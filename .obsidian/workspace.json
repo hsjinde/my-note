@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fdd6383decc9004b",
+        "id": "da5879f80358d549",
         "type": "tabs",
         "children": [
           {
-            "id": "fa38c8261e00843e",
+            "id": "d771c232b4698bb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
+                "file": "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_Day01-10_Fundamentals"
+              "title": "00_資料結構-鐵人挑_Introduction"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 520.5
   },
   "right": {
     "id": "77e9436b1b2f0bf2",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
+                "file": "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "01_Day01-10_Fundamentals 的反向連結"
+              "title": "00_資料結構-鐵人挑_Introduction 的反向連結"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
+                "file": "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "01_Day01-10_Fundamentals 的對外連結"
+              "title": "00_資料結構-鐵人挑_Introduction 的對外連結"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
+                "file": "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_Day01-10_Fundamentals 的大綱"
+              "title": "00_資料結構-鐵人挑_Introduction 的大綱"
             }
           }
         ]
@@ -184,9 +184,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa38c8261e00843e",
+  "active": "d771c232b4698bb8",
   "lastOpenFiles": [
+    "RTK_Analysis.md",
     "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
+    "資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction/file-20260527150412458.png",
+    "資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction",
+    "資料結構-鐵人挑戰-35D/assets",
+    "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
     "assets/RTK_Analysis/file-20260527112846360.png",
     "資料結構-鐵人挑戰-35D/04_Day31-35_Advanced_Searching_Patterns.md",
     "圖Graph-實作.md",
@@ -194,7 +199,6 @@
     "資料結構-鐵人挑戰-35D/03_Day21-30_Sorting_Searching.md",
     "Data_Structures_Ironman/02_Day11-20_NonLinear_Structures.md",
     "資料結構-鐵人挑戰-35D/00_Introduction.md",
-    "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
     "資料結構-鐵人挑戰-35D/02_Day11-20_NonLinear_Structures.md",
     "資料結構-鐵人挑戰-35D/00_Index.md",
     "資料結構-鐵人挑戰-35D",
@@ -203,7 +207,6 @@
     "Data_Structures_Ironman/04_Day31-35_Advanced_Searching_Patterns.md",
     "Data_Structures_Ironman/03_Day21-30_Sorting_Searching.md",
     "Data_Structures_Ironman",
-    "RTK_Analysis.md",
     "README.md",
     "KeyLogger-Server.md",
     "assets/RTK_Analysis",

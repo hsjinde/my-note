@@ -11,17 +11,14 @@
             "id": "e0999079e4129655",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "SRE 學習路徑圖.canvas",
-                "viewState": {
-                  "x": 774.8665442903351,
-                  "y": -167.78852298982576,
-                  "zoom": -0.6792938098333957
-                }
+                "file": "RTK_Analysis.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "SRE 學習路徑圖"
+              "icon": "lucide-file",
+              "title": "RTK_Analysis"
             }
           }
         ]
@@ -190,6 +187,7 @@
   },
   "active": "e0999079e4129655",
   "lastOpenFiles": [
+    "SRE 學習路徑圖.canvas.tmp.11944.50c2b7dcbadf",
     "SRE 學習路徑圖.canvas",
     "SRE 學習路徑圖.canvas.tmp.17612.3440fa28c43e",
     "2026-05-27.md",

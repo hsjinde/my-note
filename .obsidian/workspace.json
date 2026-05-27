@@ -177,11 +177,14 @@
       "templates:插入模板": false,
       "command-palette:開啟命令面板": false,
       "bases:建立新的 base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "57e83f3404bc6f74",
+  "active": "e0999079e4129655",
   "lastOpenFiles": [
+    "SRE 學習路徑圖.canvas",
+    "SRE 學習路徑圖.canvas.tmp.17612.3440fa28c43e",
     "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HJuHiHOzC.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",
@@ -218,7 +221,6 @@
     "Data_Structures_Ironman",
     "README.md",
     "KeyLogger-Server.md",
-    "assets/RTK_Analysis",
-    "assets"
+    "assets/RTK_Analysis"
   ]
 }

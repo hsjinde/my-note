@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5f35a6b2db60ab75",
+        "id": "43b0a0d7a2a0593a",
         "type": "tabs",
         "children": [
           {
-            "id": "e0999079e4129655",
+            "id": "bfcf5d3447b12137",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "RTK_Analysis.md",
-                "mode": "source",
-                "source": false
+                "file": "SRE 學習路徑圖.canvas",
+                "viewState": {
+                  "x": 920.5906733958757,
+                  "y": 527.4311259368897,
+                  "zoom": -0.8255145506844398
+                }
               },
-              "icon": "lucide-file",
-              "title": "RTK_Analysis"
+              "icon": "lucide-layout-dashboard",
+              "title": "SRE 學習路徑圖"
             }
           }
         ]
@@ -185,10 +188,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "e0999079e4129655",
+  "active": "bfcf5d3447b12137",
   "lastOpenFiles": [
-    "SRE 學習路徑圖.canvas.tmp.11944.50c2b7dcbadf",
     "SRE 學習路徑圖.canvas",
+    "RTK_Analysis.md",
+    "SRE 學習路徑圖.canvas.tmp.11944.50c2b7dcbadf",
     "SRE 學習路徑圖.canvas.tmp.17612.3440fa28c43e",
     "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HJuHiHOzC.jpg",
@@ -206,7 +210,6 @@
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures",
     "資料結構-鐵人挑戰-35D/assets/01_Fundamentals",
     "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
-    "RTK_Analysis.md",
     "資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction",
     "資料結構-鐵人挑戰-35D/assets",
     "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
@@ -225,7 +228,6 @@
     "Data_Structures_Ironman/03_Day21-30_Sorting_Searching.md",
     "Data_Structures_Ironman",
     "README.md",
-    "KeyLogger-Server.md",
-    "assets/RTK_Analysis"
+    "KeyLogger-Server.md"
   ]
 }

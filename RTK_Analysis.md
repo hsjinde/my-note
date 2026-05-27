@@ -2,6 +2,7 @@
 
 這份報告分析了 [rtk-ai/rtk](https://github.com/rtk-ai/rtk) 專案。RTK 是一個專為 AI 編碼助手（如 Claude Code, GitHub Copilot, Cursor 等）設計的高性能 CLI 代理工具。
 
+![](assets/RTK_Analysis/file-20260527112846360.png)
 ## 什麼是 RTK？
 
 **RTK (Rust Token Killer)** 是一個位於 AI 編碼助手與終端機之間的代理工具。它的主要功能是**過濾並壓縮指令輸出**，在將資料傳回大型語言模型 (LLM) 之前移除冗餘資訊。根據官方數據，RTK 能夠為常見開發任務減少 **60% 到 90%** 的 Token 消耗。

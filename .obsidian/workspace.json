@@ -11,14 +11,12 @@
             "id": "c6d241e4e27e0089",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "RTK_Analysis.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/RTK_Analysis/file-20260527112846360.png"
               },
-              "icon": "lucide-file",
-              "title": "RTK_Analysis"
+              "icon": "lucide-image",
+              "title": "file-20260527112846360"
             }
           }
         ]
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RTK_Analysis.md",
+                "file": "assets/RTK_Analysis/file-20260527112846360.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "RTK_Analysis 的反向連結"
+              "title": "file-20260527112846360 的反向連結"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RTK_Analysis.md",
+                "file": "assets/RTK_Analysis/file-20260527112846360.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "RTK_Analysis 的對外連結"
+              "title": "file-20260527112846360 的對外連結"
             }
           },
           {
@@ -156,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RTK_Analysis.md",
+                "file": "assets/RTK_Analysis/file-20260527112846360.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "RTK_Analysis 的大綱"
+              "title": "file-20260527112846360 的大綱"
             }
           }
         ]
@@ -188,6 +186,9 @@
   "lastOpenFiles": [
     "README.md",
     "RTK_Analysis.md",
+    "assets/RTK_Analysis/file-20260527112846360.png",
+    "assets/RTK_Analysis",
+    "assets",
     ",gitignore"
   ]
 }

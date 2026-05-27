@@ -11,10 +11,17 @@
             "id": "e0999079e4129655",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新分頁"
+              "type": "canvas",
+              "state": {
+                "file": "SRE 學習路徑圖.canvas",
+                "viewState": {
+                  "x": 774.8665442903351,
+                  "y": -167.78852298982576,
+                  "zoom": -0.6792938098333957
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "SRE 學習路徑圖"
             }
           }
         ]

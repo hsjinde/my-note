@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "76549055936ccd8f",
+        "id": "2b2cf2af59eb46b1",
         "type": "tabs",
         "children": [
           {
-            "id": "4b7940e94c8073e4",
+            "id": "ffe938eb6d1ae512",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -179,14 +179,23 @@
   },
   "active": "57e83f3404bc6f74",
   "lastOpenFiles": [
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/B1BmJvlf0.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/Bk2LyGkzC.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/Hyul_3pbA.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/H13u6Ohb0.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/rJN651tZA.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/ryIZS0B-R.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/rJxSAJSW0.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/SJ91joy-C.jpg",
+    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/BJ7be-0gC.jpg",
+    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/S1wE_6ee0.jpg",
+    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/BJrGdpggR.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns",
     "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures",
     "資料結構-鐵人挑戰-35D/assets/01_Fundamentals",
-    "assets/RTK_Analysis/file-20260527112846360.png",
     "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
     "RTK_Analysis.md",
-    "資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction/file-20260527150412458.png",
     "資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction",
     "資料結構-鐵人挑戰-35D/assets",
     "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
@@ -207,7 +216,6 @@
     "README.md",
     "KeyLogger-Server.md",
     "assets/RTK_Analysis",
-    "assets",
-    ",gitignore"
+    "assets"
   ]
 }

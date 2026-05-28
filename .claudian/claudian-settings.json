@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "gemini-3.1-pro-low",
+  "model": "haiku",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -9,9 +9,9 @@
   "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
-  "systemPrompt": "",
+  "systemPrompt": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"deepseek-chat\"",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"gemini-3.1-pro-low\"\n",
+  "sharedEnvironmentVariables": "AN",
   "envSnippets": [],
   "customContextLimits": {},
   "keyboardNavigation": {
@@ -34,7 +34,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_MODEL=gemini-3.1-pro-low"
+      "environmentHash": ""
     },
     "codex": {
       "enabled": false,
@@ -46,7 +46,8 @@
       "environmentVariables": "",
       "environmentHash": "",
       "installationMethodsByHost": {
-        "device:3834be7e-2f78-4165-860f-3ef4133c41a3": "native-windows"
+        "device:3834be7e-2f78-4165-860f-3ef4133c41a3": "native-windows",
+        "device:616fa3c9-b59d-4b4a-85e5-2651c655afdf": "native-windows"
       },
       "wslDistroOverridesByHost": {}
     },
@@ -65,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "gemini-3.1-pro-low"
+    "claude": "haiku"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -77,7 +78,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "gemini-3.1-pro-low",
+  "lastCustomModel": "",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

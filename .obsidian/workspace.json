@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7b9894b849e02c2f",
+        "id": "184f535ab0ec5b62",
         "type": "tabs",
         "children": [
           {
-            "id": "43853355cf44f926",
+            "id": "22cc4fcb315f40a7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "obsidian相關筆記/插件安裝.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "插件安裝"
+              "title": "新分頁"
             }
           }
         ]
@@ -164,13 +160,23 @@
               "icon": "lucide-list",
               "title": "2026-05-27 的大綱"
             }
+          },
+          {
+            "id": "1962ed3d77218033",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 1006.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,7 +192,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "43853355cf44f926",
+  "active": "1962ed3d77218033",
   "lastOpenFiles": [
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/SRE Engineer & AI Systems Developer.md",

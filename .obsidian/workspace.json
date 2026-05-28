@@ -11,10 +11,14 @@
             "id": "22cc4fcb315f40a7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "obsidian相關筆記/插件安裝.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "插件安裝"
             }
           }
         ]
@@ -192,15 +196,15 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "1962ed3d77218033",
+  "active": "22cc4fcb315f40a7",
   "lastOpenFiles": [
+    "obsidian相關筆記/目前的skills.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/SRE Engineer & AI Systems Developer.md",
     "工作專案/KeyLogger-Server.md",
     "工作專案",
     "個人學習/SRE 學習路徑圖.canvas",
     "個人學習",
-    "obsidian相關筆記/目前的skills.md",
     "obsidian相關筆記/插件安裝.md",
     "obsidian相關筆記",
     "Clippings",

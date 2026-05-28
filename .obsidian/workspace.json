@@ -11,10 +11,14 @@
             "id": "3cd8a4a9136e8d20",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "obsidian相關筆記/目前的skills.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "目前的skills"
             }
           }
         ]
@@ -152,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-05-27.md",
+                "file": "obsidian相關筆記/目前的skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-05-27 的大綱"
+              "title": "目前的skills 的大綱"
             }
           },
           {
@@ -192,15 +196,20 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "3cd8a4a9136e8d20",
+  "active": "5fcac832d4fa79c7",
   "lastOpenFiles": [
+    "obsidian相關筆記/目前的skills.md.tmp.22380.e05df72e427e",
+    "obsidian相關筆記/插件安裝.md",
+    "obsidian相關筆記/目前的skills.md",
+    "obsidian相關筆記/插件安裝.md.tmp.23076.7ada54ae2c88",
+    "daily/2026-05-28.md",
+    "obsidian相關筆記",
+    "未命名.md",
     "VjVmLnW4R0a2aWfQfGuntQ.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Shiki.md",
-    "daily/2026-05-28.md",
     "daily",
     "個人學習/SRE 學習路徑圖.canvas",
-    "目前的skills.md",
     "Clippings/SRE Engineer & AI Systems Developer.md",
     "README.md",
     "README.md.tmp.21688.c13d7c158900",
@@ -214,8 +223,6 @@
     "RTK_Analysis.md",
     "工作專案",
     "2026-05-28.md.tmp.18152.f443b077fb68",
-    "Clippings/SRE Engineer & AI Systems Developer.md.tmp.24384.a94e31abac36",
-    "Clippings",
     "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",
@@ -237,8 +244,6 @@
     "資料結構-鐵人挑戰-35D/00_Introduction.md",
     "資料結構-鐵人挑戰-35D/00_Index.md",
     "Data_Structures_Ironman/01_Day01-10_Fundamentals.md",
-    "Data_Structures_Ironman/00_Index.md",
-    "Data_Structures_Ironman/04_Day31-35_Advanced_Searching_Patterns.md",
-    "Data_Structures_Ironman/03_Day21-30_Sorting_Searching.md"
+    "Data_Structures_Ironman/00_Index.md"
   ]
 }

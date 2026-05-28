@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "624eb8078bcfe45e",
+        "id": "adfd05fae6c2b623",
         "type": "tabs",
         "children": [
           {
-            "id": "f5eb80932c8f2f54",
+            "id": "3cd8a4a9136e8d20",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -192,28 +192,29 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "f5eb80932c8f2f54",
+  "active": "3cd8a4a9136e8d20",
   "lastOpenFiles": [
-    "目前的skills.md",
     "VjVmLnW4R0a2aWfQfGuntQ.md",
-    "Clippings/SRE Engineer & AI Systems Developer.md",
+    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
+    "Shiki.md",
     "daily/2026-05-28.md",
+    "daily",
+    "個人學習/SRE 學習路徑圖.canvas",
+    "目前的skills.md",
+    "Clippings/SRE Engineer & AI Systems Developer.md",
     "README.md",
     "README.md.tmp.21688.c13d7c158900",
     "2026-05-28.md",
     "README.md.tmp.14068.3e29868950dc",
-    "daily",
     "daliy/2026-05-28.md",
     "daliy",
     "README.md.tmp.14068.3554f9d71063",
-    "個人學習/SRE 學習路徑圖.canvas",
     "工作專案/KeyLogger-Server.md",
     "個人學習",
     "RTK_Analysis.md",
     "工作專案",
     "2026-05-28.md.tmp.18152.f443b077fb68",
     "Clippings/SRE Engineer & AI Systems Developer.md.tmp.24384.a94e31abac36",
-    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings",
     "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",

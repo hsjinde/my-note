@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M",
+  "model": "deepseek-ai/deepseek-v4-flash",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"http://127.0.0.1:8080/\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M\"",
+  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"deepseek-ai/deepseek-v4-flash\"",
   "envSnippets": [],
   "customContextLimits": {},
   "keyboardNavigation": {
@@ -34,7 +34,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=http://127.0.0.1:8080/|ANTHROPIC_MODEL=Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_MODEL=deepseek-ai/deepseek-v4-flash"
     },
     "codex": {
       "enabled": false,
@@ -66,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M"
+    "claude": "deepseek-ai/deepseek-v4-flash"
   },
   "savedProviderEffort": {
     "claude": "high"

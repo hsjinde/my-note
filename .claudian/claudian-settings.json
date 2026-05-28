@@ -77,7 +77,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "gemini-3-flash",
+  "lastCustomModel": "gemini-3.1-pro-low",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

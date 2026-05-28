@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian相關筆記/目前的skills.md",
+                "file": "obsidian相關筆記/插件安裝.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "目前的skills"
+              "title": "插件安裝"
             }
           }
         ]
@@ -196,11 +196,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "5fcac832d4fa79c7",
+  "active": "3cd8a4a9136e8d20",
   "lastOpenFiles": [
+    "obsidian相關筆記/目前的skills.md",
     "obsidian相關筆記/目前的skills.md.tmp.22380.e05df72e427e",
     "obsidian相關筆記/插件安裝.md",
-    "obsidian相關筆記/目前的skills.md",
     "obsidian相關筆記/插件安裝.md.tmp.23076.7ada54ae2c88",
     "daily/2026-05-28.md",
     "obsidian相關筆記",
@@ -222,7 +222,6 @@
     "個人學習",
     "RTK_Analysis.md",
     "工作專案",
-    "2026-05-28.md.tmp.18152.f443b077fb68",
     "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",

@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "haiku",
+  "model": "gemini-3-flash",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "AN",
+  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"gemini-3-flash\"\n",
   "envSnippets": [],
   "customContextLimits": {},
   "keyboardNavigation": {
@@ -34,7 +34,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": ""
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_MODEL=gemini-3-flash"
     },
     "codex": {
       "enabled": false,
@@ -46,8 +46,7 @@
       "environmentVariables": "",
       "environmentHash": "",
       "installationMethodsByHost": {
-        "device:3834be7e-2f78-4165-860f-3ef4133c41a3": "native-windows",
-        "device:616fa3c9-b59d-4b4a-85e5-2651c655afdf": "native-windows"
+        "device:3834be7e-2f78-4165-860f-3ef4133c41a3": "native-windows"
       },
       "wslDistroOverridesByHost": {}
     },
@@ -66,7 +65,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "haiku"
+    "claude": "gemini-3-flash"
   },
   "savedProviderEffort": {
     "claude": "high"

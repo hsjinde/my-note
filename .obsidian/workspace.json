@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7c47aeb20e97c9b6",
+        "id": "624eb8078bcfe45e",
         "type": "tabs",
         "children": [
           {
-            "id": "993983cceeac4e72",
+            "id": "f5eb80932c8f2f54",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/SRE Engineer & AI Systems Developer.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "SRE Engineer & AI Systems Developer"
+              "title": "新分頁"
             }
           }
         ]
@@ -196,10 +192,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "993983cceeac4e72",
+  "active": "f5eb80932c8f2f54",
   "lastOpenFiles": [
-    "daily/2026-05-28.md",
     "目前的skills.md",
+    "VjVmLnW4R0a2aWfQfGuntQ.md",
+    "Clippings/SRE Engineer & AI Systems Developer.md",
+    "daily/2026-05-28.md",
     "README.md",
     "README.md.tmp.21688.c13d7c158900",
     "2026-05-28.md",
@@ -214,7 +212,6 @@
     "RTK_Analysis.md",
     "工作專案",
     "2026-05-28.md.tmp.18152.f443b077fb68",
-    "Clippings/SRE Engineer & AI Systems Developer.md",
     "Clippings/SRE Engineer & AI Systems Developer.md.tmp.24384.a94e31abac36",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings",
@@ -234,7 +231,6 @@
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SJydzsHGC.jpg",
     "資料結構-鐵人挑戰-35D/04_Day31-35_Advanced_Searching_Patterns.md",
     "圖Graph-實作.md",
-    "VjVmLnW4R0a2aWfQfGuntQ.md",
     "資料結構-鐵人挑戰-35D/03_Day21-30_Sorting_Searching.md",
     "Data_Structures_Ironman/02_Day11-20_NonLinear_Structures.md",
     "資料結構-鐵人挑戰-35D/00_Introduction.md",

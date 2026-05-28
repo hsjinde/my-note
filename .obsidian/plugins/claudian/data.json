@@ -2,8 +2,14 @@
   "tabManagerState": {
     "openTabs": [
       {
+        "draftModel": "gemini-3.1-pro-low",
         "tabId": "tab-1779932571429-y8oxbe1",
-        "conversationId": "conv-1779937600026-oosmf9wom"
+        "conversationId": null
+      },
+      {
+        "draftModel": "gemini-3.1-pro-low",
+        "tabId": "tab-1779937768494-8u22p63",
+        "conversationId": null
       }
     ],
     "activeTabId": "tab-1779932571429-y8oxbe1"

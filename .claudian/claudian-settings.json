@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "gemini-3-flash",
+  "model": "gemini-3.1-pro-low",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"gemini-3-flash\"\n",
+  "sharedEnvironmentVariables": "ANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_AUTH_TOKEN=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_MODEL=\"gemini-3.1-pro-low\"\n",
   "envSnippets": [],
   "customContextLimits": {},
   "keyboardNavigation": {
@@ -34,7 +34,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_MODEL=gemini-3-flash"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_MODEL=gemini-3.1-pro-low"
     },
     "codex": {
       "enabled": false,
@@ -65,7 +65,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "gemini-3-flash"
+    "claude": "gemini-3.1-pro-low"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -77,7 +77,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "",
+  "lastCustomModel": "gemini-3-flash",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

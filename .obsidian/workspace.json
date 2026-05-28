@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026-05-27.md",
+                "file": "2026-05-28.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-27"
+              "title": "2026-05-28"
             }
           }
         ]
@@ -185,8 +185,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "57e83f3404bc6f74",
+  "active": "fbd310ee0025ff0b",
   "lastOpenFiles": [
+    "2026-05-27.md",
+    "2026-05-28.md",
     "daliy",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",
@@ -198,7 +200,6 @@
     "RTK_Analysis.md",
     "SRE 學習路徑圖.canvas.tmp.11944.50c2b7dcbadf",
     "SRE 學習路徑圖.canvas.tmp.17612.3440fa28c43e",
-    "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HJuHiHOzC.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HkZei-PzC.jpg",
@@ -224,7 +225,6 @@
     "Data_Structures_Ironman/00_Index.md",
     "Data_Structures_Ironman/04_Day31-35_Advanced_Searching_Patterns.md",
     "Data_Structures_Ironman/03_Day21-30_Sorting_Searching.md",
-    "Data_Structures_Ironman",
     "README.md",
     "KeyLogger-Server.md"
   ]

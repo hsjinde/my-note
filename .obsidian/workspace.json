@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "184f535ab0ec5b62",
+        "id": "adfd05fae6c2b623",
         "type": "tabs",
         "children": [
           {
-            "id": "22cc4fcb315f40a7",
+            "id": "3cd8a4a9136e8d20",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "obsidian相關筆記/插件安裝.md",
-                "mode": "source",
-                "source": false
+                "file": "個人學習/SRE 學習路徑圖.canvas",
+                "viewState": {
+                  "x": 707.2000174717655,
+                  "y": 835.9889554491996,
+                  "zoom": -1.3810700723315752
+                }
               },
-              "icon": "lucide-file",
-              "title": "插件安裝"
+              "icon": "lucide-layout-dashboard",
+              "title": "SRE 學習路徑圖"
             }
           }
         ]
@@ -78,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 520.5
+    "width": 360.5
   },
   "right": {
     "id": "77e9436b1b2f0bf2",
@@ -156,17 +159,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-05-27.md",
+                "file": "obsidian相關筆記/目前的skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-05-27 的大綱"
+              "title": "目前的skills 的大綱"
             }
           },
           {
-            "id": "1962ed3d77218033",
+            "id": "5fcac832d4fa79c7",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
@@ -180,7 +183,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1006.5
+    "width": 662.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,26 +199,39 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "22cc4fcb315f40a7",
+  "active": "3cd8a4a9136e8d20",
   "lastOpenFiles": [
     "obsidian相關筆記/目前的skills.md",
-    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
-    "Clippings/SRE Engineer & AI Systems Developer.md",
-    "工作專案/KeyLogger-Server.md",
-    "工作專案",
-    "個人學習/SRE 學習路徑圖.canvas",
-    "個人學習",
     "obsidian相關筆記/插件安裝.md",
+    "obsidian相關筆記/目前的skills.md.tmp.22380.e05df72e427e",
+    "obsidian相關筆記/插件安裝.md.tmp.23076.7ada54ae2c88",
+    "daily/2026-05-28.md",
     "obsidian相關筆記",
-    "Clippings",
+    "未命名.md",
+    "VjVmLnW4R0a2aWfQfGuntQ.md",
+    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
+    "Shiki.md",
+    "daily",
+    "個人學習/SRE 學習路徑圖.canvas",
+    "Clippings/SRE Engineer & AI Systems Developer.md",
+    "README.md",
+    "README.md.tmp.21688.c13d7c158900",
+    "2026-05-28.md",
+    "README.md.tmp.14068.3e29868950dc",
+    "daliy/2026-05-28.md",
+    "daliy",
+    "README.md.tmp.14068.3554f9d71063",
+    "工作專案/KeyLogger-Server.md",
+    "個人學習",
+    "RTK_Analysis.md",
+    "工作專案",
+    "2026-05-27.md",
+    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
+    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",
+    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1IuBcw1R.jpg",
     "資料結構-鐵人挑戰-35D/02_Day11-20_NonLinear_Structures.md",
     "資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
     "資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
-    "SRE 學習路徑圖.canvas",
-    "RTK_Analysis.md",
-    "SRE 學習路徑圖.canvas.tmp.11944.50c2b7dcbadf",
-    "SRE 學習路徑圖.canvas.tmp.17612.3440fa28c43e",
-    "2026-05-27.md",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HJuHiHOzC.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/HkZei-PzC.jpg",
@@ -223,25 +239,13 @@
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/Sk0blePfA.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SyPOfiBzR.jpg",
     "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SJydzsHGC.jpg",
-    "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/BJm-I2Wf0.jpg",
-    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/B1BmJvlf0.jpg",
-    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/Bk2LyGkzC.jpg",
-    "資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns",
-    "資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching",
-    "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures",
-    "資料結構-鐵人挑戰-35D/assets/01_Fundamentals",
     "資料結構-鐵人挑戰-35D/04_Day31-35_Advanced_Searching_Patterns.md",
     "圖Graph-實作.md",
-    "VjVmLnW4R0a2aWfQfGuntQ.md",
     "資料結構-鐵人挑戰-35D/03_Day21-30_Sorting_Searching.md",
     "Data_Structures_Ironman/02_Day11-20_NonLinear_Structures.md",
     "資料結構-鐵人挑戰-35D/00_Introduction.md",
     "資料結構-鐵人挑戰-35D/00_Index.md",
     "Data_Structures_Ironman/01_Day01-10_Fundamentals.md",
-    "Data_Structures_Ironman/00_Index.md",
-    "Data_Structures_Ironman/04_Day31-35_Advanced_Searching_Patterns.md",
-    "Data_Structures_Ironman/03_Day21-30_Sorting_Searching.md",
-    "README.md",
-    "KeyLogger-Server.md"
+    "Data_Structures_Ironman/00_Index.md"
   ]
 }

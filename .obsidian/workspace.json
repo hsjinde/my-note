@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d568b1bcbb30a453",
+        "id": "3d942480acdb76dc",
         "type": "tabs",
         "children": [
           {
-            "id": "a2efcab44ebe7208",
+            "id": "848c4a2e177c1dfc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "core_rules.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "core_rules"
+              "title": "新分頁"
             }
           }
         ]
@@ -156,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "core_rules.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "core_rules 的大綱"
+              "title": "大綱"
             }
           },
           {
@@ -196,11 +191,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "a2efcab44ebe7208",
+  "active": "848c4a2e177c1dfc",
   "lastOpenFiles": [
-    "GEMINI.md",
-    "README.md",
     "core_rules.md",
+    "GEMINI.md",
+    "core_rules.md.tmp.13680.7b78efa5f1c5",
+    "core_rules.md.tmp.13680.99c48ba5c0a3",
+    "README.md",
     "CLAUDE.md",
     "AGENTS.md",
     "GEMINI.md.tmp.29492.3c50efc94ba4",
@@ -220,8 +217,6 @@
     "好工具推薦",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "obsidian相關筆記/目前的skills.md",
-    "obsidian相關筆記/目前的skills.md.tmp.22380.e05df72e427e",
-    "obsidian相關筆記/插件安裝.md.tmp.23076.7ada54ae2c88",
     "daily/2026-05-28.md",
     "VjVmLnW4R0a2aWfQfGuntQ.md",
     "Shiki.md",

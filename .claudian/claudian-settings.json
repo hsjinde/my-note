@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "gpt-5.5s",
+  "model": "claude-sonnet-4-6",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -66,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "gpt-5.5s"
+    "claude": "claude-sonnet-4-6"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -78,7 +78,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "gpt-5.5s",
+  "lastCustomModel": "claude-sonnet-4-6",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

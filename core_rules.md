@@ -1,7 +1,6 @@
 # Core Rules
 
-所有 AI 代理（Claude Code、Codex、Gemini、其他 coding agents）都應遵守本檔案的共同規則。
-
+優先使用 obsidian-cli
 ## 語言與語氣
 
 - 預設使用繁體中文回覆與撰寫筆記。

@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "gemini-3.1-pro-low",
+  "model": "gpt-5.5s",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -66,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "gemini-3.1-pro-low"
+    "claude": "gpt-5.5s"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -78,7 +78,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "gemini-3.1-pro-low",
+  "lastCustomModel": "gpt-5.5s",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

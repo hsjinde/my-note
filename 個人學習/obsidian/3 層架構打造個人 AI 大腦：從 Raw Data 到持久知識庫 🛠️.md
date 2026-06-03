@@ -109,9 +109,41 @@ Layer 3：Schema（結構定義）
 
 - **智能體**：[[Claude Code]]（可搭配第三方模型如 MiniMax、Qwen、GLM，避免平台綁定）
 - **知識庫格式**：Obsidian Vault（Markdown 文件，本地儲存）
-- **Skills 安裝**：可安裝 Global 或 Project specific
-  - 建議：只裝當前 Project 需要的 Skills，減少 Context Window 頂部空間的佔用
-- **重啟後生效**：安裝 Skills 後需重啟 Claude Code 才能看到新指令
+- **LLM Wiki Skills 安裝**（由 [@HoChien Chang](https://gumroad.com/d/4a4eccda937bc1df3cb16edc85b68220) 開發，基於 [[Andrej Karpathy]] 的 LLM Wiki 概念）：
+
+  **Global（所有 project 可用）：**
+  ```bash
+  mkdir -p ~/.claude/skills && git clone --depth 1 https://github.com/Changhochien/claude-wiki.git /tmp/claude-wiki && cp /tmp/claude-wiki/skills/llm-wiki/SKILL.md ~/.claude/skills/llm-wiki/
+  ```
+
+  **Project-specific（僅當前 project）：**
+  ```bash
+  mkdir -p .claude/skills/llm-wiki && git clone --depth 1 https://github.com/Changhochien/claude-wiki.git /tmp/claude-wiki && cp /tmp/claude-wiki/skills/llm-wiki/SKILL.md .claude/skills/llm-wiki/
+  ```
+
+  > [!tip] 建議只裝當前 Project 需要的 Skills
+  > Skills 會佔用 Context Window 的頭部空間（最精準的位置），過多不相關的 Skills 會降低模型表現。
+
+  **安裝後需重啟 Claude Code** 才能看到新指令。
+
+  **Skills 提供的功能：**
+  - **Ingest** — 將 Raw Source 置入知識庫（URL、檔案、筆記）
+  - **Query** — 查找已編譯的知識庫
+  - **Lint** — 檢查一致性、孤兒頁面、損壞連結、過時內容
+  - 可透過環境變數 `WIKI_PATH` 或 `.omc-config.json` 設定 Wiki 路徑
+
+  **Wiki 目錄結構：**
+  ```
+  ~/wiki/               # 或自訂路徑
+  ├── SCHEMA.md        # 慣例與規則
+  ├── index.md         # 內容目錄
+  ├── log.md           # 動作歷史
+  ├── raw/             # 不可變的原始來源
+  ├── entities/        # 人物、組織、產品
+  ├── concepts/        # 主題與概念
+  ├── comparisons/     # 對比分析
+  └── queries/         # 歸檔的 Q&A
+  ```
 
 > [!tip] 避免平台綁定的策略
 > Claude Code 本身可搭配非 Anthropic 模型（如 MiniMax 2.7）運行，核心知識庫為純文字，不依賴任何特定 AI 平台。

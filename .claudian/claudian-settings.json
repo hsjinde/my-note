@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "claude-sonnet-4-6",
+  "model": "gemini-3.1-pro-low",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -66,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "claude-sonnet-4-6"
+    "claude": "gemini-3.1-pro-low"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -78,7 +78,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "claude-sonnet-4-6",
+  "lastCustomModel": "gemini-3.1-pro-low",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

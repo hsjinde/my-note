@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
+                "file": "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
                 "mode": "source",
                 "source": false
               },
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 360.5
+    "width": 360.5,
+    "collapsed": true
   },
   "right": {
     "id": "77e9436b1b2f0bf2",
@@ -196,9 +197,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "fc5eeace21bf603d",
+  "active": "5fcac832d4fa79c7",
   "lastOpenFiles": [
-    "Clippings/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
+    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md.tmp.248.6f44aa3ac3f1",
+    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
     "個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md",
     "個人學習/obsidian相關筆記/插件安裝.md",
     "Clippings/cve-vault.lnk",
@@ -234,7 +236,6 @@
     "2026-05-28.md",
     "daliy/2026-05-28.md",
     "工作專案/KeyLogger-Server.md",
-    "RTK_Analysis.md",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1IuBcw1R.jpg",

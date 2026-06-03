@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b9f92792c1788174",
+        "id": "55046dd63d9778dc",
         "type": "tabs",
         "children": [
           {
-            "id": "fc5eeace21bf603d",
+            "id": "571f52b2e33ca732",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 360.5,
-    "collapsed": true
+    "width": 360.5
   },
   "right": {
     "id": "77e9436b1b2f0bf2",
@@ -197,10 +196,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "5fcac832d4fa79c7",
+  "active": "571f52b2e33ca732",
   "lastOpenFiles": [
-    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md.tmp.248.6f44aa3ac3f1",
+    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
+    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md.tmp.248.6f44aa3ac3f1",
     "個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md",
     "個人學習/obsidian相關筆記/插件安裝.md",
     "Clippings/cve-vault.lnk",
@@ -208,7 +208,6 @@
     "個人學習/obsidian/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md.tmp.23404.2b2bfab5de3f",
     "個人學習/obsidian/LLM Wiki Skills for Claude Code.md",
     "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
-    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/obsidian相關筆記",
     "個人學習/AI相關學習",
     "uzqrxdsmT7e9-SSQX00uJw.md",
@@ -223,7 +222,6 @@
     "CLAUDE.md",
     "AGENTS.md",
     "GEMINI.md.tmp.29492.3c50efc94ba4",
-    "AGENTS.md.tmp.29492.86032a058df0",
     "Clippings/SRE Engineer & AI Systems Developer.md",
     "conflict-files-obsidian-git.md",
     "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",

@@ -19,3 +19,29 @@ title: Wiki 操作日誌
 - 建立 wiki/ 目錄結構：index.md、log.md、concepts/、entities/、queries/
 - 建立 Clippings/Conversations/ 目錄
 - 安裝 llm-wiki skill
+
+## [2026-06-04] ingest | 第一批：obsidian相關筆記 4 篇
+
+來源：
+- [[個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️]]
+- [[個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍]]
+- [[個人學習/obsidian相關筆記/插件安裝]]
+- [[個人學習/obsidian相關筆記/目前的skills]]
+
+建立概念頁 6 個：
+- wiki/concepts/LLM-Wiki.md
+- wiki/concepts/RAG-vs-LLM-Wiki.md
+- wiki/concepts/知識庫架構設計.md
+- wiki/concepts/Ingest-工作流.md
+- wiki/concepts/Obsidian-插件.md
+- wiki/concepts/Claude-Code-Skills.md
+
+建立實體頁 4 個：
+- wiki/entities/Obsidian.md
+- wiki/entities/Claude-Code.md
+- wiki/entities/Claudian.md
+- wiki/entities/Andrej-Karpathy.md
+
+更新：wiki/index.md
+
+待消化：Clippings/ 4 篇、Leecode/ 1 篇、工作專案/ 1 篇、資料結構/ 5 篇 = 11 篇

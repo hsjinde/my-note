@@ -80,3 +80,13 @@
 - 這個 vault 是 git repository，但不要主動 commit、push、reset 或執行破壞性 git 操作，除非使用者明確要求。
 - 若看到自動備份 commit 或同步紀錄，不要把它當成任務需求。
 - 修改前後應尊重使用者既有未提交變更，不要覆蓋他人的工作。
+
+
+## Wiki 知識層
+
+- 這個 vault 有一個 wiki/ 目錄，是 AI 維護的知識提煉層，與原始筆記分離。
+- 原始筆記（Clippings/、個人學習/、工作專案/ 等）保持唯讀，AI 不直接修改。
+- wiki 操作請遵循 .claude/skills/llm-wiki/SKILL.md 的規則。
+- wiki/index.md 是知識庫目錄，任何 wiki 操作前先讀這裡。
+- wiki/log.md 記錄所有 wiki 操作歷史，每次操作後 append 一筆。
+- Clippings/Conversations/ 存放有價值的 AI 對話紀錄，可透過 ingest 消化進 wiki。

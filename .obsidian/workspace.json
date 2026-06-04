@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "63520c644a35812e",
+        "id": "b5b695443dfb93b8",
         "type": "tabs",
         "children": [
           {
-            "id": "c3f712077051e54e",
+            "id": "6a57174d5c3da1b6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -192,13 +192,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "c3f712077051e54e",
+  "active": "6a57174d5c3da1b6",
   "lastOpenFiles": [
+    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
     "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
     "個人學習/obsidian相關筆記/插件安裝.md",
-    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
     "個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md",
     "Clippings/cve-vault.lnk",
     "個人學習/obsidian相關筆記/目前的skills.md",

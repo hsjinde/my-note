@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "55046dd63d9778dc",
+        "id": "942831b5166bc35a",
         "type": "tabs",
         "children": [
           {
-            "id": "571f52b2e33ca732",
+            "id": "1096f658cda1816e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
+                "file": "個人學習/obsidian相關筆記/插件安裝.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍"
+              "title": "插件安裝"
             }
           }
         ]
@@ -196,12 +196,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "5fcac832d4fa79c7",
+  "active": "1096f658cda1816e",
   "lastOpenFiles": [
-    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md.tmp.4692.0e5a5151d6cc",
-    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
-    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md.tmp.248.6f44aa3ac3f1",
     "個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md",
     "個人學習/obsidian相關筆記/插件安裝.md",
     "Clippings/cve-vault.lnk",
@@ -209,6 +206,7 @@
     "個人學習/obsidian/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md.tmp.23404.2b2bfab5de3f",
     "個人學習/obsidian/LLM Wiki Skills for Claude Code.md",
     "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
+    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/obsidian相關筆記",
     "個人學習/AI相關學習",
     "uzqrxdsmT7e9-SSQX00uJw.md",
@@ -223,6 +221,7 @@
     "CLAUDE.md",
     "AGENTS.md",
     "GEMINI.md.tmp.29492.3c50efc94ba4",
+    "AGENTS.md.tmp.29492.86032a058df0",
     "Clippings/SRE Engineer & AI Systems Developer.md",
     "conflict-files-obsidian-git.md",
     "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
@@ -235,6 +234,7 @@
     "2026-05-28.md",
     "daliy/2026-05-28.md",
     "工作專案/KeyLogger-Server.md",
+    "RTK_Analysis.md",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1rih51JR.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1NXEcPk0.jpg",
     "資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures/B1IuBcw1R.jpg",

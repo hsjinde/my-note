@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/SRE Engineer & AI Systems Developer.md",
+                "file": "wiki/entities/KeyLogger-Server.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SRE Engineer & AI Systems Developer"
+              "title": "KeyLogger-Server"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Clippings/SRE Engineer & AI Systems Developer.md",
+                "file": "wiki/entities/KeyLogger-Server.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "SRE Engineer & AI Systems Developer 的反向連結"
+              "title": "KeyLogger-Server 的反向連結"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Clippings/SRE Engineer & AI Systems Developer.md",
+                "file": "wiki/entities/KeyLogger-Server.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "SRE Engineer & AI Systems Developer 的對外連結"
+              "title": "KeyLogger-Server 的對外連結"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Clippings/SRE Engineer & AI Systems Developer.md",
+                "file": "wiki/entities/KeyLogger-Server.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SRE Engineer & AI Systems Developer 的大綱"
+              "title": "KeyLogger-Server 的大綱"
             }
           },
           {
@@ -198,20 +198,30 @@
   },
   "active": "57e83f3404bc6f74",
   "lastOpenFiles": [
-    "wiki/entities/KeyLogger-Server.md",
+    "wiki/entities/Claudian.md",
+    "wiki/entities/Claude-Code.md",
+    "wiki/entities/Andrej-Karpathy.md",
+    "wiki/concepts/SRE-學習路徑.md",
+    "wiki/concepts/RAG-vs-LLM-Wiki.md",
     "wiki/concepts/NeetCode-刷題路線.md",
+    "wiki/concepts/Ingest-工作流.md",
+    "wiki/concepts/LLM-Wiki.md",
+    "wiki/concepts/Claude-Code-Skills.md",
+    "wiki/concepts/Claude-Code-Lazy-Packs.md",
     "wiki/concepts/演算法策略.md",
+    "wiki/concepts/資料結構總覽.md",
     "wiki/concepts/搜尋演算法.md",
     "wiki/concepts/排序演算法.md",
-    "wiki/concepts/資料結構總覽.md",
+    "wiki/concepts/知識庫架構設計.md",
+    "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
+    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
+    "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
+    "Clippings/SRE Engineer & AI Systems Developer.md",
+    "wiki/entities/KeyLogger-Server.md",
     "wiki/entities/mathruffian-dot.md",
     "wiki/concepts/Obsidian-同步方案.md",
-    "wiki/concepts/Claude-Code-Lazy-Packs.md",
     "core_rules.md.tmp.15856.9119576479ae",
     "core_rules.md.tmp.15856.4a9fb5ea343d",
-    "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
-    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
-    "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).canvas",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/Leecode/Solution/217. Contains Duplicate.md",
@@ -219,7 +229,6 @@
     "wiki/entities/Ethan.md",
     "個人學習/SRE 學習路徑圖.canvas",
     "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
-    "wiki/concepts/SRE-學習路徑.md",
     "modify_roadmap.py",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SyPOfiBzR.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",
@@ -236,15 +245,6 @@
     "個人學習/資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures",
     "個人學習/資料結構-鐵人挑戰-35D/assets/01_Fundamentals",
     "個人學習/資料結構-鐵人挑戰-35D/assets/00_資料結構-鐵人挑_Introduction",
-    "個人學習/資料結構-鐵人挑戰-35D/assets",
-    "個人學習/資料結構-鐵人挑戰-35D/04_Day31-35_Advanced_Searching_Patterns.md",
-    "個人學習/資料結構-鐵人挑戰-35D/03_Day21-30_Sorting_Searching.md",
-    "個人學習/資料結構-鐵人挑戰-35D/01_Day01-10_Fundamentals.md",
-    "個人學習/資料結構-鐵人挑戰-35D/02_Day11-20_NonLinear_Structures.md",
-    "個人學習/資料結構-鐵人挑戰-35D/00_資料結構-鐵人挑_Introduction.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/TypeScript 30 天證書培訓營/前端工程師用 javaScript 學演算法/前端工程師用 javaScript 學演算法 2024-09-25.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/TypeScript 30 天證書培訓營/前端工程師用 javaScript 學演算法/前端工程師用 javaScript 學演算法 2024-09-16.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/TypeScript 30 天證書培訓營/直播 2024-02-06.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/TypeScript 30 天證書培訓營/每日任務 2024-07-22.md"
+    "個人學習/資料結構-鐵人挑戰-35D/assets"
   ]
 }

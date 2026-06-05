@@ -61,18 +61,56 @@ title: Wiki 操作日誌
 
 剩餘待消化（9 篇）：Clippings/ 3 篇、Leecode/ 1 篇、工作專案/ 1 篇、資料結構/ 5 篇
 
-## [2026-06-04] ingest | 第二批：SRE 相關 2 篇
+## [2026-06-05] ingest | 第三批：Clippings 3 篇 + 好工具推薦
 
 來源：
-- [[Clippings/SRE Engineer & AI Systems Developer]]
-- [[個人學習/SRE 學習路徑圖.canvas]]
+- [[Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包]]
+- [[Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程]]（內容極少，僅記錄）
+- [[Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧]]
 
-建立概念頁 1 個：
-- wiki/concepts/SRE-學習路徑.md
+建立概念頁 2 個：
+- wiki/concepts/Claude-Code-Lazy-Packs.md
+- wiki/concepts/Obsidian-同步方案.md
 
 建立實體頁 1 個：
-- wiki/entities/Ethan.md
+- wiki/entities/mathruffian-dot.md
 
-更新：wiki/index.md
+更新：wiki/concepts/Claude-Code-Skills.md、wiki/entities/Obsidian.md
 
-剩餘待消化（9 篇）：Clippings/ 3 篇、Leecode/ 1 篇、工作專案/ 1 篇、資料結構/ 5 篇
+## [2026-06-05] ingest | 第四批：資料結構鐵人挑戰 5 篇
+
+來源：
+- [[個人學習/資料結構-鐵人挑戰-35D/]] 全系列（Day1-35）
+
+建立概念頁 4 個：
+- wiki/concepts/資料結構總覽.md
+- wiki/concepts/排序演算法.md
+- wiki/concepts/搜尋演算法.md
+- wiki/concepts/演算法策略.md
+
+## [2026-06-05] ingest | 第五批：NeetCode 刷題路線 + 52 篇解題筆記
+
+來源：
+- [[個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram)]]
+- [[個人學習/Leecode/Solution/]]（52 篇解題筆記，不逐篇 ingest）
+- [[個人學習/Leecode/Solution/Best practice questions]]
+- [[個人學習/Leecode/Solution/50 Popular Backend Developer Interview Questions and Answers]]
+
+建立概念頁 1 個：
+- wiki/concepts/NeetCode-刷題路線.md
+
+## [2026-06-05] ingest | 第六批：工作專案 KeyLogger
+
+來源：
+- [[工作專案/KeyLogger-Server]]
+
+建立實體頁 1 個：
+- wiki/entities/KeyLogger-Server.md
+
+## [2026-06-05] cleanup | 清理
+
+- 修復 log.md 重複的 SRE 批次紀錄
+- 刪除 scraped_folder.html（內容為空）
+- 好工具推薦/caliber-ai-org/ai-setup 內容不完整，暫不 ingest
+- Clippings/Obsidian Skills 內容極少（僅 YouTube 連結），暫不 ingest
+- wiki/index.md 全面更新，待消化筆記歸零

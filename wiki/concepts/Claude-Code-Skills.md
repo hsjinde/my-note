@@ -2,7 +2,7 @@
 title: Claude Code Skills
 tags: [Claude Code, Skills, 工具]
 updated: 2026-06-04
-source_count: 1
+source_count: 2
 ---
 
 # Claude Code Skills
@@ -64,11 +64,17 @@ source_count: 1
 - 全域技能太多會降低模型表現
 - 這個 vault 採用 vault 專用安裝（`.claude/skills/`）
 
+## 懶人包技能（外部）
+
+[[Claude-Code-Lazy-Packs]] 提供 12 個一鍵安裝懶人包，涵蓋 NotebookLM、GitHub、Obsidian、Supabase、Firebase、Ollama、Gemini、ChatGPT Image 等。
+
 ## 相關概念
 
 - [[Claude-Code]] — Claude Code 工具本身
+- [[Claude-Code-Lazy-Packs]] — 懶人包系列
 - [[LLM-Wiki]] — 其中 `llm-wiki` skill 維護整個 Wiki 系統
 
 ## 來源
 
 - [[目前的skills]]（2026）
+- [[mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。]]

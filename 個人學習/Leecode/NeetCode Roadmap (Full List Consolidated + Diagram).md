@@ -50,17 +50,17 @@ flowchart TB
 ```
 
 ## Arrays & Hashing
-| Problem                      | LeetCode                                                   | Difficulty | Key Points                     |              筆記               |  Progress  |
-| ---------------------------- |:---------------------------------------------------------- |:---------- | ------------------------------ |:-------------------------------:|:----------:|
-| Contains Duplicate           | https://leetcode.com/problems/contains-duplicate           | Easy       | HashSet duplicate check        | [[Solution/Contains Duplicate|Contains Duplicate]] | 2025.12.18 |
-| Valid Anagram                | https://leetcode.com/problems/valid-anagram                | Easy       | Frequency count                | [[Solution/242. Valid Anagram|242. Valid Anagram]] | 2025.12.17 |
-| Two Sum                      | https://leetcode.com/problems/two-sum                      | Easy       | Hash map complement            | [[Solution/Two Sum|Two Sum]] | 2025.12.18 |
-| Group Anagrams               | https://leetcode.com/problems/group-anagrams               | Medium     | Sorted key / count signature   | [[Solution/49. Group Anagrams|49. Group Anagrams]] | 2025.12.24 |
-| Top K Frequent Elements      | https://leetcode.com/problems/top-k-frequent-elements      | Medium     | Bucket / heap                  | [[Solution/Top K Frequent Elements|Top K Frequent Elements]] | 2026.01.15 |
-| Encode and Decode Strings    | https://leetcode.com/problems/encode-and-decode-strings    | Medium     | Custom delimiter length-prefix |                                |            |
-| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[Solution/238. Product of Array Except Self|238. Product of Array Except Self]] |            |
-| Valid Sudoku                 | https://leetcode.com/problems/valid-sudoku                 | Medium     | Set constraints (row/col/box)  |                                |            |
-| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                | [[Solution/Longest Consecutive Sequence|Longest Consecutive Sequence]] |            |
+| Problem                      | LeetCode                                                   | Difficulty | Key Points                     |                      筆記                      |              Progress               |            |
+| ---------------------------- | :--------------------------------------------------------- | :--------- | ------------------------------ | :------------------------------------------: | :---------------------------------: | ---------- |
+| Contains Duplicate           | https://leetcode.com/problems/contains-duplicate           | Easy       | HashSet duplicate check        |        [[Solution/Contains Duplicate         |        Contains Duplicate]]         | 2025.12.18 |
+| Valid Anagram                | https://leetcode.com/problems/valid-anagram                | Easy       | Frequency count                |        [[Solution/242. Valid Anagram         |        242. Valid Anagram]]         | 2025.12.17 |
+| Two Sum                      | https://leetcode.com/problems/two-sum                      | Easy       | Hash map complement            |              [[Solution/Two Sum              |              Two Sum]]              | 2025.12.18 |
+| Group Anagrams               | https://leetcode.com/problems/group-anagrams               | Medium     | Sorted key / count signature   |        [[Solution/49. Group Anagrams         |        49. Group Anagrams]]         | 2025.12.24 |
+| Top K Frequent Elements      | https://leetcode.com/problems/top-k-frequent-elements      | Medium     | Bucket / heap                  |      [[Solution/Top K Frequent Elements      |      Top K Frequent Elements]]      | 2026.01.15 |
+| Encode and Decode Strings    | https://leetcode.com/problems/encode-and-decode-strings    | Medium     | Custom delimiter length-prefix |                                              |                                     |            |
+| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[Solution/238. Product of Array Except Self | 238. Product of Array Except Self]] |            |
+| Valid Sudoku                 | https://leetcode.com/problems/valid-sudoku                 | Medium     | Set constraints (row/col/box)  |                                              |                                     |            |
+| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                |   [[Solution/Longest Consecutive Sequence    |   Longest Consecutive Sequence]]    |            |
 
 ## Two Pointers
 | Problem                            | LeetCode                                                       | Difficulty | Key Points                  |              筆記               |  Progress  |

@@ -11,10 +11,14 @@
             "id": "3360c6a988b058f3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "NeetCode Roadmap (Full List Consolidated + Diagram)"
             }
           }
         ]
@@ -152,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大綱"
+              "title": "NeetCode Roadmap (Full List Consolidated + Diagram) 的大綱"
             }
           },
           {

@@ -5,7 +5,8 @@
 ## 工具使用優先順序
 
 - 操作 vault 筆記時，優先使用 obsidian-cli skill。
-- 只有在 obsidian-cli 無法處理時，才退回使用直接檔案讀寫。
+- 如果 obsidian-cli 不可用或失敗，可退回使用 Obsidian MCP 服務（mcpvault）作為備選方案。
+- 只有在兩者都無法處理時，才退回使用直接檔案讀寫。
 
 ## 語言與語氣
 

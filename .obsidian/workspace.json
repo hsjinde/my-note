@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/entities/KeyLogger-Server.md",
+                "file": "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KeyLogger-Server"
+              "title": "Obsidian Skills Ai自动化笔记新方法 使用配置教程"
             }
           }
         ]
@@ -196,8 +196,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "57e83f3404bc6f74",
+  "active": "de2f9d567228fc9e",
   "lastOpenFiles": [
+    "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
+    "wiki/entities/KeyLogger-Server.md",
     "wiki/entities/Claudian.md",
     "wiki/entities/Claude-Code.md",
     "wiki/entities/Andrej-Karpathy.md",
@@ -215,9 +217,7 @@
     "wiki/concepts/知識庫架構設計.md",
     "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
-    "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
     "Clippings/SRE Engineer & AI Systems Developer.md",
-    "wiki/entities/KeyLogger-Server.md",
     "wiki/entities/mathruffian-dot.md",
     "wiki/concepts/Obsidian-同步方案.md",
     "core_rules.md.tmp.15856.9119576479ae",

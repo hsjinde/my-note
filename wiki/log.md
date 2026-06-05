@@ -60,3 +60,19 @@ title: Wiki 操作日誌
 更新：wiki/index.md
 
 剩餘待消化（9 篇）：Clippings/ 3 篇、Leecode/ 1 篇、工作專案/ 1 篇、資料結構/ 5 篇
+
+## [2026-06-04] ingest | 第二批：SRE 相關 2 篇
+
+來源：
+- [[Clippings/SRE Engineer & AI Systems Developer]]
+- [[個人學習/SRE 學習路徑圖.canvas]]
+
+建立概念頁 1 個：
+- wiki/concepts/SRE-學習路徑.md
+
+建立實體頁 1 個：
+- wiki/entities/Ethan.md
+
+更新：wiki/index.md
+
+剩餘待消化（9 篇）：Clippings/ 3 篇、Leecode/ 1 篇、工作專案/ 1 篇、資料結構/ 5 篇

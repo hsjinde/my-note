@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "87948977973ea0af",
+        "id": "73c0e8715068c66e",
         "type": "tabs",
         "children": [
           {
-            "id": "df23d264d0fe7c61",
+            "id": "3360c6a988b058f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex"
+              "title": "新分頁"
             }
           }
         ]
@@ -156,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex 的大綱"
+              "title": "大綱"
             }
           },
           {
@@ -196,9 +191,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "df23d264d0fe7c61",
+  "active": "3360c6a988b058f3",
   "lastOpenFiles": [
     "wiki/entities/Ethan.md",
+    "個人學習/SRE 學習路徑圖.canvas",
+    "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
     "wiki/concepts/SRE-學習路徑.md",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "modify_roadmap.py",
@@ -241,9 +238,6 @@
     "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/PA440 FW 情資資料更新使用手冊 2024-06-12.md",
     "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/Mail Server 2025-02-04.md",
     "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/cve-2024-4577漏洞研究 2024-07-22.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/Chinese version 繁體中文版本 2026-04-28.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/AI 2024-02-29.md",
-    "個人學習/Leecode/資料結構-鐵人挑戰-35D/🦊 Day31 ~ Day35 2024-05-09.md",
-    "個人學習/SRE 學習路徑圖.canvas"
+    "個人學習/Leecode/資料結構-鐵人挑戰-35D/work/Chinese version 繁體中文版本 2026-04-28.md"
   ]
 }

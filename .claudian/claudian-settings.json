@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "claude-sonnet-4-6",
+  "model": "Qwen3.7 Max",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_DEFAULT_SONNET_MODEL=\"claude-sonnet-4-6\"\nANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3.1-pro-low\nANTHROPIC_DEFAULT_OPUS_MODEL=gpt-5.5s",
+  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_DEFAULT_SONNET_MODEL=\"claude-sonnet-4-6\"\nANTHROPIC_DEFAULT_HAIKU_MODEL=Qwen3.7 Max\nANTHROPIC_DEFAULT_OPUS_MODEL=MiMo-V2.5",
   "envSnippets": [],
   "customContextLimits": {},
   "keyboardNavigation": {
@@ -34,7 +34,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3.1-pro-low|ANTHROPIC_DEFAULT_OPUS_MODEL=gpt-5.5s|ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-6"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=Qwen3.7 Max|ANTHROPIC_DEFAULT_OPUS_MODEL=MiMo-V2.5|ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-6"
     },
     "codex": {
       "enabled": false,
@@ -66,7 +66,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "claude-sonnet-4-6"
+    "claude": "Qwen3.7 Max"
   },
   "savedProviderEffort": {
     "claude": "high"
@@ -78,7 +78,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "claude-sonnet-4-6",
+  "lastCustomModel": "Qwen3.7 Max",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

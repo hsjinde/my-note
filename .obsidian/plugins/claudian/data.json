@@ -2,16 +2,14 @@
   "tabManagerState": {
     "openTabs": [
       {
-        "draftModel": "claude-sonnet-4-6",
         "tabId": "tab-1779932571429-y8oxbe1",
-        "conversationId": null
+        "conversationId": "conv-1780629108708-pnue4kpwq"
       },
       {
-        "draftModel": "claude-sonnet-4-6",
         "tabId": "tab-1780450998639-8i9dyxl",
-        "conversationId": null
+        "conversationId": "conv-1780629168477-xodjexthk"
       }
     ],
-    "activeTabId": "tab-1779932571429-y8oxbe1"
+    "activeTabId": "tab-1780450998639-8i9dyxl"
   }
 }

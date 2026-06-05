@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
+                "file": "wiki/concepts/知識庫架構設計.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Obsidian Skills Ai自动化笔记新方法 使用配置教程"
+              "title": "知識庫架構設計"
             }
           }
         ]
@@ -198,6 +198,11 @@
   },
   "active": "de2f9d567228fc9e",
   "lastOpenFiles": [
+    "wiki/concepts/排序演算法.md",
+    "wiki/concepts/知識庫架構設計.md",
+    "好工具推薦/oc-go-cc 設定指南.md",
+    "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
+    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
     "wiki/entities/KeyLogger-Server.md",
     "wiki/entities/Claudian.md",
@@ -213,10 +218,7 @@
     "wiki/concepts/演算法策略.md",
     "wiki/concepts/資料結構總覽.md",
     "wiki/concepts/搜尋演算法.md",
-    "wiki/concepts/排序演算法.md",
-    "wiki/concepts/知識庫架構設計.md",
     "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
-    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/SRE Engineer & AI Systems Developer.md",
     "wiki/entities/mathruffian-dot.md",
     "wiki/concepts/Obsidian-同步方案.md",
@@ -226,9 +228,7 @@
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
     "個人學習/Leecode/Solution/217. Contains Duplicate.md",
     "個人學習/Leecode/map_script_fix.py",
-    "wiki/entities/Ethan.md",
     "個人學習/SRE 學習路徑圖.canvas",
-    "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
     "modify_roadmap.py",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SyPOfiBzR.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",

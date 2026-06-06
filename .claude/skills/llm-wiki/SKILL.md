@@ -1,4 +1,9 @@
-﻿# Skill: llm-wiki
+﻿---
+name: llm-wiki
+description: Manage the LLM Wiki knowledge base in the vault. Ingest new sources into wiki/, query existing knowledge, run health checks (lint), and archive AI conversations. Use when the user says "ingest", "消化", "整理進 wiki", "查詢", "query", "健康檢查", "lint wiki", or mentions managing their wiki/ knowledge base.
+---
+
+# Skill: llm-wiki
 
 這個 vault 使用 LLM Wiki 模式管理知識。AI 負責維護 `wiki/` 目錄下的提煉知識層，
 原始筆記（Clippings/、個人學習/、工作專案/ 等）保持不變。

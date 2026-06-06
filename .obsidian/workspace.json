@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f6f811cc37f0cf5b",
+        "id": "55d1d83570453096",
         "type": "tabs",
         "children": [
           {
-            "id": "de2f9d567228fc9e",
+            "id": "a4b3130923ba5063",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "core_rules.md",
+                "file": "好工具推薦/OpenCode MCP 配置指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "core_rules"
+              "title": "OpenCode MCP 配置指南"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/entities/KeyLogger-Server.md",
+                "file": "好工具推薦/OpenCode MCP 配置指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "KeyLogger-Server 的反向連結"
+              "title": "OpenCode MCP 配置指南 的反向連結"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/entities/KeyLogger-Server.md",
+                "file": "好工具推薦/OpenCode MCP 配置指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "KeyLogger-Server 的對外連結"
+              "title": "OpenCode MCP 配置指南 的對外連結"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/entities/KeyLogger-Server.md",
+                "file": "好工具推薦/OpenCode MCP 配置指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "KeyLogger-Server 的大綱"
+              "title": "OpenCode MCP 配置指南 的大綱"
             }
           },
           {
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -196,8 +196,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "5fcac832d4fa79c7",
+  "active": "a4b3130923ba5063",
   "lastOpenFiles": [
+    "wiki/concepts/Claude-Code-Lazy-Packs.md",
+    "好工具推薦/OpenCode MCP 配置指南.md",
+    "core_rules.md",
     "test-mcp.md",
     "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
@@ -221,9 +224,6 @@
     "wiki/concepts/Ingest-工作流.md",
     "wiki/concepts/LLM-Wiki.md",
     "wiki/concepts/Claude-Code-Skills.md",
-    "wiki/concepts/Claude-Code-Lazy-Packs.md",
-    "wiki/concepts/演算法策略.md",
-    "wiki/concepts/資料結構總覽.md",
     "core_rules.md.tmp.15856.9119576479ae",
     "core_rules.md.tmp.15856.4a9fb5ea343d",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).canvas",

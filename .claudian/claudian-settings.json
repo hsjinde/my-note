@@ -66,17 +66,21 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "Qwen3.7 Max"
+    "claude": "Qwen3.7 Max",
+    "opencode": "opencode"
   },
   "savedProviderEffort": {
-    "claude": "high"
+    "claude": "high",
+    "opencode": "default"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {
-    "claude": "off"
+    "claude": "off",
+    "opencode": "default"
   },
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "yolo",
+    "opencode": "yolo"
   },
   "lastCustomModel": "Qwen3.7 Max",
   "maxTabs": 3,

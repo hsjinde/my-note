@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0b7baa5137d5df05",
+        "id": "c1326d518d0ed5f5",
         "type": "tabs",
         "children": [
           {
-            "id": "d99cd75f485ff79d",
+            "id": "f902cd3765c6a1db",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/concepts/LLM-Wiki.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "LLM-Wiki"
+              "title": "新分頁"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/concepts/LLM-Wiki.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "LLM-Wiki 的反向連結"
+              "title": "反向連結"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/concepts/LLM-Wiki.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "LLM-Wiki 的對外連結"
+              "title": "對外連結"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/concepts/LLM-Wiki.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "LLM-Wiki 的大綱"
+              "title": "大綱"
             }
           },
           {
@@ -196,10 +189,18 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "28434fdd479df81c",
+  "active": "f902cd3765c6a1db",
   "lastOpenFiles": [
-    "wiki/log.md",
+    "wiki/entities/Obsidian.md",
+    "iAa6kmYLQ_WNwyNvrFLHUQ.md",
+    "Claude Code.md",
     "Clippings/llm-wiki.md",
+    "wiki/concepts/Obsidian-同步方案.md",
+    "wiki/concepts/Obsidian-插件.md",
+    "個人學習/Leecode/Solution/Best practice questions.md",
+    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
+    "wiki/concepts/LLM-Wiki.md",
+    "wiki/log.md",
     "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
     "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
     "core_rules.md",
@@ -216,14 +217,6 @@
     "CLAUDE.md",
     "AGENTS.md",
     "wiki/concepts/Claude-Code-Lazy-Packs.md",
-    "test-mcp.md",
-    "wiki/concepts/知識庫架構設計.md",
-    "wiki/concepts/排序演算法.md",
-    "wiki/entities/KeyLogger-Server.md",
-    "wiki/entities/Claudian.md",
-    "wiki/entities/Claude-Code.md",
-    "wiki/entities/Andrej-Karpathy.md",
-    "wiki/concepts/SRE-學習路徑.md",
     "core_rules.md.tmp.15856.9119576479ae",
     "core_rules.md.tmp.15856.4a9fb5ea343d",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).canvas",

@@ -2,12 +2,14 @@
   "tabManagerState": {
     "openTabs": [
       {
+        "draftModel": "Qwen3.7 Max",
         "tabId": "tab-1779932571429-y8oxbe1",
-        "conversationId": "conv-1780629108708-pnue4kpwq"
+        "conversationId": null
       },
       {
+        "draftModel": "Qwen3.7 Max",
         "tabId": "tab-1780450998639-8i9dyxl",
-        "conversationId": "conv-1780629168477-xodjexthk"
+        "conversationId": null
       }
     ],
     "activeTabId": "tab-1780450998639-8i9dyxl"

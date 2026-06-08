@@ -150,12 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "GEMINI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大綱"
+              "title": "GEMINI 的大綱"
             }
           },
           {
@@ -189,7 +190,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "f902cd3765c6a1db",
+  "active": "57e83f3404bc6f74",
   "lastOpenFiles": [
     "wiki/entities/Obsidian.md",
     "iAa6kmYLQ_WNwyNvrFLHUQ.md",

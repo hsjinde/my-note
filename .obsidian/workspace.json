@@ -11,10 +11,14 @@
             "id": "f902cd3765c6a1db",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "個人學習/多益/文法/02_動詞時態與語態/02_完成式.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "02_完成式"
             }
           }
         ]
@@ -150,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "個人學習/多益/文法/02_動詞時態與語態/02_完成式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大綱"
+              "title": "02_完成式 的大綱"
             }
           },
           {
@@ -191,40 +196,44 @@
   },
   "active": "f902cd3765c6a1db",
   "lastOpenFiles": [
-    "GEMINI.md",
-    "個人學習/多益/文法/README.md",
+    "個人學習/多益/文法/02_動詞時態與語態/01_基本時態與進行式.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構/05_介系詞.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構/04_連接詞.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構/03_形容詞與副詞.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構/02_動詞分類.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構/01_名詞與代名詞.md",
+    "個人學習/多益/文法/05_子句與假設語氣/04_假設語氣.md",
+    "個人學習/多益/文法/05_子句與假設語氣/03_副詞子句.md",
+    "個人學習/多益/文法/05_子句與假設語氣/02_關係子句_形容詞子句.md",
+    "個人學習/多益/文法/05_子句與假設語氣/01_名詞子句.md",
+    "個人學習/多益/文法/05_子句與假設語氣",
+    "個人學習/多益/文法/01_八大詞性與句型結構/06_五大句型.md",
+    "個人學習/多益/文法/01_八大詞性與句型結構",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞/04_情緒動詞與分詞.md",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞/03_分詞與分詞構句.md",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞/02_動名詞.md",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞/01_不定詞.md",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞",
+    "個人學習/多益/文法/04_特殊動詞用法/03_意志動詞與建議動詞.md",
+    "個人學習/多益/文法/04_特殊動詞用法/02_感官動詞.md",
+    "個人學習/多益/文法/04_特殊動詞用法/01_使役動詞.md",
+    "個人學習/多益/文法/04_特殊動詞用法",
+    "個人學習/多益/文法/06_其他多益必考進階題型/04_附加問句.md",
+    "個人學習/多益/文法/06_其他多益必考進階題型/03_主動詞一致性.md",
+    "個人學習/多益/文法/06_其他多益必考進階題型/02_倒裝句.md",
+    "個人學習/多益/文法/06_其他多益必考進階題型/01_比較級與最高級.md",
+    "個人學習/多益/文法/06_其他多益必考進階題型",
+    "個人學習/多益/文法/02_動詞時態與語態/03_被動語態.md",
+    "個人學習/多益/文法/02_動詞時態與語態/02_完成式.md",
+    "個人學習/多益/文法/02_動詞時態與語態",
     "個人學習/多益/文法",
     "個人學習/多益",
-    "wiki/entities/Obsidian.md",
-    "iAa6kmYLQ_WNwyNvrFLHUQ.md",
-    "Claude Code.md",
-    "Clippings/llm-wiki.md",
-    "wiki/concepts/Obsidian-同步方案.md",
-    "wiki/concepts/Obsidian-插件.md",
-    "個人學習/Leecode/Solution/Best practice questions.md",
-    "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md",
-    "wiki/concepts/LLM-Wiki.md",
-    "wiki/log.md",
-    "個人學習/obsidian相關筆記/Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍.md",
-    "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
-    "core_rules.md",
-    "個人學習/obsidian相關筆記/插件安裝.md",
-    "個人學習/obsidian相關筆記/目前的skills.md",
-    "個人學習/obsidian相關筆記/3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️.md",
-    "好工具推薦/OpenCode MCP 配置指南.md",
-    "好工具推薦/oc-go-cc 設定指南.md",
-    "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
-    "Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。.md",
-    "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
-    "Clippings/SRE Engineer & AI Systems Developer.md",
-    "CLAUDE.md",
-    "AGENTS.md",
+    "GEMINI.md",
+    "個人學習/多益/文法/README.md",
     "core_rules.md.tmp.15856.9119576479ae",
     "core_rules.md.tmp.15856.4a9fb5ea343d",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).canvas",
-    "個人學習/Leecode/map_script_fix.py",
     "個人學習/SRE 學習路徑圖.canvas",
-    "modify_roadmap.py",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SyPOfiBzR.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/Sk0blePfA.jpg",
@@ -234,10 +243,6 @@
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/H1ksc-vMC.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/BJm-I2Wf0.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/SJ91joy-C.jpg",
-    "個人學習/資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/ryIZS0B-R.jpg",
-    "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns",
-    "個人學習/資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching",
-    "個人學習/資料結構-鐵人挑戰-35D/assets/02_NonLinear_Structures",
-    "個人學習/資料結構-鐵人挑戰-35D/assets/01_Fundamentals"
+    "個人學習/資料結構-鐵人挑戰-35D/assets/03_Sorting_Searching/ryIZS0B-R.jpg"
   ]
 }

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c1326d518d0ed5f5",
+        "id": "3059fef6b457be25",
         "type": "tabs",
         "children": [
           {
-            "id": "f902cd3765c6a1db",
+            "id": "8ca5de0b7d8fa136",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "日常/與色寶的週末日常.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "與色寶的週末日常"
             }
           }
         ]
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "日常/與色寶的週末日常.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "conflict-files-obsidian-git 的大綱"
+              "title": "與色寶的週末日常 的大綱"
             }
           },
           {
@@ -194,12 +194,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "f902cd3765c6a1db",
+  "active": "8ca5de0b7d8fa136",
   "lastOpenFiles": [
-    "日常/與色寶的週末日常.md",
     "日常/與色寶的週末日常.pdf",
-    "個人學習/多益/文法/03_動狀詞_非謂語動詞/04_情緒動詞與分詞.md",
+    "日常/與色寶的週末日常.md",
     "conflict-files-obsidian-git.md",
+    "個人學習/多益/文法/03_動狀詞_非謂語動詞/04_情緒動詞與分詞.md",
     "wiki/entities/餐廳/馬鹿一代噴火拉麵.md",
     "wiki/entities/餐廳/餐廳總覽.md",
     "wiki/entities/餐廳/精肉壽喜燒處-北村.md",
@@ -223,7 +223,6 @@
     "wiki/entities/餐廳/DOTONBORI-KUROFUNE.md",
     "wiki/entities/餐廳/Dorajyu.md",
     "wiki/entities/餐廳",
-    "wiki/entities/購物/心齋橋PARCO.md",
     "wiki/entities/購物",
     "wiki/entities/景點",
     "wiki/entities/區域",

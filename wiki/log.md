@@ -1,4 +1,4 @@
-﻿---
+---
 title: Wiki 操作日誌
 ---
 
@@ -114,3 +114,9 @@ title: Wiki 操作日誌
 - 好工具推薦/caliber-ai-org/ai-setup 內容不完整，暫不 ingest
 - Clippings/Obsidian Skills 內容極少（僅 YouTube 連結），暫不 ingest
 - wiki/index.md 全面更新，待消化筆記歸零
+
+## [2026-06-07] translate | 全文翻譯 Clippings/llm-wiki.md 為繁體中文
+
+- 將 Karpathy 原文 LLM Wiki gist 完整翻譯為繁體中文
+- 覆寫 wiki/concepts/LLM-Wiki.md（原為摘要版，現改為全文翻譯版）
+- 來源：[[Clippings/llm-wiki]]

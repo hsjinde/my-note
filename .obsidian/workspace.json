@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/知識庫架構設計.md",
+                "file": "好工具推薦/oc-go-cc 設定指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "知識庫架構設計"
+              "title": "oc-go-cc 設定指南"
             }
           }
         ]
@@ -198,10 +198,10 @@
   },
   "active": "de2f9d567228fc9e",
   "lastOpenFiles": [
-    "wiki/concepts/排序演算法.md",
-    "wiki/concepts/知識庫架構設計.md",
-    "好工具推薦/oc-go-cc 設定指南.md",
     "好工具推薦/caliber-ai-orgai-setup Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.md",
+    "好工具推薦/oc-go-cc 設定指南.md",
+    "wiki/concepts/知識庫架構設計.md",
+    "wiki/concepts/排序演算法.md",
     "Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程.md",
     "Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧.md",
     "wiki/entities/KeyLogger-Server.md",

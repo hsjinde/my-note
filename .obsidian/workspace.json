@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3059fef6b457be25",
+        "id": "8d54c02b23493958",
         "type": "tabs",
         "children": [
           {
-            "id": "8ca5de0b7d8fa136",
+            "id": "882e23cedeb800e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "日常/與色寶的週末日常.md",
+                "file": "好工具推薦/oc-go-cc 設定指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "與色寶的週末日常"
+              "title": "oc-go-cc 設定指南"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "好工具推薦/oc-go-cc 設定指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向連結"
+              "title": "oc-go-cc 設定指南 的反向連結"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "好工具推薦/oc-go-cc 設定指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "對外連結"
+              "title": "oc-go-cc 設定指南 的對外連結"
             }
           },
           {
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常/與色寶的週末日常.md",
+                "file": "好工具推薦/oc-go-cc 設定指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "與色寶的週末日常 的大綱"
+              "title": "oc-go-cc 設定指南 的大綱"
             }
           },
           {
@@ -174,11 +176,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 703.5
+    "width": 551.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,44 +196,45 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8ca5de0b7d8fa136",
+  "active": "882e23cedeb800e1",
   "lastOpenFiles": [
-    "日常/與色寶的週末日常.pdf",
-    "日常/與色寶的週末日常.md",
-    "conflict-files-obsidian-git.md",
-    "個人學習/多益/文法/03_動狀詞_非謂語動詞/04_情緒動詞與分詞.md",
-    "wiki/entities/餐廳/馬鹿一代噴火拉麵.md",
-    "wiki/entities/餐廳/餐廳總覽.md",
-    "wiki/entities/餐廳/精肉壽喜燒處-北村.md",
-    "wiki/entities/餐廳/燒肉力丸-難波道頓堀店.md",
+    "wiki/entities/Andrej-Karpathy.md",
+    "wiki/entities/Obsidian.md",
+    "好工具推薦/oc-go-cc 設定指南.md",
     "wiki/entities/餐廳/炸牛排-京都勝牛-梅田店.md",
-    "wiki/entities/餐廳/炭火烤肉-道頓堀みつる.md",
-    "wiki/entities/餐廳/板前燒肉一牛-心齋橋本店.md",
-    "wiki/entities/餐廳/心齋橋-蟹善.md",
-    "wiki/entities/餐廳/味乃家御好燒.md",
-    "wiki/entities/餐廳/Yakinikuen忍鬨.md",
-    "wiki/entities/餐廳/Tonkatsu-Minato.md",
-    "wiki/entities/餐廳/Tachisushi-Maguro.md",
-    "wiki/entities/餐廳/Sumibi-Yakitori-Kibitaki.md",
-    "wiki/entities/餐廳/SUKIYAKI-FUJIMOTO.md",
-    "wiki/entities/餐廳/Onigiri-Gorichan.md",
-    "wiki/entities/餐廳/Onigiri-Gorichan-Nankai-Namba.md",
-    "wiki/entities/餐廳/Nishiya.md",
-    "wiki/entities/餐廳/Gyutan-YOSHIJI-Unagidani.md",
-    "wiki/entities/餐廳/Gyukatsu-Motomura-LUCUA.md",
-    "wiki/entities/餐廳/GYU-NO-HIGE.md",
-    "wiki/entities/餐廳/DOTONBORI-KUROFUNE.md",
-    "wiki/entities/餐廳/Dorajyu.md",
-    "wiki/entities/餐廳",
+    "日常/與色寶的週末日常.md",
+    "日常/與色寶的週末日常.pdf",
+    "日常",
+    "wiki/entities/購物/Orange-Street.md",
+    "wiki/entities/購物/Paper-Message-Osaka.md",
+    "wiki/entities/購物/心齋橋PARCO.md",
     "wiki/entities/購物",
-    "wiki/entities/景點",
+    "wiki/entities/餐廳/Gyutan-YOSHIJI-Unagidani.md",
+    "wiki/entities/餐廳/Nishiya.md",
+    "wiki/entities/餐廳/Tonkatsu-Minato.md",
+    "wiki/entities/餐廳/Onigiri-Gorichan-Nankai-Namba.md",
+    "wiki/entities/餐廳/Onigiri-Gorichan.md",
+    "wiki/entities/餐廳/DOTONBORI-KUROFUNE.md",
+    "wiki/entities/餐廳/Gyukatsu-Motomura-LUCUA.md",
+    "wiki/entities/餐廳/SUKIYAKI-FUJIMOTO.md",
+    "wiki/entities/餐廳/精肉壽喜燒處-北村.md",
+    "wiki/entities/餐廳/Sumibi-Yakitori-Kibitaki.md",
+    "wiki/entities/餐廳/味乃家御好燒.md",
+    "wiki/entities/餐廳/Dorajyu.md",
+    "wiki/entities/餐廳/馬鹿一代噴火拉麵.md",
+    "wiki/entities/餐廳/心齋橋-蟹善.md",
+    "wiki/entities/餐廳/Tachisushi-Maguro.md",
+    "wiki/entities/餐廳/炭火烤肉-道頓堀みつる.md",
+    "wiki/entities/餐廳/GYU-NO-HIGE.md",
+    "wiki/entities/餐廳/板前燒肉一牛-心齋橋本店.md",
+    "wiki/entities/餐廳",
     "wiki/entities/區域",
+    "wiki/entities/景點",
     "opencode.jsonc",
-    "個人學習/多益/文法/05_子句與假設語氣",
-    "個人學習/多益/文法/01_八大詞性與句型結構",
-    "個人學習/多益/文法/03_動狀詞_非謂語動詞",
-    "個人學習/多益/文法/04_特殊動詞用法",
+    "core_rules.md.tmp.15856.9119576479ae",
+    "core_rules.md.tmp.15856.4a9fb5ea343d",
     "個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).canvas",
+    "個人學習/Leecode/map_script_fix.py",
     "個人學習/SRE 學習路徑圖.canvas",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SyPOfiBzR.jpg",
     "個人學習/資料結構-鐵人挑戰-35D/assets/04_Advanced_Searching_Patterns/SkTncB_fR.jpg",

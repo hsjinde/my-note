@@ -11,13 +11,11 @@
             "id": "8ca5de0b7d8fa136",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "日常/與色寶的週末日常.md",
-                "mode": "source",
-                "source": false
+                "file": "日常/與色寶的週末日常.pdf"
               },
-              "icon": "lucide-file",
+              "icon": "lucide-file-text",
               "title": "與色寶的週末日常"
             }
           }
@@ -154,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常/與色寶的週末日常.md",
+                "file": "日常/與色寶的週末日常.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -196,8 +194,8 @@
   },
   "active": "8ca5de0b7d8fa136",
   "lastOpenFiles": [
-    "日常/與色寶的週末日常.pdf",
     "日常/與色寶的週末日常.md",
+    "日常/與色寶的週末日常.pdf",
     "conflict-files-obsidian-git.md",
     "個人學習/多益/文法/03_動狀詞_非謂語動詞/04_情緒動詞與分詞.md",
     "wiki/entities/餐廳/馬鹿一代噴火拉麵.md",

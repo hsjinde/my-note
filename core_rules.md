@@ -15,7 +15,7 @@
 ## 🔑 LLM Wiki 觸發關鍵字
 當使用者提及以下關鍵字時，**立即調用 `/llm-wiki` skill**：
 - **Ingest / 消化 / 整理進 wiki**：將原始筆記提煉進知識庫
-- **查詢 / query / 搜尋知識**：從 wiki 查詢資訊
+- **查詢 / query / 搜尋知識**：從 wiki .
 - **健康檢查 / lint wiki**：檢查 wiki 結構問題
 - **存對話 / 保存討論**：將 AI 對話存為 Clippings/Conversations/
 

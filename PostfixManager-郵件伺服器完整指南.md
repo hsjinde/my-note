@@ -194,13 +194,13 @@ sudo ./start_postfix.sh
 
 **選擇郵件伺服器類型：**
 
-![Postfix 設定 - 選擇 Internet Site](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Postfix-1.png)
+![Postfix 設定 - 選擇 Internet Site](./assets/Postfix-1.png)
 
 > 請選擇 **Internet Site**，讓郵件可以直接透過 SMTP 發送與接收。
 
 **設定系統郵件名稱：**
 
-![Postfix 設定 - 系統郵件名稱](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Postfix-2.png)
+![Postfix 設定 - 系統郵件名稱](./assets/Postfix-2.png)
 
 > 輸入您的完整網域名稱（FQDN），例如 `mail.yourdomain.com`
 
@@ -208,7 +208,7 @@ sudo ./start_postfix.sh
 
 安裝完成後，會看到類似以下畫面：
 
-![PostfixManager 啟動成功](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/run_start_postfix.png)
+![PostfixManager 啟動成功](./assets/run_start_postfix.png)
 
 > [!success] 啟動成功
 > 看到 `Starting development server at http://0.0.0.0:8000/` 表示服務已成功啟動！
@@ -221,13 +221,13 @@ sudo ./start_postfix.sh
 
 #### 登入畫面
 
-![登入畫面](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Authentication-1.png)
+![登入畫面](./assets/Authentication-1.png)
 
 點擊 **登入** 按鈕進入帳號密碼輸入頁面。
 
 #### 輸入帳號密碼
 
-![輸入帳號密碼](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Authentication-2.png)
+![輸入帳號密碼](./assets/Authentication-2.png)
 
 | 欄位 | 預設值 |
 |------|--------|
@@ -241,15 +241,15 @@ sudo ./start_postfix.sh
 
 1. 進入 Django 管理後台，選擇要修改的管理員帳號：
 
-![管理員列表](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/admin_Management-1.png)
+![管理員列表](./assets/admin_Management-1.png)
 
 2. 點擊密碼欄位的 **this form** 連結：
 
-![密碼修改連結](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/admin_Management-2.png)
+![密碼修改連結](./assets/admin_Management-2.png)
 
 3. 輸入新密碼並確認：
 
-![輸入新密碼](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/admin_Management-3.png)
+![輸入新密碼](./assets/admin_Management-3.png)
 
 > [!tip] 密碼規則
 > - 至少 8 個字元
@@ -270,21 +270,21 @@ sudo ./start_postfix.sh
 | **SYSTEM MESSAGE** | 系統提示訊息 |
 | **DNS COUNT** | 已管理的域名數量 |
 
-![DNS 管理主畫面](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/DNS_Management-1.png)
+![DNS 管理主畫面](./assets/DNS_Management-1.png)
 
 #### 新增域名
 
 1. 輸入欲新增的域名，點擊 **Create & Use**：
 
-![新增域名輸入](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/DNS_Management-Add_DNS-1.png)
+![新增域名輸入](./assets/DNS_Management-Add_DNS-1.png)
 
 2. 域名建立完成後會顯示在列表中：
 
-![域名建立完成](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/DNS_Management-Add_DNS-2.png)
+![域名建立完成](./assets/DNS_Management-Add_DNS-2.png)
 
 3. 系統會自動生成 DNS 記錄資訊，請記錄下來：
 
-![DNS 記錄資訊](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/DNS_Management-Add_DNS-3.png)
+![DNS 記錄資訊](./assets/DNS_Management-Add_DNS-3.png)
 
 #### DNS 記錄類型說明
 
@@ -302,25 +302,25 @@ sudo ./start_postfix.sh
 
 **步驟 1：新增 A Record**
 
-![Cloudflare A Record](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Cloudflare-A.png)
+![Cloudflare A Record](./assets/Cloudflare-A.png)
 
 > ⚠️ **重要**：郵件伺服器的 A Record 務必 **關閉 Cloudflare 代理功能**（灰色雲朵）
 
 **步驟 2：新增 MX Record**
 
-![Cloudflare MX Record](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Cloudflare-MX.png)
+![Cloudflare MX Record](./assets/Cloudflare-MX.png)
 
 **步驟 3：新增 DMARC 記錄**
 
-![Cloudflare DMARC](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Cloudflare-dmarc.png)
+![Cloudflare DMARC](./assets/Cloudflare-dmarc.png)
 
 **步驟 4：新增 DKIM 記錄**
 
-![Cloudflare DKIM](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Cloudflare-domainkey.png)
+![Cloudflare DKIM](./assets/Cloudflare-domainkey.png)
 
 **步驟 5：新增 SPF 記錄**
 
-![Cloudflare SPF](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Cloudflare-srf.png)
+![Cloudflare SPF](./assets/Cloudflare-srf.png)
 
 #### DNS 設定驗證
 
@@ -346,7 +346,7 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 點擊域名列表中的 **Use** 按鈕即可切換：
 
-![切換域名](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/DNS_Management-Change_DNS.png)
+![切換域名](./assets/DNS_Management-Change_DNS.png)
 
 ---
 
@@ -354,32 +354,32 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 別名管理用於建立郵件帳號（如 `user1@yourdomain.com`）。
 
-![別名管理主畫面](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management.png)
+![別名管理主畫面](./assets/Alias_Management.png)
 
 #### 新增別名帳號
 
 輸入帳號與密碼，點擊 **Create**：
 
-![新增別名](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-Add_user-1.png)
+![新增別名](./assets/Alias_Management-Add_user-1.png)
 
 建立成功後會顯示在列表中：
 
-![別名建立成功](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-Add_user-2.png)
+![別名建立成功](./assets/Alias_Management-Add_user-2.png)
 
 #### 更改密碼
 
 點擊 **Change PWD** 按鈕進入密碼修改頁面：
 
-![更改密碼](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-Change_password.png)
+![更改密碼](./assets/Alias_Management-Change_password.png)
 
 #### 鎖定/解鎖帳號
 
 - **鎖定**：暫停該帳號收發信功能
 - **解鎖**：恢復帳號功能
 
-![鎖定帳號](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-Lock_user.png)
+![鎖定帳號](./assets/Alias_Management-Lock_user.png)
 
-![解鎖帳號](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-UnLock_user.png)
+![解鎖帳號](./assets/Alias_Management-UnLock_user.png)
 
 > [!note] 鎖定狀態指示
 > - 🟢 綠色圓點：帳號正常
@@ -389,7 +389,7 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 點擊 **Delete** 按鈕，確認後即可刪除：
 
-![刪除帳號確認](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/Alias_Management-Delete_user.png)
+![刪除帳號確認](./assets/Alias_Management-Delete_user.png)
 
 > [!danger] 警告
 > 刪除帳號為不可逆操作，請謹慎執行！
@@ -414,7 +414,7 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 #### 步驟 1：新增資料檔
 
-![Outlook 新增資料檔](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-1.png)
+![Outlook 新增資料檔](./assets/outlook_setting-1.png)
 
 1. 開啟 Outlook，點選「工具」>「帳戶設定」>「資料檔」>「新增」
 2. 選擇「Office Outlook 個人資料檔」，點選「確定」
@@ -423,17 +423,17 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 選擇「網際網路電子郵件」：
 
-![Outlook 選擇郵件服務](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-2.png)
+![Outlook 選擇郵件服務](./assets/outlook_setting-2.png)
 
 #### 步驟 3：手動設定伺服器
 
 勾選「手動設定伺服器或其他伺服器類型」：
 
-![Outlook 手動設定](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-3.png)
+![Outlook 手動設定](./assets/outlook_setting-3.png)
 
 #### 步驟 4：輸入帳號資訊
 
-![Outlook 帳號設定](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-5.png)
+![Outlook 帳號設定](./assets/outlook_setting-5.png)
 
 | 欄位 | 設定值 |
 |------|--------|
@@ -447,7 +447,7 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 #### 步驟 5：進階設定
 
-![Outlook 進階設定](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-6.png)
+![Outlook 進階設定](./assets/outlook_setting-6.png)
 
 | 設定項目 | 值 |
 |----------|-----|
@@ -460,7 +460,7 @@ nslookup -type=TXT mail._domainkey.yourdomain.com 8.8.8.8
 
 #### 步驟 6：新增自訂資料夾
 
-![Outlook 新增資料夾](C:/Users/DE/Downloads/V 1.0.2(pakage)-20260617T051205Z-3-001/V 1.0.2(pakage)/assets/outlook_setting-7.png)
+![Outlook 新增資料夾](./assets/outlook_setting-7.png)
 
 右鍵點選帳號名稱，可新增「收件匣」、「寄件備份」等自訂資料夾。
 

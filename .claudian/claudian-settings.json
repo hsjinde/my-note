@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "Qwen3.7 Max",
+  "model": "DeepSeek V4 Flash",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,11 +11,15 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_DEFAULT_SONNET_MODEL=\"claude-sonnet-4-6\"\nANTHROPIC_DEFAULT_HAIKU_MODEL=Qwen3.7 Max\nANTHROPIC_DEFAULT_OPUS_MODEL=MiMo-V2.5",
+  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_DEFAULT_SONNET_MODEL=Qwen3.6 Plus\nANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro\nANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash",
   "envSnippets": [],
   "customContextLimits": {
     "Qwen3.7 Max": 1000000,
-    "claude-sonnet-4-6": 1000000
+    "claude-sonnet-4-6": 1000000,
+    "Kimi K2.6": 900000,
+    "DeepSeek V4 Pro": 1000000,
+    "DeepSeek V4 Flash": 1000000,
+    "Qwen3.6 Plus": 1000000
   },
   "keyboardNavigation": {
     "scrollUpKey": "w",
@@ -37,7 +41,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=Qwen3.7 Max|ANTHROPIC_DEFAULT_OPUS_MODEL=MiMo-V2.5|ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-6"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro|ANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash|ANTHROPIC_DEFAULT_SONNET_MODEL=Qwen3.6 Plus"
     },
     "codex": {
       "enabled": false,
@@ -69,7 +73,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "Qwen3.7 Max",
+    "claude": "DeepSeek V4 Flash",
     "opencode": "opencode"
   },
   "savedProviderEffort": {
@@ -85,7 +89,7 @@
     "claude": "yolo",
     "opencode": "yolo"
   },
-  "lastCustomModel": "Qwen3.7 Max",
+  "lastCustomModel": "DeepSeek V4 Flash",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

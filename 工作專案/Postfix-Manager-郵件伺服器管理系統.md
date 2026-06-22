@@ -25,7 +25,7 @@ source: 'D:\mail-server'
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
-> 基於 Django 的郵件伺服器管理系統，通過 Web 介面管理 Postfix、Dovecot、OpenDKIM 配置。支援多網域、TLS 憑證自動簽發、DKIM 金鑰自動產生，並透過 Nginx SSL Stream Proxy 解決主機商封鎖 993/995/465 連接埠的問題。
+> 基於 Django 的郵件伺服器管理系統，通過 Web 介面管理 Postfix、Dovecot、OpenDKIM 配置。支援多網域、TLS 憑證自動簽發、DKIM 金鑰自動產生，並透過 Nginx SSL Stream Proxy 統一對外的加密郵件接入點。
 
 ## Table of Contents
 - [專案概述](#專案概述)
@@ -50,7 +50,7 @@ Postfix Manager 是一個自架郵件伺服器的管理介面，封裝了 Postfi
 
 **核心設計理念：**
 - 把繁瑣的郵件伺服器配置（Postfix/Dovecot/OpenDKIM）封裝成 Web UI 操作
-- 透過 **Nginx 8443 SSL Stream Proxy** 繞過主機商對 995/993/465 的封鎖
+- 透過 **Nginx 8443 SSL Stream Proxy** 統一對外的加密 POP3 接入點（環境無關設計，見下方說明）
 - 自動整合 Let's Encrypt 憑證簽發流程（webroot 驗證）
 - 信箱帳號直接對應 Linux 系統使用者（底層為系統帳號）
 
@@ -69,7 +69,7 @@ Postfix Manager 是一個自架郵件伺服器的管理介面，封裝了 Postfi
 | **別名（信箱帳號）管理** | 建立、刪除、鎖定/解鎖、修改密碼（底層為 Linux 系統使用者） |
 | **TLS 憑證整合** | 透過 Certbot + Nginx webroot 自動簽發 Let's Encrypt 憑證 |
 | **OpenDKIM 配置** | 自動產生 DKIM 金鑰並寫入 KeyTable / SigningTable / TrustedHosts |
-| **Nginx SSL Stream Proxy** | 將 POP3 (110) 透過 8443 SSL 對外提供，繞過主機商封鎖 |
+| **Nginx SSL Stream Proxy** | 將 POP3 (110) 透過 8443 SSL 對外提供，統一加密接入點 |
 | **一鍵部署腳本** | `deploy.sh` 自動完成所有安裝與設定 |
 
 ---
@@ -145,10 +145,6 @@ graph LR
         MUA[Outlook / MUA]
     end
 
-    subgraph 主機商網路
-        BLOCK["封鎖 995/993/465"]
-    end
-
     subgraph Nginx
         N80["80 HTTP"]
         N443["443 HTTPS"]
@@ -180,17 +176,26 @@ graph LR
     APP --> CB
     PF --> DK
 
-    style BLOCK fill:#f55,color:#fff
     style N8443 fill:#3c3,color:#fff
 ```
 
-### 8443 SSL Stream Proxy 設計重點
+### 8443 SSL Stream Proxy 設計理念
 
-> 許多 VPS / 雲端主機商會封鎖 993 / 995 / 465 的直接 TLS 連線。本系統透過 Nginx 在 **8443** 接收 SSL 連線，終止 SSL 後轉發到內部 Dovecot POP3 (110)，繞過封鎖。
+本系統對外 POP3 走 **8443 (SSL)** 而非傳統 995，SMTP 走 **587 (STARTTLS)** 而非 465。這是個**與環境無關的架構選擇**，不預設任何 port 遭封鎖，優勢包括：
+
+| 設計目標 | 說明 |
+|----------|------|
+| **統一外部接入點** | 不論底層 Dovecot 跑在哪個 port、是否啟用 SSL，對外都走 8443 SSL，用戶端設定一致 |
+| **SSL 終止集中於 Nginx** | 憑證管理統一在 Nginx 層，Dovecot 內部 110 保持純文字，設定單純 |
+| **跨環境可攜** | 無論主機商是否允許 993/995/465 直接 TLS、是否在 NAT/防火牆後，8443 都能穩定運作 |
+| **避開常見限制** | 部分主機商/ISP 確實會限制 993/995/465，8443 + 587 是大多數環境都放行的 port |
+| **內部服務解耦** | Dovecot 內部監聽 127.0.0.1:110 即可，SSL 交給 Nginx 處理 |
 
 ```
 用戶端 (SSL) ──:8443──> Nginx (SSL 終止) ──> 127.0.0.1:110 (Dovecot POP3)
 ```
+
+> 💡 若你的環境允許 993/995/465，也可自行調整 Nginx/Dovecot 設定改走標準 port；本系統預設以 8443 + 587 作為最通用、相容性最高的組合。
 
 ---
 
@@ -498,8 +503,10 @@ mail._domainkey IN TXT "v=DKIM1; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMII
 | 25 | SMTP | Postfix 收信 |
 | 587 | SMTP STARTTLS | Postfix 寄信（Outlook 外寄用） |
 | 110 | POP3 | Dovecot 內部（僅 127.0.0.1） |
-| 8443 | POP3 SSL | Nginx Stream Proxy → 127.0.0.1:110 |
+| 8443 | POP3 SSL | Nginx Stream Proxy → 127.0.0.1:110（對外加密接入點） |
 | 8000 | Django | 應用程式（僅 127.0.0.1） |
+
+> 💡 本系統預設對外郵件 port 為 **8443 (POP3 SSL)** 與 **587 (SMTP STARTTLS)**，這是在各種主機環境下相容性最高的組合。若你的環境允許標準 993/995/465，也可自行調整 Nginx/Dovecot 設定改走標準 port。
 
 ---
 
@@ -573,16 +580,17 @@ ALLOWED_HOSTS = ["*"]  # 生產環境應設為特定 IP 或網域
 ```
 
 ### POP3 無法連線
-- 使用 Port **8443 (SSL)**，非 995
-- 確認主機商防火牆未阻擋 8443
+- 使用 Port **8443 (SSL)**（本系統預設對外 port）
+- 確認主機商防火牆/安全群組允許 8443 對外
 - 確認 Nginx stream proxy 運行：`nginx -t && systemctl status nginx`
 - 確認 Dovecot 運行：`systemctl status dovecot`
 - 確認 Cloudflare A 記錄已設為 **DNS only**
 
 ### SMTP 無法連線
-- 使用 Port **587 + STARTTLS**，不要用 465
+- 使用 Port **587 + STARTTLS**（本系統預設外寄 port）
 - 確認「我的伺服器需要驗證」已勾選
 - 確認 Postfix 運行：`systemctl status postfix`
+- 確認主機商防火牆/安全群組允許 587 對外
 
 ### 寄到 Gmail 被退信 / 進垃圾信
 - 確認 SPF、DKIM、DMARC 記錄均已正確設定
@@ -606,12 +614,12 @@ ALLOWED_HOSTS = ["*"]  # 生產環境應設為特定 IP 或網域
 
 ---
 
-## 相關文件
+## 相關文件（位於專案 `D:\mail-server`）
 
-- [[README]] — 專案說明
-- [[SETUP_GUIDE]] — Outlook 與 Cloudflare 設定指南
-- [[LINUX_INSTALLATION]] — Linux 完整安裝指南
-- [[OLDER_LINUX_COMPATIBILITY]] — 舊版 Linux 相容性說明
+- `README.md` — 專案說明
+- `SETUP_GUIDE.md` — Outlook 與 Cloudflare 設定指南
+- `LINUX_INSTALLATION.md` — Linux 完整安裝指南
+- `OLDER_LINUX_COMPATIBILITY.md` — 舊版 Linux 相容性說明
 
 ## 授權
 

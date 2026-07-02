@@ -6,17 +6,18 @@
 
 ## 專案概述
 
-在 CORE PULSE 網站（`core-pulse.19980803.xyz`）右上角增加一個 Lottie/SVG 吉祥物浮動按鈕，訪客點擊後展開聊天窗，可與 AI 對話。吉祥物以 **hsjinde 本人第一人稱** 回答，內容來自 `src/content/wiki/*.md` 中的 LLM Wiki。
+在 CORE PULSE 網站（`core-pulse.19980803.xyz`）右下角增加一個 SVG 企鵝吉祥物浮動按鈕，訪客點擊後展開聊天窗，可與 AI 對話。吉祥物以 **hsjinde 本人第一人稱** 回答，內容來自 `src/content/wiki/*.md` 中的 LLM Wiki。
 
 ### 技術棧
 
-| 層級 | 技術 |
-|------|------|
-| 前端 Widget | React 19 + TypeScript 5 + Vite 5 + Framer Motion |
-| 聊天 UI | react-markdown + SSE 串流 + sessionStorage 記憶 |
-| LLM Client | 瀏覽器端直接呼叫 OpenAI-compatible API |
-| 部署 | Cloudflare Pages + D1（rate limiting） |
-| LLM 端點 | 自架 `cli.19980803.xyz/v1`（OpenAI-compatible proxy） |
+| 層級         | 技術                                                |
+| ---------- | ------------------------------------------------- |
+| 前端 Widget  | React 19 + TypeScript 5 + Vite 5 + Framer Motion  |
+| 聊天 UI      | react-markdown + SSE 串流 + sessionStorage 記憶       |
+| LLM Client | 瀏覽器端直接呼叫 OpenAI-compatible API                    |
+| 部署         | Cloudflare Pages + D1（rate limiting）              |
+| LLM 端點     | 自架 `cli.19980803.xyz/v1`（OpenAI-compatible proxy） |
+|            |                                                   |
 
 ---
 
@@ -317,3 +318,9 @@ node scripts/set-pages-env.cjs
 - 建立日期：2026-07-01
 - 分支：`feat/llm-wiki-mascot` → merged to `main`
 - Commit range: `0c8a182` → `f2ee452`
+
+### 更新紀錄
+- **2026-07-02**：
+  - 將吉祥物重新設計為**企鵝**造型，並加入迪士尼「Squash & Stretch」動態呼吸效果。
+  - 修復手機版 UI 跑版問題，將 MascotWidget 從右上角改為**右下角**固定，並透過 `calc(100vw - 48px)` 限制聊天視窗最大寬度。
+  - 修正了各區塊（BentoGrid, Projects, Blog）因絕對定位分隔線造成的水平捲軸溢出，加入 `overflow: hidden` 與 `max-width: 100vw` 鎖定佈局。

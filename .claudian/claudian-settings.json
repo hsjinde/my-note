@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "DeepSeek V4 Flash",
+  "model": "gemini-3.5-flash",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=\"aQIZwcpdjSvc16EYi55x4iEH7UcDDp60\"\nANTHROPIC_BASE_URL=\"https://cli.19980803.xyz/v1\"\nANTHROPIC_DEFAULT_SONNET_MODEL=Qwen3.6 Plus\nANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro\nANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash",
+  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=LFxvn15sKj51rZNooAcAtNdMcLpgWb4Qj2UemTPLWDDeQp9vva\nANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1\nANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.5-flash\nANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro\nANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash",
   "envSnippets": [],
   "customContextLimits": {
     "Qwen3.7 Max": 1000000,
@@ -41,7 +41,7 @@
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro|ANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash|ANTHROPIC_DEFAULT_SONNET_MODEL=Qwen3.6 Plus"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro|ANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash|ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.5-flash"
     },
     "codex": {
       "enabled": false,
@@ -73,7 +73,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "DeepSeek V4 Flash",
+    "claude": "gemini-3.5-flash",
     "opencode": "opencode"
   },
   "savedProviderEffort": {
@@ -89,7 +89,7 @@
     "claude": "yolo",
     "opencode": "yolo"
   },
-  "lastCustomModel": "DeepSeek V4 Flash",
+  "lastCustomModel": "gemini-3.5-flash",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "obsidian": {
-      "command": "C:\\Users\\hsjin\\AppData\\Roaming\\npm\\mcpvault.cmd",
+      "command": "C:\\Users\\DE\\AppData\\Roaming\\npm\\mcpvault.cmd",
       "args": [
-        "D:\\大阪-vault"
+        "D:\\my-note"
       ]
     }
   }

@@ -1,6 +1,6 @@
 # Core Rules
 
-本 Vault 為 **LLM Wiki 知識管理系統**：AI 提煉原始筆記（剪藏、學習、工作） into `wiki/` 知識層，原始資料保持唯讀。
+本 Vault 為 **LLM Wiki 知識管理系統**：AI 提煉原始筆記（剪藏、學習、工作）進 `wiki/` 知識層，原始資料保持唯讀。
 
 ## 🛠 工具與協作
 - **筆記操作優先序**：`obsidian-cli` (Skill) ➔ `mcpvault` (Obsidian MCP 備選) ➔ 檔案直接讀寫。
@@ -10,12 +10,12 @@
 
 ## 📁 目錄與知識架構
 - `wiki/`：AI 維護的知識層（concepts/、entities/、queries/）。操作前必讀 `wiki/index.md`，操作後記錄至 `wiki/log.md`。
-- **唯讀原始區**：`Clippings/`（網頁剪藏、對話紀錄）、`工作專案/`、`個人學習/`、`資料結構-鐵人挑戰-35D/` 等。AI 應提煉這些內容進 `wiki/`，而非直接大改原始檔。
+- **唯讀原始區**：`Clippings/`（網頁剪藏、對話紀錄）、`工作專案/`、`個人學習/`、`好工具推薦/`、`日常/` 等。AI 應提煉這些內容進 `wiki/`，而非直接大改原始檔。
 
 ## 🔑 LLM Wiki 觸發關鍵字
 當使用者提及以下關鍵字時，**立即調用 `/llm-wiki` skill**：
 - **Ingest / 消化 / 整理進 wiki**：將原始筆記提煉進知識庫
-- **查詢 / query / 搜尋知識**：從 wiki .
+- **查詢 / query / 搜尋知識**：從 wiki 知識庫檢索、回答問題
 - **健康檢查 / lint wiki**：檢查 wiki 結構問題
 - **存對話 / 保存討論**：將 AI 對話存為 Clippings/Conversations/
 

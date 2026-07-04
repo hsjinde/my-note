@@ -5,6 +5,13 @@
       "args": [
         "D:\\my-note"
       ]
+    },
+    "tavily": {
+      "command": "npx",
+      "args": ["-y", "@tavily/mcp"],
+      "env": {
+        "TAVILY_API_KEY": "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"
+      }
     }
   }
 }

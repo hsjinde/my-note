@@ -120,3 +120,16 @@ title: Wiki 操作日誌
 - 將 Karpathy 原文 LLM Wiki gist 完整翻譯為繁體中文
 - 覆寫 wiki/concepts/LLM-Wiki.md（原為摘要版，現改為全文翻譯版）
 - 來源：[[Clippings/llm-wiki]]
+
+## [2026-07-04] ingest | 第七批：多益文法體系（hub 導覽頁）
+
+來源：
+- [[個人學習/多益/]] 全套教材（文法 29 章 + 閱讀 6 篇 + 模擬 2 份 + 全套詳解）
+- [[個人學習/多益/_specs/2026-07-03-toeic-expansion-design]]
+
+建立概念頁 1 個：
+- wiki/concepts/多益文法體系.md（章節地圖 hub，含 6 大類 29 章秒殺重點 + 全路徑 wikilink）
+
+更新：wiki/index.md（新增「語言學習」分類）
+
+備註：hub 型導覽頁，未逐章拆頁；如需獨立「秒殺公式速查」頁可後續再拆。

@@ -155,3 +155,21 @@ title: Wiki 操作日誌
 - `concepts/RAG-vs-LLM-Wiki.md`：新增「為什麼 Karpathy 反對 chunked RAG」（長上下文論點）
 - `index.md`：queries 區塊改為表格、登錄新歸檔頁
 - `core_rules.md`：新增「⚙️ Wiki 運作紀律」（lint 節奏／query 歸檔／長上下文模型）
+
+## [2026-07-05] query+ingest | 網搜多益秒殺文法並消化進筆記
+
+來源：tvly 網路搜尋（13 個外部來源，含 NextSchool／PrepEdu／巨匠／TutorABC／菁英）
+
+- `concepts/多益文法體系.md`：新增「Part 5 秒殺速查 SOP」節（四步法／位置法／字尾表／時態訊號詞／介連 8 組／兩大陷阱），並在來源補查詢歸檔連結
+- 新建查詢歸檔 `queries/2026-07-05-toeic-part5-秒殺sop.md`
+- `index.md`：queries 區塊新增登錄
+
+## [2026-07-05] query+ingest | 依章節標題深挖多益進階難題（800+）
+
+使用者回饋：先前秒殺法太初階，建議按 vault 章節標題查更難的。
+來源：tvly 6 組進階網搜（15 個外部來源，含常春藤／NextSchool／PrepEdu／LTTC）
+
+- 新建概念頁 `concepts/多益文法-進階難題.md`（假設倒裝＋混合假設、分詞構句、關代前置＋複合關代、一致/平行/比較、名詞子句/否定倒裝/意志動詞）
+- 新建查詢歸檔 `queries/2026-07-05-toeic-進階文法難題.md`
+- `concepts/多益文法體系.md`：教材範圍新增「進階難題」連結（雙向）
+- `index.md`：concepts「語言學習」新增進階頁、queries 新增登錄

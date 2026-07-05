@@ -19,6 +19,11 @@
 - **健康檢查 / lint wiki**：檢查 wiki 結構問題
 - **存對話 / 保存討論**：將 AI 對話存為 Clippings/Conversations/
 
+## ⚙️ Wiki 運作紀律（源自 LLM Wiki 社群實踐）
+- **Lint 節奏**：每 ingest 約 10 次或每月至少一次健康檢查（孤立頁／斷鏈／矛盾／過時）。
+- **Query 歸檔**：有價值的查詢答案，依 `/llm-wiki` Query 工作流歸檔到 `wiki/queries/`，避免知識流失。
+- **模型選擇**：wiki 查詢優先用長上下文模型（餵完整 wiki context），而非 chunked RAG——切塊會破壞跨頁推理。
+
 ## ✍️ 寫作與格式規範
 - **極致精簡**：繁體中文回覆。短段落、精簡條列，不講廢話、不主動補充未要求的背景說明。
 - **語法**：相容 Obsidian 格式。內部連結用 `[[Wikilinks]]`，外部用標準 `[Link](URL)`。

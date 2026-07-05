@@ -133,3 +133,25 @@ title: Wiki 操作日誌
 更新：wiki/index.md（新增「語言學習」分類）
 
 備註：hub 型導覽頁，未逐章拆頁；如需獨立「秒殺公式速查」頁可後續再拆。
+
+## [2026-07-05] lint | 健康檢查與修復
+
+掃描 23 個 wiki 頁面，發現並修復：
+
+- **異常頁**：`concepts/購物指南.md`（未登錄 index、無 ingest 紀錄、主題與 vault 無關、內部連結與來源全斷鏈）→ 移至 `.trash/`（Obsidian 回收桶，可復原）
+- **孤立/欠連結**：`LLM-Wiki.md`、`知識庫架構設計.md` 提到 Karpathy 卻未連結 → 各補 `[[Andrej-Karpathy]]`（同時解除 Andrej-Karpathy 孤立狀態）；LLM-Wiki 原無任何 wiki 內部連結，新增「相關概念」導覽區塊
+- **不一致**：`index.md` 中 `[[LLM-Wiki]]` 來源數 2 → 1（與頁面 frontmatter 一致）
+- 已更新 LLM-Wiki、知識庫架構設計、index 的 `updated` 為 2026-07-05
+
+未動（自然孤立，可接受）：`多益文法體系`、`KeyLogger-Server`。
+待你決定：`Claude-Code.md` 模型清單可能過時（Sonnet 4.6/GPT-5.5），因屬提煉自原始筆記，未主動改。
+
+## [2026-07-05] query+ingest | 網搜 Obsidian LLM Wiki 生態並優化筆記
+
+來源：tvly 網路搜尋（10 個外部來源，含 MindStudio/TheToolNerd/GoPenAI/agricidaniel/GitHub second-brain）
+
+- 新建查詢歸檔 `queries/2026-07-05-obsidian-llm-wiki.md`（補足先前空的 queries/）
+- `concepts/LLM-Wiki.md`：新增「生態與實作工具」節（Karpathy 官方插件、claude-obsidian、second-brain）
+- `concepts/RAG-vs-LLM-Wiki.md`：新增「為什麼 Karpathy 反對 chunked RAG」（長上下文論點）
+- `index.md`：queries 區塊改為表格、登錄新歸檔頁
+- `core_rules.md`：新增「⚙️ Wiki 運作紀律」（lint 節奏／query 歸檔／長上下文模型）

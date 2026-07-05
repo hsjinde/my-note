@@ -4,7 +4,7 @@ tags:
   - 知識管理
   - AI
   - 概念
-updated: '2026-06-07'
+updated: '2026-07-05'
 source_count: 1
 ---
 
@@ -82,3 +82,23 @@ source_count: 1
 ## 備註
 
 這份文件刻意保持抽象。它描述的是概念，而不是特定實作。確切的目錄結構、Schema 慣例、頁面格式、工具選擇——所有這些都取決於你的領域、偏好和選擇的 LLM。以上提到的所有內容都是可選和模組化的——選擇有用的，忽略不需要的。例如：你的來源可能只有文字，所以你完全不需要圖片處理。你的 Wiki 可能夠小，索引檔案就足夠了，不需要搜尋引擎。你可能不在乎投影片，只想要 Markdown 頁面。你可能想要一套完全不同的輸出格式。正確的使用方式是與你的 LLM Agent 分享這份文件，然後一起合作，建立一個適合你需求的版本。這份文件唯一的任務是傳達模式。你的 LLM 可以處理其餘的一切。
+
+## 生態與實作工具
+
+社群已出現多個把此模式產品化的實作（2026）：
+
+| 實作 | 型態 | 特點 |
+|---|---|---|
+| Karpathy LLM Wiki | Obsidian 官方插件 | entity/concept 頁 + 對話式查詢；官方評分 95/100、10 語系 |
+| claude-obsidian | Claude Code plugin | `.raw/` 唯讀、10 skills、hot cache 保留 session context |
+| second-brain (NicholasSpisak) | 跨 agent skills | `/second-brain-{ingest,query,lint}`；支援 Claude Code/Codex/Cursor/Gemini |
+
+共通設計：`raw/` 唯讀、`wiki/` 由 LLM 維護、`index.md`+`log.md` 為骨幹、ingest/query/lint 三操作。
+外部實作對照與來源見 [[2026-07-05-obsidian-llm-wiki]] 查詢歸檔。
+
+## 相關概念（Wiki 導覽）
+
+- [[Andrej-Karpathy]] — 本概念原作者
+- [[RAG-vs-LLM-Wiki]] — 與 RAG 做法的核心差異
+- [[知識庫架構設計]] — Karpathy 原版與各改造版比較
+- [[Ingest-工作流]] — 消化新資料進 Wiki 的流程

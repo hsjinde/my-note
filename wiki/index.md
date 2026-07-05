@@ -1,6 +1,6 @@
 ---
 title: Wiki 索引
-updated: '2026-07-04'
+updated: '2026-07-05'
 ---
 
 # Wiki 索引
@@ -16,7 +16,7 @@ updated: '2026-07-04'
 
 | 頁面 | 摘要 | 來源數 |
 |---|---|---|
-| [[LLM-Wiki]] | Karpathy 提出的知識管理模式：AI 持續維護 Markdown Wiki，知識累積不重新檢索 | 2 |
+| [[LLM-Wiki]] | Karpathy 提出的知識管理模式：AI 持續維護 Markdown Wiki，知識累積不重新檢索 | 1 |
 | [[RAG-vs-LLM-Wiki]] | 兩種 AI 知識做法的核心差異比較 | 2 |
 | [[知識庫架構設計]] | Karpathy 原版、范凱 5 層、HC 三層架構比較 | 2 |
 | [[Ingest-工作流]] | 將新資料消化進 Wiki 的三步流程與確認機制 | 1 |
@@ -63,7 +63,9 @@ updated: '2026-07-04'
 
 ## 查詢歸檔（queries/）
 
-> 尚未建立。有價值的問答會自動歸檔於此。
+| 頁面 | 摘要 | 日期 |
+|---|---|---|
+| [[2026-07-05-obsidian-llm-wiki]] | Obsidian × LLM Wiki 生態、外部實作對照與最佳實踐 | 2026-07-05 |
 
 ---
 

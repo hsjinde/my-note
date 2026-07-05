@@ -1,7 +1,7 @@
 ---
 title: RAG vs LLM Wiki
 tags: [知識管理, AI, 比較]
-updated: 2026-06-04
+updated: 2026-07-05
 source_count: 2
 ---
 
@@ -33,6 +33,12 @@ source_count: 2
 - 需要跨文件合成與持久記憶
 - 重視回答一致性與知識脈絡
 - 希望不被特定平台綁定
+
+## 為什麼 Karpathy 反對 chunked RAG
+
+Karpathy 的核心主張：wiki 查詢應**餵完整 wiki context 給長上下文模型**，而非用 RAG 切塊檢索。
+理由是 chunked RAG 會**切碎知識**，破壞 LLM 跨頁面推理、走訪知識圖譜的能力——這正是 LLM Wiki 相對 RAG 的關鍵優勢。
+因此社群實作普遍**建議長上下文模型**：Wiki 越大，越需要長 context。
 
 ## 混合使用
 

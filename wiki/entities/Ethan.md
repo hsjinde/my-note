@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ethan
 tags: [人物, SRE, AI, 個人]
 updated: 2026-06-04

@@ -173,3 +173,11 @@ title: Wiki 操作日誌
 - 新建查詢歸檔 `queries/2026-07-05-toeic-進階文法難題.md`
 - `concepts/多益文法體系.md`：教材範圍新增「進階難題」連結（雙向）
 - `index.md`：concepts「語言學習」新增進階頁、queries 新增登錄
+
+## [2026-07-09] lint | 健康檢查與修復
+
+掃描 24 個 wiki 頁面，發現並修復：
+
+- **斷鏈**：`concepts/NeetCode-刷題路線.md` 來源清單 `[[Best practice questions]]` 無對應檔（`個人學習/Leecode/Solution/` 下不存在）→ 移除該行
+- **孤立頁**：`entities/KeyLogger-Server.md` 無任何 wiki 內部連入 → 於 `entities/Ethan.md`「相關概念」補 `[[KeyLogger-Server]]`（個人 C++ 專案），解除孤立
+- 其餘 100+ 條 wikilink 全數解析正常；`mathruffian-dot…` 系列長檔名連結經核實有效（原始剪藏檔名本身即含描述文字）

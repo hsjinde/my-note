@@ -48,6 +48,7 @@ SRE 學習實驗室：Python 自動化、PyTest 測試、Prometheus/Grafana 監�
 ## 相關概念
 
 - [[SRE-學習路徑]] — SRE 學習路線
+- [[KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案
 
 ## 來源
 

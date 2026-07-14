@@ -1,6 +1,6 @@
 ---
 title: Claude Code Skills 安裝指南
-updated: 2026-07-13
+updated: 2026-07-14
 tags:
   - claude-code
   - skills
@@ -24,6 +24,19 @@ skill-name/
 ```
 
 Claude Code 採**三層漸進載入**：`name + description` 常駐 context（決定是否觸發）→ 觸發時載入 SKILL.md 全文 → 需要時才讀 references／跑 scripts。所以 skill 平常幾乎不佔 token。
+
+## 方法零：skills.sh 一行安裝（最快，推薦）
+
+四個 skill 都已上架 [skills.sh](https://www.skills.sh)（Vercel 開源的 Agent Skills 市集，相容 Claude Code、Cursor、GitHub Copilot 等多種 agent），直接用 `npx skills add` 安裝，不用手動 clone：
+
+```bash
+npx skills add hsjinde/note-maintain
+npx skills add hsjinde/ui-fix-verify
+npx skills add hsjinde/cloudflare-use-skill
+npx skills add hsjinde/server-security-audit-skills
+```
+
+各 skill 頁面：[note-maintain](https://www.skills.sh/hsjinde/note-maintain)｜[ui-fix-verify](https://www.skills.sh/hsjinde/ui-fix-verify)｜[cloudflare-use-skill](https://www.skills.sh/hsjinde/cloudflare-use-skill)｜[server-security-audit-skills](https://www.skills.sh/hsjinde/server-security-audit-skills)
 
 ## 安裝位置（二選一）
 

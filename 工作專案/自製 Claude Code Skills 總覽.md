@@ -1,6 +1,6 @@
 ---
 title: 自製 Claude Code Skills 總覽
-updated: 2026-07-13
+updated: 2026-07-14
 tags:
   - claude-code
   - skills
@@ -10,14 +10,14 @@ tags:
 # 自製 Claude Code Skills 總覽
 
 我自己開發並開源的四個 Claude Code / Claude Agent SDK **Agent Skills**，全部 MIT 授權。
-安裝方式見 [[Claude Code Skills 安裝指南]]。
+安裝方式見 [[Claude Code Skills 安裝指南]]，四個都已上架 [skills.sh](https://www.skills.sh)（Vercel 的 Agent Skills 市集），可用 `npx skills add` 一行安裝。
 
-| Skill | 一句話 | Repo |
-|---|---|---|
-| note-maintain | 一個指令完成 Obsidian vault 例行維護 | [GitHub](https://github.com/hsjinde/note-maintain) |
-| ui-fix-verify | 強制 UI 修改「先量測、後截圖驗證」才准回報完成 | [GitHub](https://github.com/hsjinde/ui-fix-verify) |
-| cloudflare-use | 繞開 wrangler、直打 REST API 操作 Cloudflare D1 + R2 | [GitHub](https://github.com/hsjinde/cloudflare-use-skill) |
-| server-security-audit | Docker Linux 伺服器可重複執行的安全巡檢 | [GitHub](https://github.com/hsjinde/server-security-audit-skills) |
+| Skill | 一句話 | Repo | skills.sh |
+|---|---|---|---|
+| note-maintain | 一個指令完成 Obsidian vault 例行維護 | [GitHub](https://github.com/hsjinde/note-maintain) | [skills.sh](https://www.skills.sh/hsjinde/note-maintain) |
+| ui-fix-verify | 強制 UI 修改「先量測、後截圖驗證」才准回報完成 | [GitHub](https://github.com/hsjinde/ui-fix-verify) | [skills.sh](https://www.skills.sh/hsjinde/ui-fix-verify) |
+| cloudflare-use | 繞開 wrangler、直打 REST API 操作 Cloudflare D1 + R2 | [GitHub](https://github.com/hsjinde/cloudflare-use-skill) | [skills.sh](https://www.skills.sh/hsjinde/cloudflare-use-skill) |
+| server-security-audit | Docker Linux 伺服器可重複執行的安全巡檢 | [GitHub](https://github.com/hsjinde/server-security-audit-skills) | [skills.sh](https://www.skills.sh/hsjinde/server-security-audit-skills) |
 
 ---
 

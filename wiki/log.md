@@ -48,7 +48,7 @@ title: Wiki 操作日誌
 ## [2026-06-04] ingest | 第二批：SRE 相關 2 篇
 
 來源：
-- [[Clippings/SRE Engineer & AI Systems Developer]]
+- [[Clippings/職涯/SRE Engineer & AI Systems Developer]]
 - [[個人學習/SRE 學習路徑圖.canvas]]
 
 建立概念頁 1 個：
@@ -64,9 +64,9 @@ title: Wiki 操作日誌
 ## [2026-06-05] ingest | 第三批：Clippings 3 篇 + 好工具推薦
 
 來源：
-- [[Clippings/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包]]
-- [[Clippings/Obsidian Skills Ai自动化笔记新方法 使用配置教程]]（內容極少，僅記錄）
-- [[Clippings/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧]]
+- [[Clippings/AI 開發工具/mathruffian-dotclaude-code-lazy-packs Claude Code 懶人包：每支教學影片附一個 MD 檔，丟給 Claude Code 就能自動完成。]]
+- [[Clippings/Obsidian/Obsidian Skills Ai自动化笔记新方法 使用配置教程]]（內容極少，僅記錄）
+- [[Clippings/Obsidian/Obsidian邪修用法，免费云同步，AI，手机端，还有进阶技巧]]
 
 建立概念頁 2 個：
 - wiki/concepts/Claude-Code-Lazy-Packs.md
@@ -119,7 +119,7 @@ title: Wiki 操作日誌
 
 - 將 Karpathy 原文 LLM Wiki gist 完整翻譯為繁體中文
 - 覆寫 wiki/concepts/LLM-Wiki.md（原為摘要版，現改為全文翻譯版）
-- 來源：[[Clippings/llm-wiki]]
+- 來源：[[Clippings/AI 開發工具/llm-wiki]]
 
 ## [2026-07-04] ingest | 第七批：多益文法體系（hub 導覽頁）
 

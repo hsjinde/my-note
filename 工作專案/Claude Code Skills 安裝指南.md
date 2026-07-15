@@ -1,6 +1,6 @@
 ---
 title: Claude Code Skills 安裝指南
-updated: 2026-07-14
+updated: 2026-07-15
 tags:
   - claude-code
   - skills
@@ -89,6 +89,93 @@ python -m scripts.package_skill /path/to/server-security-audit
 ```
 
 產出 `server-security-audit.skill`，交給支援匯入的 UI 即可。
+
+## 方法四：交給 agent 自動安裝（複製即用的 prompt）
+
+把下面整段 prompt 貼給任一具備 shell 能力的自動化 agent（例如常駐的 Hermes），它就能自己把四個 skill 裝好並自我驗證。已內建幾個自動化最容易出錯的點：**用安裝後資料夾名驗證**（避免 `cloudflare-use`／`server-security-audit` 因 repo 名不同被誤判成失敗）、**逐一 npx→git 後備**（成敗以落地的 `SKILL.md` 為準，不看 exit code、不整批重來）、**非互動**（避免 headless shell 卡在 CLI 提問）、**只驗到路徑層級**（skill 需新 session 才掃描，禁止誇稱「已確認觸發」）。
+
+> [!note] 平台
+> 這版針對 macOS / Linux（bash、`~/.claude/skills`）。Windows PowerShell 請把路徑改成 `$env:USERPROFILE\.claude\skills\`、指令改用 PowerShell 語法。
+
+````text
+# 任務：自動安裝並驗證四個開源 Agent Skills（macOS / Linux）
+
+你要在本機自動安裝下列四個 Claude Code / Agent SDK skills，裝完做「路徑層級」驗證並回報。全程**非互動**，不要卡在任何提示上；任何一步失敗就走後備方案，不要整批放棄。
+
+## 四個 skill（skills.sh id → 安裝後的資料夾名）
+1. hsjinde/note-maintain                → note-maintain
+2. hsjinde/ui-fix-verify                → ui-fix-verify
+3. hsjinde/cloudflare-use-skill         → cloudflare-use          （skill 在子資料夾）
+4. hsjinde/server-security-audit-skills → server-security-audit   （skill 在子資料夾）
+
+⚠️ 驗證與檢查一律用「安裝後的資料夾名」，不要用 repo 名——後兩個的 repo 名和實際資料夾名不同，用 repo 名去 test 會誤判成安裝失敗。
+
+## 步驟 0：決定安裝範圍（自行判斷，並在回報裡講明選了哪個）
+- 若你此刻正在一個「應該隨這個 repo 一起攜帶這些 skill」的特定專案裡 → 專案層級：`SKILLS_DIR="$PWD/.claude/skills"`（請確認 $PWD 是專案根）
+- 否則（常駐個人 agent、跨專案通用）→ 個人層級：`SKILLS_DIR=~/.claude/skills`
+之後所有指令都用 `$SKILLS_DIR`。
+
+## 步驟 1：前置檢查
+```bash
+command -v git >/dev/null || echo "MISSING: git"
+command -v npx >/dev/null || echo "MISSING: npx (需要 Node.js)"
+mkdir -p "$SKILLS_DIR"
+```
+git 與 npx 兩者都缺就停下來回報，不要硬跑。
+
+## 步驟 2：逐一安裝——先試 skills.sh 一行（非互動），成敗以「落地的 SKILL.md」為準
+```bash
+for pair in \
+  "note-maintain:hsjinde/note-maintain" \
+  "ui-fix-verify:hsjinde/ui-fix-verify" \
+  "cloudflare-use:hsjinde/cloudflare-use-skill" \
+  "server-security-audit:hsjinde/server-security-audit-skills"; do
+  name="${pair%%:*}"; repo="${pair#*:}"
+  if [ -f "$SKILLS_DIR/$name/SKILL.md" ]; then echo "SKIP $name（已存在）"; continue; fi
+  npx --yes skills add "$repo" < /dev/null || true      # < /dev/null 確保非互動，卡住/失敗都往下走
+  if [ -f "$SKILLS_DIR/$name/SKILL.md" ]; then
+    echo "OK   $name (npx)"
+  else
+    echo "NEED_FALLBACK $name"
+  fi
+done
+```
+- `npx skills add` 的實際落點由該 CLI 決定；若它沒把 SKILL.md 放進你選的 `$SKILLS_DIR`（或卡住被 /dev/null 中斷），該 skill 會被標成 `NEED_FALLBACK`，交給步驟 3 用 git 補到正確位置。
+- 只對被標成 `NEED_FALLBACK` 的那幾個做步驟 3，不要因為一個失敗就重裝全部。
+
+## 步驟 3：git 後備（只跑 NEED_FALLBACK 對應的區塊）
+repo 根目錄就是 skill 本體的兩個，直接 clone 進去：
+```bash
+git clone --depth 1 https://github.com/hsjinde/note-maintain.git "$SKILLS_DIR/note-maintain"
+git clone --depth 1 https://github.com/hsjinde/ui-fix-verify.git  "$SKILLS_DIR/ui-fix-verify"
+```
+skill 在子資料夾的兩個，clone 到暫存區 → 複製子資料夾 → 清掉暫存（別把整包 repo 留在工作目錄）：
+```bash
+TMP="$(mktemp -d)"
+git clone --depth 1 https://github.com/hsjinde/cloudflare-use-skill.git "$TMP/cf"
+cp -r "$TMP/cf/cloudflare-use" "$SKILLS_DIR/cloudflare-use"
+git clone --depth 1 https://github.com/hsjinde/server-security-audit-skills.git "$TMP/ssa"
+cp -r "$TMP/ssa/server-security-audit" "$SKILLS_DIR/server-security-audit"
+rm -rf "$TMP"
+```
+
+## 步驟 4：驗證（只驗到路徑層級，不要誇大）
+```bash
+for n in note-maintain ui-fix-verify cloudflare-use server-security-audit; do
+  test -f "$SKILLS_DIR/$n/SKILL.md" && echo "OK   $n" || echo "FAIL $n"
+done
+```
+重要誠實邊界：skill 只有在**新 session** 才會被掃描載入。所以你此刻能如實宣稱的只有「已安裝到 `<路徑>`，下個 session 生效」；**不要**宣稱「已確認會觸發／正常運作」——那要重開對話講觸發詞才算數。
+
+## 步驟 5：回報
+- 選了哪個安裝範圍（個人／專案）、`$SKILLS_DIR` 的實際絕對路徑。
+- 四個 skill 各自：用 npx 還是 git 後備、最終路徑、OK 或 FAIL。
+- 列出每個 skill 裝完仍需的設定（你不用替我做，列出來提醒即可）：
+  - note-maintain：預設 vault 有 `core_rules.md`、`wiki/index.md`、`Clippings/`、`wiki/log.md`；結構不同要改它的 SKILL.md。
+  - ui-fix-verify：需要可跑的 dev server（建議設 `.claude/launch.json`）＋瀏覽器工具。
+  - cloudflare-use：專案 `.env` 要放 `CLOUDFLARE_API_TOKEN`（權限 D1 Edit + R2 Storage Edit），需 Node 18+。
+  - server-security-audit：先跑一次 `scripts/audit.sh` 看實際拓撲，再填 `references/known-issues.md`。
+````
 
 ## 安裝後：驗證與觸發
 

@@ -30,7 +30,7 @@ SRE 工程師與 AI 系統開發者。致力於 RNN 查詢優化研究與高可�
 
 ### RNN SPARQL Optimizer
 IEEE 發表的研究論文。基於 RNN 的 SPARQL 查詢優化模型，查詢反應時間平均降低 **35%**。
-- [[https://ieeexplore.ieee.org/document/10230082|IEEE Xplore]]
+- [IEEE Xplore](https://ieeexplore.ieee.org/document/10230082)
 
 ### OpenClaw
 自建 LLM 推理後端，VPS 上 Docker 部署，Cloudflare Tunnel 安全暴露。

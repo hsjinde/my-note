@@ -181,3 +181,18 @@ title: Wiki 操作日誌
 - **斷鏈**：`concepts/NeetCode-刷題路線.md` 來源清單 `[[Best practice questions]]` 無對應檔（`個人學習/Leecode/Solution/` 下不存在）→ 移除該行
 - **孤立頁**：`entities/KeyLogger-Server.md` 無任何 wiki 內部連入 → 於 `entities/Ethan.md`「相關概念」補 `[[KeyLogger-Server]]`（個人 C++ 專案），解除孤立
 - 其餘 100+ 條 wikilink 全數解析正常；`mathruffian-dot…` 系列長檔名連結經核實有效（原始剪藏檔名本身即含描述文字）
+
+## [2026-07-15] lint | 健康檢查與修復（本 session 於 vault 安裝 note-maintain skill 後首跑）
+
+掃描 26 個 wiki 內容頁（16 concepts＋7 entities＋3 queries）。孤立頁 0；`.canvas` 連結（SRE 學習路徑圖、NeetCode Roadmap）經查證存在、非斷鏈。
+
+**自動修（格式）**：
+- `entities/Ethan.md`：IEEE 論文連結誤用 `[[網址|別名]]` wikilink 語法 → 改外部連結 `[IEEE Xplore](https://ieeexplore.ieee.org/document/10230082)`
+- `concepts/Ingest-工作流.md`：ingest 範本區塊圍欄為單反引號（未成程式碼區塊），佔位符 `[[現有wiki頁面]]` 外洩成連結 → 改三反引號程式碼區塊
+
+**規則檔同步**：`CLAUDE.md`、`AGENTS.md` 均仍為指向 `core_rules.md` 的薄指標檔，無重複規則、無矛盾；本次 `core_rules.md` 未改動。
+
+**待決定（未動）**：
+- `entities/Andrej-Karpathy.md`：`[[范凱說AI]]`、`[[HC AI說人話]]` 斷鏈（無對應頁）→ 建實體頁 or 去連結化
+- `entities/Claude-Code.md`：模型清單過時（Sonnet 4.6／GPT-5.5）→ 更新為現行 or 保留
+- 未消化 Clippings 2 篇：`How I build with AI as a 1-person product team`、`Codex 逆袭开始！…OpenAI Codex…` → 是否 ingest（若 ingest 再更新 index）

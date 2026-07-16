@@ -4,8 +4,8 @@ tags:
   - 知識管理
   - AI
   - 概念
-updated: '2026-07-05'
-source_count: 1
+updated: '2026-07-16'
+source_count: 2
 ---
 
 # LLM Wiki
@@ -102,3 +102,8 @@ source_count: 1
 - [[RAG-vs-LLM-Wiki]] — 與 RAG 做法的核心差異
 - [[知識庫架構設計]] — Karpathy 原版與各改造版比較
 - [[Ingest-工作流]] — 消化新資料進 Wiki 的流程
+
+## 來源
+
+- [[Clippings/AI 開發工具/llm-wiki]] — Karpathy 原始 gist；本頁「備註」節以上為其全文繁體翻譯（2026-06-07 覆寫）
+- [[2026-07-05-obsidian-llm-wiki]] — 外部網搜生態調查；「生態與實作工具」節之來源（2026-07-05）

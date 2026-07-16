@@ -1,8 +1,8 @@
 ---
 title: RAG vs LLM Wiki
 tags: [知識管理, AI, 比較]
-updated: 2026-07-05
-source_count: 2
+updated: 2026-07-16
+source_count: 3
 ---
 
 # RAG vs LLM Wiki
@@ -40,9 +40,19 @@ Karpathy 的核心主張：wiki 查詢應**餵完整 wiki context 給長上下�
 理由是 chunked RAG 會**切碎知識**，破壞 LLM 跨頁面推理、走訪知識圖譜的能力——這正是 LLM Wiki 相對 RAG 的關鍵優勢。
 因此社群實作普遍**建議長上下文模型**：Wiki 越大，越需要長 context。
 
+> [!note] 他反對的是「切塊當知識層」，不是「檢索當定位工具」
+> 這點容易誤讀成「Karpathy 反對一切向量檢索」。但他在原文親自推薦 qmd（BM25／向量混合搜尋 + LLM 重排序），並明言「小規模時索引檔案就夠了，但隨著 Wiki 成長你需要真正的搜尋」——見 [[LLM-Wiki#可選：CLI 工具]]。
+> 差別在**檢索的對象與粒度**：
+> - **他反對**：把原始文件切碎、每次查詢重新拼湊片段 → 知識不累積、跨頁推理斷裂
+> - **他不反對**：用搜尋定位到相關的 **wiki 整頁**，再把整頁交給模型 → 頁內脈絡完整，跨頁推理不受損
+>
+> 因此下節「混合使用」與本節並不衝突——那正是 Karpathy 自己的 qmd 做法。
+
 ## 混合使用
 
-當 Wiki 成長到 Context Window 壓力很大時，可以在 LLM Wiki 上層疊加 RAG，用向量檢索定位到相關 Wiki 頁面，再讓 AI 讀取頁面回答。
+當 Wiki 成長到 Context Window 壓力很大時，可以在 LLM Wiki 上層疊加**檢索層**：用向量／BM25 搜尋**定位**到相關 Wiki 頁面，再讓 AI 讀取**整頁**回答。
+
+與 chunked RAG 的差別在粒度——檢索的對象是 wiki 頁面而非原始文件碎片，知識層仍然是 wiki（理由見上節註記）。
 
 ## 相關概念
 
@@ -53,3 +63,4 @@ Karpathy 的核心主張：wiki 查詢應**餵完整 wiki context 給長上下�
 
 - [[3 層架構打造個人 AI 大腦：從 Raw Data 到持久知識庫 🛠️]]（HC AI說人話，2026-04）
 - [[Karpathy 的 LLM Wiki 火了，我改造了一下，比原版好用十倍]]（范凱說AI，2026-04）
+- [[2026-07-05-obsidian-llm-wiki]] — 外部網搜；「為什麼 Karpathy 反對 chunked RAG」節之來源（2026-07-05）

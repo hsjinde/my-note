@@ -196,3 +196,67 @@ title: Wiki 操作日誌
 - `entities/Andrej-Karpathy.md`：`[[范凱說AI]]`、`[[HC AI說人話]]` 斷鏈（無對應頁）→ 建實體頁 or 去連結化
 - `entities/Claude-Code.md`：模型清單過時（Sonnet 4.6／GPT-5.5）→ 更新為現行 or 保留
 - 未消化 Clippings 2 篇：`How I build with AI as a 1-person product team`、`Codex 逆袭开始！…OpenAI Codex…` → 是否 ingest（若 ingest 再更新 index）
+
+## [2026-07-16] lint | 健康檢查與修復
+
+掃描 28 個 wiki 頁面（26 內容頁）＋全 vault 原始區盤點。
+
+**已修（自動）**
+
+- **格式**：`concepts/Ingest-工作流.md` 步驟 2 的方案範本誤用單反引號當程式碼圍欄（應為三反引號），使範本內佔位符 `[[現有wiki頁面]]` 成為活的斷鏈 → 改為 ` ```text ` 圍欄；範本正常呈現，斷鏈解除
+- **索引失準**：`index.md`「待消化筆記」原記「全部消化完畢」，實際仍有 13 篇未提煉 → 補上完整清單（Clippings 2、個人學習 2、工作專案 7、好工具推薦 2）
+- **索引補漏**：`index.md` 原始資料位置表補上 `個人學習/多益/`、`個人學習/LLM與AI/`、`日常/`、`靈感/`；`好工具推薦/` 說明更新（舊述之 caliber-ai-org 路徑已不存在，現為 2 篇工具設定指南）
+- `index.md` updated → 2026-07-16
+
+**檢查結果**
+
+- 孤立頁：**0**（26 個內容頁全數有 wiki 內入鏈）
+- 斷鏈：全量複驗後實際僅餘 4 條（2 條待決、2 條屬歷史紀錄刻意不改）
+
+**待決（未動，等使用者裁示）**
+
+- `entities/Andrej-Karpathy.md`：`[[范凱說AI]]`、`[[HC AI說人話]]` 無對應頁（外部自媒體帳號）
+- `entities/Claude-Code.md`：模型清單過時 — 「Sonnet 4.6（預設）」「GPT-5.5」既非實際模型，亦未見於來源筆記（`目前的skills`／`插件安裝` 只提到 MiniMax 2.7、GLM、千問、DeepSeek、OpenRouter）。自 2026-07-05 lint 起懸置
+- `CLAUDE.md`：「Skills 檢查」「Git 紀律」兩條與 `core_rules.md` 重複（內容一致但違反單一真相來源）
+- `log.md` 內 2 條 `Best practice questions` 斷鏈：屬 2026-06-05／2026-07-09 歷史紀錄，**刻意保留**（日誌為 append-only 事實紀錄，不回頭改寫）
+
+**工具備註（下次 lint 必看）**
+
+Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部變亂碼 → 首版腳本誤報 87 條斷鏈、14 個孤立頁。改用 `[System.IO.File]::ReadAllText($p, UTF8Encoding)` 讀取，並額外處理表格內跳脫管線 `\|`（`[[路徑\|別名]]`）後，實際只有 5 條。日後寫 lint 腳本務必沿用此兩點。
+
+## [2026-07-16] lint | 矛盾與衝突處理（第二輪）
+
+首輪漏做 lint 的「矛盾與過時」項，補做後另發現兩類問題。
+
+**內容矛盾（已調和）**
+
+- `concepts/RAG-vs-LLM-Wiki.md` **同頁自相矛盾**：「為什麼 Karpathy 反對 chunked RAG」說不要 RAG 切塊，下一節「混合使用」卻說可疊加 RAG 向量檢索。
+  查證一手來源後確認**兩者實際不衝突**：Karpathy 在原文親自推薦 qmd（BM25／向量混合搜尋 + LLM 重排序），可見他反對的是「切塊當**知識層**」，不是「檢索當**定位工具**」——差別在檢索對象是原始文件碎片還是 wiki 整頁。
+  處理：兩節都保留，加 callout 註記釐清層次差異並交叉引用 [[LLM-Wiki#可選：CLI 工具]]；「混合使用」改寫為「檢索層／定位／整頁」用語。**未刪任何一邊**。
+
+**來源歸屬斷裂（已補）**
+
+- `concepts/LLM-Wiki.md` 是全 wiki **唯一沒有「來源」區塊**的內容頁（23 頁中唯一）——推測為 2026-06-07「全文翻譯覆寫」時遺失。已補回兩個來源脈絡：Karpathy 原文 gist（正文翻譯）＋ 2026-07-05 網搜（生態節）。`source_count` 1 → 2、index 來源數同步。
+  註：2026-07-05 lint 曾將 index 來源數由 2 改為 1「與 frontmatter 一致」——**當時對齊到錯的一邊**，實為 frontmatter 漏記。
+- `concepts/RAG-vs-LLM-Wiki.md`「為什麼 Karpathy 反對 chunked RAG」節（2026-07-05 網搜產物）未列來源、未連查詢歸檔 → 補 [[2026-07-05-obsidian-llm-wiki]]，`source_count` 2 → 3、index 同步。
+
+**斷鏈（已修）**
+
+- **heading anchor 斷鏈 4 條**（首輪腳本切掉 `#` 後未驗，故漏掉）：
+  `演算法策略.md` 的 `排序演算法#Merge Sort`／`#Quick Sort`、`搜尋演算法#Binary Search`，及 `資料結構總覽.md` 的 `排序演算法#Heap Sort`。
+  實際標題含中文對照（如「Merge Sort（合併排序）」），錨點對不上 → 改為完整標題 + alias 保持顯示不變。
+
+**格式（已修）**
+
+- `concepts/知識庫架構設計.md` **4 處**與 `Ingest-工作流.md` 同款的單反引號圍欄 bug（其中一處包住目錄樹狀圖）→ 全改為三反引號。
+
+**命名衝突（新發現）**
+
+- `wiki/entities/KeyLogger-Server.md` 與 `工作專案/KeyLogger-Server.md` **完全同名**。`index.md` 的裸連結依 Obsidian 最短路徑規則會落到工作專案原始筆記（1 層 < 2 層）→ 已改用 `entities/` 路徑消歧義。
+  （`entities/Ethan.md` 的同名連結因與 entity 頁同資料夾，解析正確，不受影響。）
+- `wiki/concepts/LLM-Wiki.md` 與 `Clippings/AI 開發工具/llm-wiki.md` 僅大小寫不同，8 處裸 `[[LLM-Wiki]]` 靠大小寫精確匹配解析。目前運作正常但脆弱（改動任一檔名大小寫即失效）——**待決，未動**。
+- `個人學習/Leecode/NeetCode Roadmap (...)` 有 `.canvas` 與 `.md` 同名兩份，`NeetCode-刷題路線.md` 來源連結指向不明確——**待決，未動**。
+
+**工具備註（續）**
+
+腳本第二個坑：PowerShell hashtable **預設大小寫不敏感**，`llm-wiki` 與 `LLM-Wiki` 視為同鍵，導致標題表被 Clippings 版覆蓋、誤報 anchor 斷鏈。另需排除 **inline code**（`` `[[範例]]` ``）否則說明文字裡的連結會被誤判為活斷鏈。最終腳本：排除 fenced + inline code、大小寫敏感、依「同資料夾 → 最短路徑」解析並標記撞名。

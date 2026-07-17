@@ -18,6 +18,7 @@ tags:
 | ui-fix-verify         | 強制 UI 修改「先量測、後截圖驗證」才准回報完成                     | [GitHub](https://github.com/hsjinde/ui-fix-verify)                | [skills.sh](https://www.skills.sh/hsjinde/ui-fix-verify)                |
 | cloudflare-use        | 繞開 wrangler、直打 REST API 操作 Cloudflare D1 + R2 | [GitHub](https://github.com/hsjinde/cloudflare-use-skill)         | [skills.sh](https://www.skills.sh/hsjinde/cloudflare-use-skill)         |
 | server-security-audit | Docker Linux 伺服器可重複執行的安全巡檢                    | [GitHub](https://github.com/hsjinde/server-security-audit-skills) | [skills.sh](https://www.skills.sh/hsjinde/server-security-audit-skills) |
+|                       |                                               |                                                                   |                                                                         |
 
 ---
 

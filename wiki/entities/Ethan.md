@@ -48,7 +48,7 @@ SRE 學習實驗室：Python 自動化、PyTest 測試、Prometheus/Grafana 監�
 ## 相關概念
 
 - [[SRE-學習路徑]] — SRE 學習路線
-- [[KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案
+- [[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案（完整路徑消歧義，避免撞名 `工作專案/KeyLogger-Server.md`）
 - [[Postfix-Manager]] — 自架郵件伺服器管理系統（Django + Docker）
 - [[CORE-PULSE]] — 個人網站的 AI 吉祥物對話系統
 - [[Quartz-閱讀網站]] — 用 Quartz 發布本 vault 的公開閱讀站（規劃中）

@@ -307,3 +307,7 @@ Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部
 **隱私處理**：ingest 時未寫入來源中的個資與憑證（個人 email、API key/salt、預設密碼、本機路徑）——只提煉知識。
 
 **驗證**：UTF-8 lint 腳本複掃，新頁 wikilink 全解析、無新增斷鏈、無孤立頁（`AI-產品開發工作流` 由 `自製-Claude-Code-Skills` 連入）。`index.md` 補登 9 頁、待消化歸零、updated 2026-07-21。
+
+## [2026-07-21] fix | KeyLogger-Server 撞名消歧義（自動處理殘項）
+
+承上，使用者要求自動處理唯一殘留的命名脆弱項。`entities/Ethan.md` 的裸連結 `[[KeyLogger-Server]]` 依 Obsidian 最短路徑會落到 `工作專案/KeyLogger-Server.md`（1 層）而非 entity 頁（2 層）→ 改為完整路徑 `[[wiki/entities/KeyLogger-Server|KeyLogger-Server]]`（條列用一般 `|`，非表格跳脫 `\|`）。效果：Ethan 確定連到 entity 頁，`entities/KeyLogger-Server.md` 由「僅 index 連入」升級為有內容頁入鏈。至此全 wiki 撞名項清空。

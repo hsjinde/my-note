@@ -260,3 +260,54 @@ Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部
 **工具備註（續）**
 
 腳本第二個坑：PowerShell hashtable **預設大小寫不敏感**，`llm-wiki` 與 `LLM-Wiki` 視為同鍵，導致標題表被 Clippings 版覆蓋、誤報 anchor 斷鏈。另需排除 **inline code**（`` `[[範例]]` ``）否則說明文字裡的連結會被誤判為活斷鏈。最終腳本：排除 fenced + inline code、大小寫敏感、依「同資料夾 → 最短路徑」解析並標記撞名。
+
+## [2026-07-21] lint | 健康檢查與修復
+
+以 UTF-8-safe Python 腳本掃 26 個 wiki 內容頁 + 全 vault 原始區複點（處理跳脫管線 `\|` 與 `.canvas` 副檔名、排除 fenced/inline code、大小寫敏感）。距上次 lint（2026-07-16）原始區僅 2 檔異動 + 1 檔刪除，wiki/ 與 Clippings/ 內容無變動。
+
+**已修（自動）**
+
+- **索引補漏**：`Clippings/MCP vs API Why traditional APIs are failing AI agents.md`（2026-07-16 09:09 新增的 YouTube 剪藏，Google Cloud Tech）未登錄 index「待消化」清單、亦未 ingest → 補入清單（Clippings 2→3）。
+- `index.md` updated → 2026-07-21。
+
+**新發現斷鏈（待決，未動）**
+
+- **來源檔遭刪**：`Clippings/職涯/SRE Engineer & AI Systems Developer.md` 於 2026-07-16 09:29 vault backup commit（2eb8fdd）中被刪 → `concepts/SRE-學習路徑.md`（L103）、`entities/Ethan.md` 各餘 1 條活斷鏈指向它。內容可自 git（2eb8fdd^）還原。等使用者裁示：還原原始檔 or 移除／改寫 wiki 來源引用。
+
+**沿用待決（未動）**
+
+- `entities/Andrej-Karpathy.md`：`[[范凱說AI]]`、`[[HC AI說人話]]` 無對應頁（外部自媒體）。自 2026-07-05 懸置。
+- `entities/Claude-Code.md`：模型清單過時（Sonnet 4.6／GPT-5.5，非實際模型且未見於來源筆記）。自 2026-07-05 懸置。
+- `CLAUDE.md`：「skills 檢查」「git 紀律」2 條與 `core_rules.md` 重複（AGENTS.md 無此問題）。自 2026-07-16 懸置。
+- 命名脆弱：`LLM-Wiki` vs `llm-wiki`（僅大小寫）、`NeetCode Roadmap` .canvas/.md 同名、`KeyLogger-Server` 撞名（`Ethan.md` 裸連結依最短路徑解析到 `工作專案/` 原始檔而非 entity 頁）。
+
+**檢查結果**
+
+- 孤立頁 **0**（`KeyLogger-Server.md` 由 index 全路徑連入）。
+- log.md 內斷鏈（`Best practice questions`、職涯 SRE 全路徑、`路徑\|別名`、`範例` 等）均為 append-only 歷史紀錄或語法範例，刻意保留。
+
+## [2026-07-21] fix+ingest | 使用者裁示「全部修」——修完 6 項待決 + 消化全部待消化
+
+承同日 lint，使用者回「全部修」。逐項處理：
+
+**待決修復（1、4、5、6）**
+
+- **斷鏈（1）**：自 git（`2eb8fdd^`）還原被誤刪的 `Clippings/職涯/SRE Engineer & AI Systems Developer.md` → `concepts/SRE-學習路徑.md`、`entities/Ethan.md` 兩條活斷鏈自動解除。
+- **去連結化（4）**：`entities/Andrej-Karpathy.md` 的 `范凱說AI`、`HC AI說人話`（外部自媒體、無頁）由 wikilink 改純文字「『范凱說AI』與『HC AI說人話』等自媒體」。
+- **過時內容（5）**：`entities/Claude-Code.md` 模型節。查來源 `插件安裝.md` 發現 `claude-sonnet-4-6`／`gemini-3.1-pro-low`／`gpt-5.5` 實為 DeepSeek 第三方後端 env 範例值，原頁誤distill成「Sonnet 4.6（預設）」「GPT-5.5 第三方模型」→ 改寫為「Claude 三層級 + 可用 `ANTHROPIC_DEFAULT_*_MODEL` 換第三方後端」，貼合來源。
+- **規則重複（6）**：`CLAUDE.md` 刪去與 `core_rules.md` 重複的「skills 檢查」「git 紀律」兩條，改一句指回 `core_rules.md`，只留 CC 專屬補充。AGENTS.md 本就乾淨、未動。
+
+**Ingest（2、3）：14 篇 → 新增 9 頁**
+
+- 新概念頁 5：`LLM-入門`（Karpathy LLM 演講）、`MCP`（MCP vs API 剪藏）、`LLM-Wiki-搭建指南`（搭建指南）、`自製-Claude-Code-Skills`（總覽+安裝指南 2 篇合併）、`AI-產品開發工作流`（How I build 剪藏）。
+- 新實體頁 4：`OpenCode`（oc-go-cc + MCP 配置 2 篇合併）、`Postfix-Manager`（系統+維護 2 篇合併）、`CORE-PULSE`、`Quartz-閱讀網站`。
+- 更新交叉連結：`Ethan`（補 4 個專案/skill 連結）、`Claude-Code-Skills`（補自製技能節）、`Andrej-Karpathy`（補 `LLM-入門`）、`Claude-Code`（補 `OpenCode`/`MCP`）。
+- **刻意不另建頁**：Codex 逆袭剪藏（推廣、知識稀薄，nugget 併入 `OpenCode`）；`2026-07 工作紀錄`（月度 meta-index，已指向各 wiki 頁）。
+
+**隱私處理**：ingest 時未寫入來源中的個資與憑證（個人 email、API key/salt、預設密碼、本機路徑）——只提煉知識。
+
+**驗證**：UTF-8 lint 腳本複掃，新頁 wikilink 全解析、無新增斷鏈、無孤立頁（`AI-產品開發工作流` 由 `自製-Claude-Code-Skills` 連入）。`index.md` 補登 9 頁、待消化歸零、updated 2026-07-21。
+
+## [2026-07-21] fix | KeyLogger-Server 撞名消歧義（自動處理殘項）
+
+承上，使用者要求自動處理唯一殘留的命名脆弱項。`entities/Ethan.md` 的裸連結 `[[KeyLogger-Server]]` 依 Obsidian 最短路徑會落到 `工作專案/KeyLogger-Server.md`（1 層）而非 entity 頁（2 層）→ 改為完整路徑 `[[wiki/entities/KeyLogger-Server|KeyLogger-Server]]`（條列用一般 `|`，非表格跳脫 `\|`）。效果：Ethan 確定連到 entity 頁，`entities/KeyLogger-Server.md` 由「僅 index 連入」升級為有內容頁入鏈。至此全 wiki 撞名項清空。

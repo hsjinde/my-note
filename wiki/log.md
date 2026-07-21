@@ -260,3 +260,28 @@ Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部
 **工具備註（續）**
 
 腳本第二個坑：PowerShell hashtable **預設大小寫不敏感**，`llm-wiki` 與 `LLM-Wiki` 視為同鍵，導致標題表被 Clippings 版覆蓋、誤報 anchor 斷鏈。另需排除 **inline code**（`` `[[範例]]` ``）否則說明文字裡的連結會被誤判為活斷鏈。最終腳本：排除 fenced + inline code、大小寫敏感、依「同資料夾 → 最短路徑」解析並標記撞名。
+
+## [2026-07-21] lint | 健康檢查與修復
+
+以 UTF-8-safe Python 腳本掃 26 個 wiki 內容頁 + 全 vault 原始區複點（處理跳脫管線 `\|` 與 `.canvas` 副檔名、排除 fenced/inline code、大小寫敏感）。距上次 lint（2026-07-16）原始區僅 2 檔異動 + 1 檔刪除，wiki/ 與 Clippings/ 內容無變動。
+
+**已修（自動）**
+
+- **索引補漏**：`Clippings/MCP vs API Why traditional APIs are failing AI agents.md`（2026-07-16 09:09 新增的 YouTube 剪藏，Google Cloud Tech）未登錄 index「待消化」清單、亦未 ingest → 補入清單（Clippings 2→3）。
+- `index.md` updated → 2026-07-21。
+
+**新發現斷鏈（待決，未動）**
+
+- **來源檔遭刪**：`Clippings/職涯/SRE Engineer & AI Systems Developer.md` 於 2026-07-16 09:29 vault backup commit（2eb8fdd）中被刪 → `concepts/SRE-學習路徑.md`（L103）、`entities/Ethan.md` 各餘 1 條活斷鏈指向它。內容可自 git（2eb8fdd^）還原。等使用者裁示：還原原始檔 or 移除／改寫 wiki 來源引用。
+
+**沿用待決（未動）**
+
+- `entities/Andrej-Karpathy.md`：`[[范凱說AI]]`、`[[HC AI說人話]]` 無對應頁（外部自媒體）。自 2026-07-05 懸置。
+- `entities/Claude-Code.md`：模型清單過時（Sonnet 4.6／GPT-5.5，非實際模型且未見於來源筆記）。自 2026-07-05 懸置。
+- `CLAUDE.md`：「skills 檢查」「git 紀律」2 條與 `core_rules.md` 重複（AGENTS.md 無此問題）。自 2026-07-16 懸置。
+- 命名脆弱：`LLM-Wiki` vs `llm-wiki`（僅大小寫）、`NeetCode Roadmap` .canvas/.md 同名、`KeyLogger-Server` 撞名（`Ethan.md` 裸連結依最短路徑解析到 `工作專案/` 原始檔而非 entity 頁）。
+
+**檢查結果**
+
+- 孤立頁 **0**（`KeyLogger-Server.md` 由 index 全路徑連入）。
+- log.md 內斷鏈（`Best practice questions`、職涯 SRE 全路徑、`路徑\|別名`、`範例` 等）均為 append-only 歷史紀錄或語法範例，刻意保留。

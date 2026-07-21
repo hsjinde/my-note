@@ -1,6 +1,6 @@
 ---
 title: Wiki 索引
-updated: '2026-07-16'
+updated: '2026-07-21'
 ---
 
 # Wiki 索引
@@ -90,11 +90,12 @@ updated: '2026-07-16'
 
 ## 待消化筆記
 
-2026-07-16 lint 盤點，以下尚未提煉進 wiki（前次索引誤記為「全部消化完畢」）：
+2026-07-21 lint 複點（原 2026-07-16 盤點），以下尚未提煉進 wiki：
 
-**Clippings（2）**
+**Clippings（3）**
 - [[Clippings/AI 開發工具/How I build with AI as a 1-person product team]] — /superpowers 開發工作流
 - [[Clippings/AI 開發工具/Codex 逆袭开始！国内畅玩 OpenAI Codex，对接自建 API 中转站完整教程]] — 影片描述＋章節，內容偏推廣
+- [[Clippings/MCP vs API Why traditional APIs are failing AI agents]] — MCP vs 傳統 API 差異（YouTube／Google Cloud Tech，2026-07-16 新增，index 前次漏登）
 
 **個人學習（2）**
 - [[個人學習/LLM與AI/Karpathy LLM 入門 - 從心智模型理解 LLM]]

@@ -285,3 +285,25 @@ Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部
 
 - 孤立頁 **0**（`KeyLogger-Server.md` 由 index 全路徑連入）。
 - log.md 內斷鏈（`Best practice questions`、職涯 SRE 全路徑、`路徑\|別名`、`範例` 等）均為 append-only 歷史紀錄或語法範例，刻意保留。
+
+## [2026-07-21] fix+ingest | 使用者裁示「全部修」——修完 6 項待決 + 消化全部待消化
+
+承同日 lint，使用者回「全部修」。逐項處理：
+
+**待決修復（1、4、5、6）**
+
+- **斷鏈（1）**：自 git（`2eb8fdd^`）還原被誤刪的 `Clippings/職涯/SRE Engineer & AI Systems Developer.md` → `concepts/SRE-學習路徑.md`、`entities/Ethan.md` 兩條活斷鏈自動解除。
+- **去連結化（4）**：`entities/Andrej-Karpathy.md` 的 `范凱說AI`、`HC AI說人話`（外部自媒體、無頁）由 wikilink 改純文字「『范凱說AI』與『HC AI說人話』等自媒體」。
+- **過時內容（5）**：`entities/Claude-Code.md` 模型節。查來源 `插件安裝.md` 發現 `claude-sonnet-4-6`／`gemini-3.1-pro-low`／`gpt-5.5` 實為 DeepSeek 第三方後端 env 範例值，原頁誤distill成「Sonnet 4.6（預設）」「GPT-5.5 第三方模型」→ 改寫為「Claude 三層級 + 可用 `ANTHROPIC_DEFAULT_*_MODEL` 換第三方後端」，貼合來源。
+- **規則重複（6）**：`CLAUDE.md` 刪去與 `core_rules.md` 重複的「skills 檢查」「git 紀律」兩條，改一句指回 `core_rules.md`，只留 CC 專屬補充。AGENTS.md 本就乾淨、未動。
+
+**Ingest（2、3）：14 篇 → 新增 9 頁**
+
+- 新概念頁 5：`LLM-入門`（Karpathy LLM 演講）、`MCP`（MCP vs API 剪藏）、`LLM-Wiki-搭建指南`（搭建指南）、`自製-Claude-Code-Skills`（總覽+安裝指南 2 篇合併）、`AI-產品開發工作流`（How I build 剪藏）。
+- 新實體頁 4：`OpenCode`（oc-go-cc + MCP 配置 2 篇合併）、`Postfix-Manager`（系統+維護 2 篇合併）、`CORE-PULSE`、`Quartz-閱讀網站`。
+- 更新交叉連結：`Ethan`（補 4 個專案/skill 連結）、`Claude-Code-Skills`（補自製技能節）、`Andrej-Karpathy`（補 `LLM-入門`）、`Claude-Code`（補 `OpenCode`/`MCP`）。
+- **刻意不另建頁**：Codex 逆袭剪藏（推廣、知識稀薄，nugget 併入 `OpenCode`）；`2026-07 工作紀錄`（月度 meta-index，已指向各 wiki 頁）。
+
+**隱私處理**：ingest 時未寫入來源中的個資與憑證（個人 email、API key/salt、預設密碼、本機路徑）——只提煉知識。
+
+**驗證**：UTF-8 lint 腳本複掃，新頁 wikilink 全解析、無新增斷鏈、無孤立頁（`AI-產品開發工作流` 由 `自製-Claude-Code-Skills` 連入）。`index.md` 補登 9 頁、待消化歸零、updated 2026-07-21。

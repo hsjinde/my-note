@@ -1,7 +1,7 @@
 ---
 title: Claude Code
 tags: [工具, AI, 程式助理]
-updated: 2026-06-04
+updated: 2026-07-21
 source_count: 2
 ---
 
@@ -31,15 +31,15 @@ Anthropic 推出的命令列 AI 助理，可讀取專案檔案、執行指令、
 
 ## 模型選項
 
-- Claude Sonnet 4.6（預設，平衡性能與成本）
-- Claude Haiku（成本最佳化）
-- Claude Opus（高品質任務）
-- 第三方模型（DeepSeek、Gemini、GPT-5.5 等）
+- **Claude 家族**：分 Sonnet（平衡）、Haiku（成本最佳化）、Opus（高品質任務）三個層級。
+- **可換第三方後端**：透過 `ANTHROPIC_DEFAULT_{SONNET,HAIKU,OPUS}_MODEL` 環境變數，把各層級的模型槽改指向第三方模型，以節省成本／避免平台綁定（來源筆記示範以 DeepSeek API 為後端，並把 Haiku、Opus 槽分別換成 Gemini、GPT 等）。
 
 ## 相關概念
 
 - [[Claudian]] — Obsidian 內的 Claude Code 整合
 - [[Claude-Code-Skills]] — 可用 Skills 清單
+- [[OpenCode]] — 可透過 oc-go-cc proxy 當 Claude Code 的第三方模型後端
+- [[MCP]] — Claude Code 也支援的工具協定
 - [[LLM-Wiki]] — Claude Code 維護的知識庫
 
 ## 來源

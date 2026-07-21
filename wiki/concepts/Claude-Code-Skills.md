@@ -1,7 +1,7 @@
 ---
 title: Claude Code Skills
 tags: [Claude Code, Skills, 工具]
-updated: 2026-06-04
+updated: 2026-07-21
 source_count: 2
 ---
 
@@ -53,6 +53,10 @@ source_count: 2
 | `fewer-permission-prompts` | 掃描對話紀錄，把常見唯讀指令加入白名單以減少權限彈窗 |
 | `loop` | 定期或模型節奏重複執行某 prompt / slash command |
 
+## 自製技能（本 vault 作者開源）
+
+[[自製-Claude-Code-Skills]]：[[Ethan]] 開發的四個 Agent Skill（`note-maintain`、`ui-fix-verify`、`cloudflare-use`、`server-security-audit`），皆上架 skills.sh。其中 `note-maintain` 就裝在本 vault，負責一鍵維護流水線。
+
 ## 觸發方式
 
 `/skill-name`（例如 `/obsidian-markdown`）
@@ -71,6 +75,7 @@ source_count: 2
 ## 相關概念
 
 - [[Claude-Code]] — Claude Code 工具本身
+- [[自製-Claude-Code-Skills]] — 本 vault 作者開源的四個 skill
 - [[Claude-Code-Lazy-Packs]] — 懶人包系列
 - [[LLM-Wiki]] — 其中 `llm-wiki` skill 維護整個 Wiki 系統
 

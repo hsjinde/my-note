@@ -24,6 +24,16 @@ updated: '2026-07-21'
 | [[Obsidian-同步方案]] | 免費雲同步、手機端、導出等技巧比較 | 1 |
 | [[Claude-Code-Skills]] | Claude Code 19+ 個 Skills 分類整理 | 2 |
 | [[Claude-Code-Lazy-Packs]] | 12 個 Claude Code 懶人包技能清單與影片系列 | 1 |
+| [[LLM-Wiki-搭建指南]] | 從零搭 LLM Wiki 的 6 步驟 + 5 大陷阱（含本 vault 案例） | 1 |
+| [[自製-Claude-Code-Skills]] | 作者開源的 4 個 Agent Skill 與共同設計理念 | 2 |
+
+### AI 與 LLM
+
+| 頁面 | 摘要 | 來源數 |
+|---|---|---|
+| [[LLM-入門]] | 從心智模型理解 LLM：壓縮即理解、4 階段訓練管道、幻覺/CoT/LLM-as-OS | 1 |
+| [[MCP]] | Model Context Protocol：架在 API 之上、讓模型自行發現與呼叫工具的語義層 | 1 |
+| [[AI-產品開發工作流]] | 一人團隊用 AI 開發：superpowers 四階段 + 測試自動化 + Codex 交叉審查 | 1 |
 
 ### 計算機科學
 
@@ -52,7 +62,16 @@ updated: '2026-07-21'
 | [[Obsidian]] | 這個 vault 的主要平台，純 Markdown 筆記軟體 | 4 |
 | [[Claude-Code]] | Anthropic 的命令列 AI 助理，本 vault 的主要 AI 介面 | 2 |
 | [[Claudian]] | Obsidian 內建的 AI 助理插件 | 1 |
+| [[OpenCode]] | 開源命令列 AI 助理：oc-go-cc 提供第三方模型、並掛載多個 MCP server | 2 |
+
+### 專案（Ethan 作品）
+
+| 頁面 | 摘要 | 來源數 |
+|---|---|---|
 | [[wiki/entities/KeyLogger-Server\|KeyLogger-Server]] | C++ Winsock Server-Client 鍵側錄程式（與 `工作專案/KeyLogger-Server.md` 同名，故用完整路徑消歧義） | 1 |
+| [[Postfix-Manager]] | Django + Docker 自架郵件伺服器管理系統（Postfix/Dovecot/OpenDKIM + Fail2ban） | 2 |
+| [[CORE-PULSE]] | 個人網站的 AI 吉祥物對話系統（React + Cloudflare Pages，由 LLM Wiki 驅動） | 1 |
+| [[Quartz-閱讀網站]] | 用 Quartz 4 把 vault 白名單資料夾發布為公開閱讀站（規劃中） | 1 |
 
 ### 人物
 
@@ -90,28 +109,10 @@ updated: '2026-07-21'
 
 ## 待消化筆記
 
-2026-07-21 lint 複點（原 2026-07-16 盤點），以下尚未提煉進 wiki：
+2026-07-21 全部消化完畢（本輪 ingest 14 篇 → 新增 9 頁：5 概念 + 4 實體）。
 
-**Clippings（3）**
-- [[Clippings/AI 開發工具/How I build with AI as a 1-person product team]] — /superpowers 開發工作流
-- [[Clippings/AI 開發工具/Codex 逆袭开始！国内畅玩 OpenAI Codex，对接自建 API 中转站完整教程]] — 影片描述＋章節，內容偏推廣
-- [[Clippings/MCP vs API Why traditional APIs are failing AI agents]] — MCP vs 傳統 API 差異（YouTube／Google Cloud Tech，2026-07-16 新增，index 前次漏登）
-
-**個人學習（2）**
-- [[個人學習/LLM與AI/Karpathy LLM 入門 - 從心智模型理解 LLM]]
-- [[個人學習/obsidian相關筆記/搭建屬於自己的 LLM Wiki - Karpathy 模式實作指南]]
-
-**工作專案（7）**
-- [[工作專案/Postfix-Manager/Postfix-Manager-郵件伺服器管理系統]]
-- [[工作專案/Postfix-Manager/mail_server_guide]]
-- [[工作專案/CORE-PULSE-AI吉祥物對話系統]]
-- [[工作專案/Claude Code Skills 安裝指南]]
-- [[工作專案/自製 Claude Code Skills 總覽]]
-- [[工作專案/Quartz 閱讀網站建置規格]]
-- [[工作專案/2026-07 工作紀錄]]
-
-**好工具推薦（2）**
-- [[好工具推薦/oc-go-cc 設定指南]]
-- [[好工具推薦/OpenCode MCP 配置指南]]
+**刻意不另建頁（已審閱）**
+- [[Clippings/AI 開發工具/Codex 逆袭开始！国内畅玩 OpenAI Codex，对接自建 API 中转站完整教程]] — YouTube 描述＋推廣連結，知識稀薄；其「Codex 經自建 API 中轉站接入」的點已併入 [[OpenCode]] 的第三方模型主題。
+- [[工作專案/2026-07 工作紀錄]] — 月度工作彙整，本身即指向各 wiki 頁的 meta-index，不重複建頁。
 
 未列入：`日常/`、`靈感/`（生活與速記，非知識層素材）。

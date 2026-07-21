@@ -1,7 +1,7 @@
 ---
 title: Ethan
 tags: [人物, SRE, AI, 個人]
-updated: 2026-06-04
+updated: 2026-07-21
 source_count: 1
 ---
 
@@ -49,6 +49,10 @@ SRE 學習實驗室：Python 自動化、PyTest 測試、Prometheus/Grafana 監�
 
 - [[SRE-學習路徑]] — SRE 學習路線
 - [[KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案
+- [[Postfix-Manager]] — 自架郵件伺服器管理系統（Django + Docker）
+- [[CORE-PULSE]] — 個人網站的 AI 吉祥物對話系統
+- [[Quartz-閱讀網站]] — 用 Quartz 發布本 vault 的公開閱讀站（規劃中）
+- [[自製-Claude-Code-Skills]] — 開源的四個 Agent Skills
 
 ## 來源
 

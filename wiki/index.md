@@ -73,6 +73,7 @@ updated: '2026-07-21'
 | [[Postfix-Manager]] | Django + Docker 自架郵件伺服器管理系統（Postfix/Dovecot/OpenDKIM + Fail2ban） | 2 |
 | [[CORE-PULSE]] | 個人網站的 AI 吉祥物對話系統（React + Cloudflare Pages，由 LLM Wiki 驅動） | 1 |
 | [[Quartz-閱讀網站]] | 用 Quartz 4 把 vault 白名單資料夾發布為公開閱讀站（規劃中） | 1 |
+| [[wiki/entities/PA440-FW-data-configurator\|PA440-FW-data-configurator]] | Palo Alto PA-440 防火牆 CTI 威脅情資自動化注入與組態稽核工具 | 1 |
 
 ### 人物
 

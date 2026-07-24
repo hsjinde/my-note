@@ -14,6 +14,13 @@ title: Wiki 操作日誌
 
 ---
 
+## [2026-07-24] ingest | 新增 PA440 防火牆情資自動化配置工具技術分享
+
+來源：[[工作專案/PA440-FW-data-configurator.md]] (`D:\PA440-FW-data-configurator`)
+新增專案筆記：[[工作專案/PA440-FW-data-configurator.md]]
+新增實體頁：[[wiki/entities/PA440-FW-data-configurator]]
+更新索引：[[wiki/index.md]]
+
 ## [2026-07-24] ingest | 新增 Matt Pocock Skills for Real Engineers
 
 來源：使用者提問與檢索資料提煉

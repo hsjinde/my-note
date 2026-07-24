@@ -112,14 +112,11 @@ updated: '2026-07-24'
 
 ## 待消化筆記
 
-2026-07-24 lint：撞名交叉引用全數修復，wiki 內部零斷鏈、零孤立頁。
+2026-07-24 lint：撞名交叉引用全數修復、LLM-Wiki 大小寫撞名根除，wiki 內部零斷鏈、零孤立頁。
 
 **近期已消化**
 - 2026-07-24：[[wiki/entities/PA440-FW-data-configurator|PA440-FW-data-configurator]]（來源 `工作專案/PA440-FW-data-configurator`）、[[Matt-Pocock-Skills-for-Real-Engineers]]＋[[Matt-Pocock]]
 - 2026-07-21：ingest 14 篇 → 新增 9 頁（5 概念 + 4 實體）
-
-**待裁示（未消化）**
-- `Clippings/大阪…天神橋筋商店街…Japan TV`（旅遊影片剪藏）— 旅遊/日常素材，是否納入以 tech 為主的知識層，待你決定
 
 **刻意不另建頁（已審閱）**
 - [[Clippings/AI 開發工具/Codex 逆袭开始！国内畅玩 OpenAI Codex，对接自建 API 中转站完整教程]] — YouTube 描述＋推廣連結，知識稀薄；其「Codex 經自建 API 中轉站接入」的點已併入 [[OpenCode]] 的第三方模型主題。

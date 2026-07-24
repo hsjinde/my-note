@@ -105,5 +105,5 @@ source_count: 2
 
 ## 來源
 
-- [[Clippings/AI 開發工具/llm-wiki]] — Karpathy 原始 gist；本頁「備註」節以上為其全文繁體翻譯（2026-06-07 覆寫）
+- [[Clippings/AI 開發工具/llm-wiki-karpathy-gist]] — Karpathy 原始 gist；本頁「備註」節以上為其全文繁體翻譯（2026-06-07 覆寫；原檔名 `llm-wiki.md`，2026-07-24 為消除與本頁大小寫撞名而改名）
 - [[2026-07-05-obsidian-llm-wiki]] — 外部網搜生態調查；「生態與實作工具」節之來源（2026-07-05）

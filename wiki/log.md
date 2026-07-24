@@ -14,6 +14,36 @@ title: Wiki 操作日誌
 
 ---
 
+## [2026-07-24] fix | 使用者裁示「處理 1、2」——NeetCode 來源歧義、LLM-Wiki 大小寫撞名根除
+
+承同日 lint，使用者回「處理 1、2」（第 3 項大阪旅遊剪藏依建議略過，使用者其後自行刪除該檔）。
+
+**1. NeetCode 來源歧義（已修）**
+
+`個人學習/Leecode/` 下 `NeetCode Roadmap (Full List Consolidated + Diagram)` 有 `.canvas`（5 KB，視覺 diagram）與 `.md`（44 KB，完整題目表格＋進度追蹤，且自身以 `![[…canvas]]` 內嵌該圖）兩份。查證確認 `.md` 為主體筆記、`.canvas` 為其附圖；概念頁 L70 早已明確引用 `.canvas` 作「Canvas 路線圖」，僅 L81「來源」用裸名（靠 Obsidian「無副檔名預設 `.md`」解析，語義本就正確但不自我說明）。
+
+處理：L81 → `[[個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md|NeetCode Roadmap（Full List 主體筆記）]]`（完整路徑＋副檔名），與 L70 的 `.canvas` 明確區隔；lint 的 ambiguous 警告由此消除。
+
+**2. LLM-Wiki 大小寫撞名（已根除）**
+
+調查：小寫 `[[llm-wiki]]` 全 vault **零引用**；該剪藏僅被 `concepts/LLM-Wiki.md` L108 以完整路徑引用 1 處。wiki 內裸 `[[LLM-Wiki]]` 實際約 20 處（非 log 舊記的 8 處），另有 3 處位於唯讀原始區（`工作專案/2026-07 工作紀錄`、`個人學習/` 2 篇）無法改。
+
+使用者於三方案（維持＋記錄／改剪藏檔名根除／wiki 內全改完整路徑）中選**根除**，授權破例動一個原始區檔名：
+
+- `Clippings/AI 開發工具/llm-wiki.md` → `llm-wiki-karpathy-gist.md`（**僅改檔名，內容未動**，維持原始區內容唯讀原則）
+- 同步更新 `concepts/LLM-Wiki.md` L108 來源引用，並於該行註明原檔名與改名理由
+- `log.md` 內 2 處舊引用（L169、L304）屬 append-only 歷史紀錄，依既有慣例**刻意保留不改寫**
+
+效果：vault 內 `LLM-Wiki` basename 唯一，所有 `[[LLM-Wiki]]`（含唯讀原始區那 3 處）不再依賴 Obsidian「大小寫完全相符優先」的隱性行為，撞名根除。自 2026-07-16 懸置的待決項結案。
+
+**工具備註（新記一筆，與既有編碼坑並列）**
+
+本輪 Grep 工具連續兩次對 `llm-wiki` 回報「零結果」，與 L108 實際存在明顯矛盾；改用 Bash `grep -rn` 才取得正確清單（3 處引用）。**改名這類牽一髮動全身的操作前，務必交叉驗證引用清單，勿單憑一次搜尋結果**——否則會漏改引用而製造斷鏈。
+
+**index 補正**：移除「待裁示」的大阪旅遊剪藏一條——該檔已於 16:52 的 vault backup（`f037cef`）中由使用者刪除，不再是待決事項。
+
+**驗證**：重跑腳本 → 斷鏈 0、heading anchor 0、孤立頁 0、未登錄 index 0；ambiguous 僅餘 1 條刻意保留（`entities/KeyLogger-Server.md` 的來源指向 `工作專案/` 原始筆記，語義正確）。全 vault md/canvas 由 236 → 235，經 `git log` 查證為使用者刪除大阪剪藏所致，非本次操作誤刪。
+
 ## [2026-07-24] lint | 健康檢查與撞名交叉引用修復
 
 以 UTF-8-safe Python 腳本掃 38 個 wiki 內容頁 + 全 vault（236 個 md/canvas）複點。距上次 lint（2026-07-21）新增 2 筆 ingest（[[wiki/entities/PA440-FW-data-configurator|PA440]]、[[Matt-Pocock]]／[[Matt-Pocock-Skills-for-Real-Engineers]]），本輪針對其引入的撞名問題修復。

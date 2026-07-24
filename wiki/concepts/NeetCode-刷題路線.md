@@ -78,5 +78,5 @@ Linked List → Trees → Tries → Heap/PQ → Backtracking
 
 ## 來源
 
-- [[NeetCode Roadmap (Full List Consolidated + Diagram)]]
+- [[個人學習/Leecode/NeetCode Roadmap (Full List Consolidated + Diagram).md|NeetCode Roadmap（Full List 主體筆記）]]
 - [[50 Popular Backend Developer Interview Questions and Answers]]

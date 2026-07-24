@@ -26,6 +26,7 @@ updated: '2026-07-21'
 | [[Claude-Code-Lazy-Packs]] | 12 個 Claude Code 懶人包技能清單與影片系列 | 1 |
 | [[LLM-Wiki-搭建指南]] | 從零搭 LLM Wiki 的 6 步驟 + 5 大陷阱（含本 vault 案例） | 1 |
 | [[自製-Claude-Code-Skills]] | 作者開源的 4 個 Agent Skill 與共同設計理念 | 2 |
+| [[Matt-Pocock-Skills-for-Real-Engineers]] | 專為 AI Agent 設計的工程化流程技能庫（TDD、PRD、Grilling 等 SOP） | 1 |
 
 ### AI 與 LLM
 
@@ -80,6 +81,7 @@ updated: '2026-07-21'
 | [[Andrej-Karpathy]] | LLM Wiki 概念的原作者，OpenAI 共同創辦人 | 2 |
 | [[Ethan]] | SRE 工程師與 AI 系統開發者，個人技術檔案 | 1 |
 | [[mathruffian-dot]] | Claude Code 懶人包系列作者 | 1 |
+| [[Matt-Pocock]] | TypeScript 講師、AI Hero 創辦人與 mattpocock/skills 開發者 | 1 |
 
 ## 查詢歸檔（queries/）
 

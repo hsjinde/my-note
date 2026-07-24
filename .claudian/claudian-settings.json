@@ -1,7 +1,7 @@
 {
   "userName": "ethan",
   "permissionMode": "yolo",
-  "model": "gemini-3.5-flash",
+  "model": "claude-sonnet-4-6",
   "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -11,7 +11,7 @@
   "mediaFolder": "",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=LFxvn15sKj51rZNooAcAtNdMcLpgWb4Qj2UemTPLWDDeQp9vva\nANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1\nANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.5-flash\nANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro\nANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash",
+  "sharedEnvironmentVariables": "ANTHROPIC_API_KEY=LFxvn15sKj51rZNooAcAtNdMcLpgWb4Qj2UemTPLWDDeQp9vva\nANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1\nANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.6-flash-high\nANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-4-6\nANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash",
   "envSnippets": [],
   "customContextLimits": {
     "Qwen3.7 Max": 1000000,
@@ -36,12 +36,12 @@
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
-      "enableOpus1M": false,
-      "enableSonnet1M": false,
+      "enableOpus1M": true,
+      "enableSonnet1M": true,
       "customModels": "",
       "lastModel": "haiku",
       "environmentVariables": "",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=DeepSeek V4 Pro|ANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash|ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.5-flash"
+      "environmentHash": "ANTHROPIC_BASE_URL=https://cli.19980803.xyz/v1|ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-4-6|ANTHROPIC_DEFAULT_OPUS_MODEL=DeepSeek V4 Flash|ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3.6-flash-high"
     },
     "codex": {
       "enabled": false,
@@ -73,7 +73,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "gemini-3.5-flash",
+    "claude": "claude-sonnet-4-6",
     "opencode": "opencode"
   },
   "savedProviderEffort": {
@@ -89,7 +89,7 @@
     "claude": "yolo",
     "opencode": "yolo"
   },
-  "lastCustomModel": "gemini-3.5-flash",
+  "lastCustomModel": "claude-sonnet-4-6",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,

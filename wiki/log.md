@@ -14,6 +14,13 @@ title: Wiki 操作日誌
 
 ---
 
+## [2026-07-24] ingest | 新增 Matt Pocock Skills for Real Engineers
+
+來源：使用者提問與檢索資料提煉
+新增概念頁：[[Matt-Pocock-Skills-for-Real-Engineers]]
+新增實體頁：[[Matt-Pocock]]
+更新索引：[[wiki/index.md]]
+
 ## [2026-06-04] init | Wiki 知識庫初始化
 
 - 建立 wiki/ 目錄結構：index.md、log.md、concepts/、entities/、queries/

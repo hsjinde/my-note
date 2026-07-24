@@ -1,6 +1,8 @@
 # CORE PULSE — AI 吉祥物對話系統
 
-> 在個人品牌網站加入 AI 吉祥物，訪客可點擊對話，回答基於 LLM Wiki 的「關於我」問題。
+> 在 [[CORE-PULSE|CORE PULSE 個人品牌網站]] 提供 AI 第一人稱對話，回答基於 LLM Wiki 的「關於我」問題。
+
+> ⚠️ **架構演進更新**：原右下角浮動企鵝按鈕 (`MascotWidget`) 已移除，重構為獨立分頁路由 `/ask` (`src/pages/Ask.tsx`)，訪客由導覽列點擊 `ask` 即可開啟獨立對話頁面。
 
 ---
 

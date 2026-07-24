@@ -34,7 +34,7 @@ source_count: 1
 
 - [[Ethan]] — 網站主人（同一 `core-pulse.19980803.xyz` 站點即他的 [[Clippings/職涯/SRE Engineer & AI Systems Developer|SRE 作品集]]）
 - [[LLM-Wiki]] — 吉祥物回答的知識來源模式
-- [[Postfix-Manager]]、[[KeyLogger-Server]]、[[Quartz-閱讀網站]] — Ethan 的其他專案
+- [[Postfix-Manager]]、[[wiki/entities/KeyLogger-Server|KeyLogger-Server]]、[[Quartz-閱讀網站]] — Ethan 的其他專案
 
 ## 來源
 

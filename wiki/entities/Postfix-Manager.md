@@ -32,7 +32,7 @@ source_count: 2
 
 - [[Ethan]] — 作者
 - [[自製-Claude-Code-Skills]] — `server-security-audit` skill 正源自類似的 mail server 安全巡檢經驗（失明的 fail2ban filter、缺登入日誌）
-- [[KeyLogger-Server]]、[[CORE-PULSE]]、[[Quartz-閱讀網站]] — Ethan 的其他專案
+- [[wiki/entities/KeyLogger-Server|KeyLogger-Server]]、[[wiki/entities/CORE-PULSE|CORE-PULSE]]、[[Quartz-閱讀網站]] — Ethan 的其他專案
 
 ## 來源
 

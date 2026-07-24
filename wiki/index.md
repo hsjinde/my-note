@@ -1,6 +1,6 @@
 ---
 title: Wiki 索引
-updated: '2026-07-21'
+updated: '2026-07-24'
 ---
 
 # Wiki 索引
@@ -71,7 +71,7 @@ updated: '2026-07-21'
 |---|---|---|
 | [[wiki/entities/KeyLogger-Server\|KeyLogger-Server]] | C++ Winsock Server-Client 鍵側錄程式（與 `工作專案/KeyLogger-Server.md` 同名，故用完整路徑消歧義） | 1 |
 | [[Postfix-Manager]] | Django + Docker 自架郵件伺服器管理系統（Postfix/Dovecot/OpenDKIM + Fail2ban） | 2 |
-| [[CORE-PULSE]] | 個人網站的 AI 吉祥物對話系統（React + Cloudflare Pages，由 LLM Wiki 驅動） | 1 |
+| [[wiki/entities/CORE-PULSE\|CORE-PULSE]] | 個人網站的 AI 吉祥物對話系統（React + Cloudflare Pages，由 LLM Wiki 驅動） | 1 |
 | [[Quartz-閱讀網站]] | 用 Quartz 4 把 vault 白名單資料夾發布為公開閱讀站（規劃中） | 1 |
 | [[wiki/entities/PA440-FW-data-configurator\|PA440-FW-data-configurator]] | Palo Alto PA-440 防火牆 CTI 威脅情資自動化注入與組態稽核工具 | 1 |
 
@@ -112,7 +112,14 @@ updated: '2026-07-21'
 
 ## 待消化筆記
 
-2026-07-21 全部消化完畢（本輪 ingest 14 篇 → 新增 9 頁：5 概念 + 4 實體）。
+2026-07-24 lint：撞名交叉引用全數修復，wiki 內部零斷鏈、零孤立頁。
+
+**近期已消化**
+- 2026-07-24：[[wiki/entities/PA440-FW-data-configurator|PA440-FW-data-configurator]]（來源 `工作專案/PA440-FW-data-configurator`）、[[Matt-Pocock-Skills-for-Real-Engineers]]＋[[Matt-Pocock]]
+- 2026-07-21：ingest 14 篇 → 新增 9 頁（5 概念 + 4 實體）
+
+**待裁示（未消化）**
+- `Clippings/大阪…天神橋筋商店街…Japan TV`（旅遊影片剪藏）— 旅遊/日常素材，是否納入以 tech 為主的知識層，待你決定
 
 **刻意不另建頁（已審閱）**
 - [[Clippings/AI 開發工具/Codex 逆袭开始！国内畅玩 OpenAI Codex，对接自建 API 中转站完整教程]] — YouTube 描述＋推廣連結，知識稀薄；其「Codex 經自建 API 中轉站接入」的點已併入 [[OpenCode]] 的第三方模型主題。

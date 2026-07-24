@@ -14,6 +14,39 @@ title: Wiki 操作日誌
 
 ---
 
+## [2026-07-24] lint | 健康檢查與撞名交叉引用修復
+
+以 UTF-8-safe Python 腳本掃 38 個 wiki 內容頁 + 全 vault（236 個 md/canvas）複點。距上次 lint（2026-07-21）新增 2 筆 ingest（[[wiki/entities/PA440-FW-data-configurator|PA440]]、[[Matt-Pocock]]／[[Matt-Pocock-Skills-for-Real-Engineers]]），本輪針對其引入的撞名問題修復。
+
+**腳本工具坑（新記一筆）**
+
+首版腳本把表格跳脫管線 `\|` 誤還原為字面 `|` 再 split，使 `[[path\|alias]]` 的 target 含管線 → 誤報 39 條斷鏈（多益 hub 37 條 + index 的 KeyLogger／PA440 完整路徑 2 條）全為假陽性。修正：`\|` 應直接視為被跳脫的別名分隔符（還原成 `|` 後取前段）。沿用舊備註：排除 fenced/inline code、大小寫敏感、`.canvas` 副檔名、最短路徑解析。
+
+**已修（自動）——撞名交叉引用統一化**
+
+根因：`工作專案/` 下的 `CORE-PULSE.md`、`KeyLogger-Server.md`、`PA440-FW-data-configurator.md` 與 wiki entity 同名，裸 `[[名稱]]` 依 Obsidian 最短路徑一律落到工作專案原始筆記，連不到 entity 頁。07-21 只點修了 Ethan→KeyLogger 一條，07-21／07-24 新建的 entity 頁又大量沿用裸連結。本輪把「相關／其他專案／清單」導覽用的交叉引用全數改完整路徑（表格用 `\|`、條列用 `|`）：
+
+- `index.md`：`[[CORE-PULSE]]` → 完整路徑（解除 CORE-PULSE 孤立）
+- `entities/Ethan.md`：`[[CORE-PULSE]]` → 完整路徑；並補 `[[PA440-FW-data-configurator]]` 專案連結（解除 PA440 僅 index 連入）
+- `entities/CORE-PULSE.md`、`Postfix-Manager.md`、`Quartz-閱讀網站.md`：其「其他專案」清單內的 `[[KeyLogger-Server]]`／`[[CORE-PULSE]]` → 完整路徑
+- `entities/PA440-FW-data-configurator.md`：L30／L34 與自身同名的裸連結明確化為 `[[工作專案/PA440-FW-data-configurator|…]]`（本就指原始筆記，消除裸名脆弱）
+
+**index 補漏**：`updated` → 2026-07-24；「待消化」區塊更新（反映 07-24 已 ingest PA440／Matt-Pocock、標記大阪旅遊剪藏待裁示）。
+
+**保留（目標正確，非問題）**：entity 頁「來源」區塊的 `[[KeyLogger-Server]]`（指向 `工作專案/` 原始筆記為正確語義，故不改）。
+
+**語義層（矛盾/過時）**：本次 delta 僅 07-24 兩頁。核對新 concept 頁 [[Matt-Pocock-Skills-for-Real-Engineers]] 與相鄰兄弟頁（[[AI-產品開發工作流]]／[[自製-Claude-Code-Skills]]／[[Claude-Code-Skills]]）——四者同屬 AI Agent 工程化但定位互異（Matt 第三方技能庫／superpowers 方法論／Ethan 自製技能／CC skills 機制），且已互相 wikilink，無重複或矛盾。順手補 [[Matt-Pocock-Skills-for-Real-Engineers]]、[[Matt-Pocock]] 兩頁缺漏的 `source_count: 1`（對齊 index 來源數）；其餘 schema 漂移（多出 `type` 欄位、tags 多行、`updated` 加引號）屬 07-24 新頁風格差異，未強制統一，留待日後定慣例。
+
+**規則檔同步**：`CLAUDE.md`、`AGENTS.md` 均仍為指向 `core_rules.md` 的薄指標檔，無重複規則；`core_rules.md` 本次未改。
+
+**驗證**：修後重跑腳本 → 斷鏈 0、heading anchor 0、孤立頁 0、未登錄 index 0；ambiguous 僅餘 2 條刻意保留（KeyLogger 來源、NeetCode Roadmap `.canvas`／`.md`）。
+
+**待決（未動，待裁示）**
+
+- `NeetCode-刷題路線.md` 來源 `[[NeetCode Roadmap (...)]]` 有 `.canvas`／`.md` 同名，裸連結解析到 `.md`：來源要指哪個。
+- `LLM-Wiki`（wiki）vs `llm-wiki`（Clippings）僅大小寫之差，8 處裸連結靠大小寫精確匹配解析，脆弱：是否永久消歧義。自 2026-07-16 懸置。
+- `Clippings/大阪…天神橋筋商店街…`（旅遊影片剪藏）：是否 ingest（建議略過，屬旅遊／日常素材）。
+
 ## [2026-07-24] ingest | 新增 PA440 防火牆情資自動化配置工具技術分享
 
 來源：[[工作專案/PA440-FW-data-configurator.md]] (`D:\PA440-FW-data-configurator`)

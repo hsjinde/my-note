@@ -27,8 +27,8 @@ Palo Alto PA-440 防火牆 CTI（Cyber Threat Intelligence 威脅情資）自動
 ## 相關概念
 
 - [[SRE-學習路徑]] — 包含自動化維運 (Automation & Tooling) 與資安防禦
-- [[PA440-FW-data-configurator]] — 完整技術分享筆記
+- [[工作專案/PA440-FW-data-configurator|完整技術分享筆記]]
 
 ## 來源
 
-- [[PA440-FW-data-configurator]]（`工作專案/PA440-FW-data-configurator.md`）
+- [[工作專案/PA440-FW-data-configurator]]（工作紀錄，完整技術與部署細節）

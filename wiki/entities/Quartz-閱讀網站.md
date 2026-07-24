@@ -30,7 +30,7 @@ Quartz 放 repo 子資料夾 `website/`；Actions 只把白名單資料夾複製
 
 - [[Ethan]] — 專案作者
 - [[Obsidian]] — 內容來源平台
-- [[Postfix-Manager]]、[[CORE-PULSE]]、[[KeyLogger-Server]] — Ethan 的其他專案
+- [[Postfix-Manager]]、[[wiki/entities/CORE-PULSE|CORE-PULSE]]、[[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — Ethan 的其他專案
 
 ## 來源
 

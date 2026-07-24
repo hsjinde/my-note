@@ -6,6 +6,7 @@ tags:
   - ai/workflow
   - developer-tools
 updated: '2026-07-24'
+source_count: 1
 ---
 
 # Matt Pocock Skills for Real Engineers

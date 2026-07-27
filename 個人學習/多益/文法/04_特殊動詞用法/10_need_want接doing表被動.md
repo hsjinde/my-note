@@ -32,32 +32,22 @@
 *   **merit** (v.) 值得、應得 | The proposal *merits* further discussion before approval.
 *   **entail** (v.) 需要、牽涉 | Launching the new product line will *entail* significant restructuring.
 *   **necessitate** (v.) 使成為必要 | The equipment failure *necessitated* an immediate inspection.
-*   **revise** (v. 及物) 修改、修訂 | The contract needs *revising* before both parties sign it.
 *   **revision** (n.) 修訂、修改 | The draft is currently undergoing a final *revision*.
 *   **edit** (v. 及物) 編輯、修改 | The manuscript still requires careful *editing*.
-*   **overhaul** (v. 及物) 徹底翻修、改造 | The outdated database wants *overhauling* before the migration.
-*   **streamline** (v. 及物) 使簡化、使效率化 | The approval process needs *streamlining* to cut delays.
-*   **restructure** (v. 及物) 重組、改組 | The finance department needs *restructuring* after the merger.
-*   **reorganize** (v. 及物) 重新整理、重組 | The warehouse layout needs *reorganizing* to save space.
 *   **redesign** (v. 及物) 重新設計 | The company website needs *redesigning* to look more modern.
-*   **rewrite** (v. 及物) 重寫 | This section of the manual needs *rewriting* for clarity.
 *   **reword** (v. 及物) 改寫措辭 | The vague clause in the agreement needs *rewording*.
 *   **proofread** (v. 及物) 校對 | The press release still needs *proofreading* before it goes out.
 *   **correct** (v. 及物) 更正、修正 | Several figures in the spreadsheet need *correcting*.
-*   **amend** (v. 及物) 修正、修改（正式，常用於法律／合約） | The bylaws want *amending* to reflect the new policy.
 *   **upgrade** (v. 及物) 升級 | The server needs *upgrading* to handle the extra traffic.
 *   **patch** (v. 及物) 修補（尤指軟體漏洞） | The security flaw needs *patching* immediately.
 *   **tweak** (v. 及物) 微調 | The marketing plan just needs *tweaking* here and there.
 *   **refine** (v. 及物) 精煉、改善 | The forecasting model needs *refining* before it can be trusted.
-*   **clarify** (v. 及物) 澄清、闡明 | The instructions in the memo need *clarifying*.
 *   **simplify** (v. 及物) 簡化 | The reimbursement procedure needs *simplifying*.
 
 ### 動詞：整理、維護類
 *   **mend** (v. 及物) 修補 | The torn packaging on the delivered goods needs *mending*.
 *   **repair** (v. 及物) 修理 | The photocopier on the third floor needs *repairing*.
 *   **update** (v. 及物) 更新 | The employee directory needs *updating* every quarter.
-*   **sort out** (phr. v.) 整理、解決 | The billing discrepancy wants *sorting out* before the audit.
-*   **iron out** (phr. v.) 解決（小問題） | A few scheduling conflicts still need *ironing out*.
 *   **touch up** (phr. v.) 稍加潤飾 | The product photos need *touching up* before the catalog is printed.
 
 ## 📚 補充秒殺公式
@@ -106,8 +96,9 @@
 **10.** The torn seals on several returned packages need ______ before the items can be resold.
 (A) mend (B) mended (C) mending (D) to mend
 
-**11.** 第一空：The draft press release still needs ______ for a few grammatical errors.（第一空）第二空：Once it is polished, the outdated media contact list also wants ______ before it is sent out.（第二空）
-(A) proofreading (B) updating
+**11.** The draft press release still needs ______ for a few grammatical errors. Once it is polished, the outdated media contact list also wants ______ before it is sent out.
+第一空：(A) proofreading (B) proofread (C) to proofread (D) proofreads
+第二空：(A) update (B) updating (C) to update (D) updates
 
 **12.** The vague wording in the return policy warrants ______, since several customers have misunderstood it.
 (A) clarify (B) clarified (C) clarifying (D) to clarifying
@@ -118,7 +109,8 @@
 **14.** Because the layout wastes so much floor space, the entire warehouse wants ______ before the new shipment arrives.
 (A) reorganize (B) reorganized (C) reorganizing (D) to reorganizing
 
-**15.** 第一空：The forecasting model the analysts built last year needs ______ to account for the recent market shift.（第一空）第二空：Once the figures are corrected, the summary chart will also need ______.（第二空）
-(A) refining (B) updating
+**15.** The forecasting model the analysts built last year needs ______ to account for the recent market shift. Once the figures are corrected, the summary chart will also need ______.
+第一空：(A) refining (B) refine (C) to refine (D) refines
+第二空：(A) update (B) updating (C) to update (D) updates
 
 📖 詳解請見：[[詳解/04_特殊動詞用法/10_need_want接doing表被動]]

@@ -1,6 +1,6 @@
 # Postfix Manager — 企業級多網域郵件伺服器管理系統與 Linux 網路安全強化架構 (求職 Presentation 評析)
 
-> **"This project demonstrate end-to-end Systems Architecture, Linux Network Hardening, Cloud Native Container Orchestration, and Full-Stack Infrastructure Management."**
+> **"This project demonstrates end-to-end Systems Architecture, Linux Network Hardening, Cloud Native Container Orchestration, and Full-Stack Infrastructure Management."**
 
 ---
 
@@ -8,12 +8,13 @@
 
 * **求職目標**: Senior DevOps Engineer / Infrastructure Architect / Site Reliability Engineer (SRE) / Full-Stack System Developer
 * **專案名稱**: Postfix Manager (企業級多網域郵件伺服器管理系統)
+* **真實線上環境**: `https://postfix-manager.19980803.xyz`
 * **核心技術棧**: Python (Django), Docker Compose, Postfix (SMTP), Dovecot (POP3/IMAP), OpenDKIM, Certbot (Let's Encrypt), Host Nginx (SSL Stream Proxy), Linux IPTables (DOCKER-USER chain), Fail2ban.
 * **主要工程亮點**:
   1. **端口封鎖繞過與 SSL Stream 轉發代理**: 針對 VPS 主機商封鎖 995/465/587 等傳統郵件傳輸埠的困境，運用 Host Nginx 的 `ngx_stream_module` 在 8443 (POP3 SSL) 與 2525 (SMTP SSL) 建立二層 SSL Stream 代理轉發，彈性繞過 ISP 限制。
   2. **多網域 TLS 憑證與 OpenDKIM 自動化編排**: 整合 Django 管理介面與 Certbot (Webroot 模式)，建立新網域時自動完成 Let's Encrypt TLS 簽發、產生 RSA/Ed25519 OpenDKIM 金鑰，並精確寫入 Postfix / Dovecot / OpenDKIM 設定檔與自動匯出 DNS (SPF / DMARC / DKIM) 記錄。
   3. **Docker DNAT 與 Fail2ban 防禦鏈修正 (DOCKER-USER Chain)**: 深入剖析 Docker 容器網絡映射會繞過 Linux IPTables `INPUT` 鏈的底層機制，將 Fail2ban 的封鎖規則精準掛載至 `DOCKER-USER` 鏈，並調優 24 小時滑動時間窗以擊退慢速分散式暴力破解。
-  4. **無狀態容器中郵件帳戶持久化機制**: 設計 Dovecot/Postfix 虛擬帳號與 Shadow 自動備份與掛載修復機制 (`passwd.backup` / `shadow.backup`)，確保 Docker 容器重建或滾動更新時，郵件帳戶與雜湊密碼完全不遺失。
+  4. **無狀態容器中郵件帳號持久化機制**: 設計 Dovecot/Postfix 虛擬帳號與 Shadow 自動備份與掛載修復機制 (`passwd.backup` / `shadow.backup`)，確保 Docker 容器重建或滾動更新時，郵件帳戶與雜湊密碼完全不遺失。
 
 ---
 
@@ -25,26 +26,26 @@
 ### Slide 2: 端口繞過與 Nginx SSL Stream 架構 (SSL Stream Proxy & Port Bypass)
 ![Postfix Manager 系統架構簡報](screenshots/mail_server_architecture_slide.jpg)
 
-### Slide 3: Linux 網絡安全與 Fail2ban DOCKER-USER 防禦 (Security Hardening & Fail2ban)
+### Slide 3: Linux 網路安全與 Fail2ban DOCKER-USER 防禦 (Security Hardening & Fail2ban)
 ![Postfix Manager 安全強化簡報](screenshots/mail_server_security_slide.jpg)
 
 ---
 
-## 畫面與亮點展示 (Visual Showcase)
+## 畫面與亮點展示 (Real Production Showcase)
 
-以下為本專案運作之真實系統介面截圖：
+以下為本專案正式生產環境 (`https://postfix-manager.19980803.xyz`) 運作之真實系統介面截圖：
 
-### 1. 系統登入與存取控制 (Authentication & Access Control)
+### 1. 系統營運儀表板 (Production Dashboard)
 
-![Postfix Manager 登入介面](screenshots/01_mail_server_login.png)
+![Postfix Manager 系統儀表板看板](screenshots/01_mail_server_index.png)
 
 * **架構觀點**:
-  * 採用 Django 自訂身份驗證機制，限制僅具備 `is_staff` 管理員權限的用戶存取內部控制台。
-  * 結合 CSRF Token 保護機制與 Session 安全設定，防止跨站請求偽造。
+  * 實時顯示當前伺服器監聽之網域總數、郵件帳號數量與關鍵服務（Postfix, Dovecot, OpenDKIM）運作狀態。
+  * 採用響應式終端卡片設計，提供清晰的高階營運觀測視角。
 
 ---
 
-### 2. DNS / 多網域管理控制台 (DNS & Multi-Domain Manager)
+### 2. DNS / 多網域管理控制台 (Production DNS Manager)
 
 ![DNS 管理控制台](screenshots/02_mail_server_dns_manager.png)
 
@@ -54,7 +55,7 @@
 
 ---
 
-### 3. 別名與信箱帳號管理 (Alias & Account Manager)
+### 3. 別名與信箱帳號管理 (Production Alias Manager)
 
 ![別名帳號管理](screenshots/03_mail_server_alias_manager.png)
 
@@ -64,14 +65,14 @@
 
 ---
 
-### 4. 自動化 DNS 記錄與安全防護預覽 (DNS Security Detail)
+### 4. 自動化 DNS 記錄與安全防護細節 (Production DNS Security Detail: 19980803.xyz)
 
 ![DNS 設定細節預覽](screenshots/04_mail_server_dns_detail.png)
 
 * **安全規範實踐**:
-  * **SPF 自動生成**：根據伺服器 IPv4 自動產出嚴格防偽造標準 `v=spf1 ip4:<IP> -all`。
+  * **SPF 自動生成**：根據伺服器對外 IP 自動產出嚴格防偽造標準 `v=spf1 ip4:<IP> -all`。
   * **DMARC 檢測指引**：自動設置 Reject 策略與 postmaster 報告回傳機制。
-  * **DKIM 秘鑰導出**：將生成的 OpenDKIM 公鑰格式化為符合 Cloudflare / DNS 供應商規範的 TXT 記錄。
+  * **DKIM 秘鑰導出**：將生成的 OpenDKIM 公鑰格式化為符合 Cloudflare / DNS 供應商規範的 TXT 記錄（如 `mail._domainkey.19980803.xyz`）。
 
 ---
 
@@ -84,7 +85,7 @@ flowchart TD
         DNSProvider["DNS Providers (Cloudflare, Route53)"]
     end
 
-    subgraph Host ["VPS Host Infrastructure (Ubuntu 22.04)"]
+    subgraph Host ["VPS Host Infrastructure (RackNerd Ubuntu 22.04)"]
         subgraph NetLayer ["Linux Network & Security Filter"]
             IPTables["IPTables / Netfilter Rules"]
             Fail2ban["Fail2ban Service (DOCKER-USER Chain)"]
@@ -138,7 +139,7 @@ flowchart TD
 ## 核心技術挑戰與工程解決方案 (Technical Challenges & Engineering Solutions)
 
 ### 挑戰一：主機商封鎖 995/465/587 連接埠的繞過機制
-* **問題**：許多廉價或雲端 VPS 主機商（如 RackNerd、AWS EC2、GCP）預設會封鎖或嚴格審查 outgoing/incoming 的標準郵件連接埠（例如 465/587 SMTP 或 995 POP3 SSL），導致客戶端無法順利收發郵件。
+* **問題**：許多 VPS 主機商（如 RackNerd、AWS EC2、GCP）預設會封鎖或嚴格審查 outgoing/incoming 的標準郵件連接埠（例如 465/587 SMTP 或 995 POP3 SSL），導致客戶端無法順利收發郵件。
 * **工程解法**：
   1. 使用 Host Nginx 載入 `ngx_stream_module` 模組，配置四層傳輸層轉發 (Stream Proxy)。
   2. 將對外的 `8443` 埠流量以 SSL 終止或直接 Stream 透傳至內網 `127.0.0.1:110` (Dovecot POP3)。
@@ -205,13 +206,13 @@ flowchart TD
 ## 履歷可複製亮點描述 (Resume Bullet Points)
 
 ### 繁體中文 CV 格式
-* **設計與維運企業級多網域郵件伺服器**：基於 Django、Docker Compose、Postfix 與 Dovecot 打造全自動郵件管理系統，支援多網域動態切換、Certbot TLS 自動簽發與 OpenDKIM 密鑰對自動化管理。
+* **設計與維運企業級多網域郵件伺服器**：基於 Django、Docker Compose、Postfix 與 Dovecot 打造全自動郵件管理系統 (`https://postfix-manager.19980803.xyz`)，支援多網域動態切換、Certbot TLS 自動簽發與 OpenDKIM 密鑰對自動化管理。
 * **突破 ISP 傳輸埠限制與四層代理架構**：運用 Host Nginx `ngx_stream_module` 設計 SSL Stream 反向代理，將外部 8443/2525 流量安全透傳至內部 POP3/SMTP 服務，解決雲端主機 PORT 465/587 封鎖問題。
 * **Linux 網路層安全強化與 Docker 防禦工程**：修正 Docker DNAT 繞過 IPTables `INPUT` 鏈之安全漏洞，將 Fail2ban 規則掛載至 `DOCKER-USER` 鏈，並精準攔截超過 10,000+ 次慢速分散式 SMTP 暴力破解攻擊。
 * **無狀態容器資料持久化**：實作虛擬郵件帳號與密碼雜湊檔 (`passwd.backup`/`shadow.backup`) 的雙向備份與容器啟動修復機制，確保容器滾動更新時服務無縫接軌。
 
 ### English CV Format
-* **Engineered an Enterprise Multi-Domain Mail Management System**: Built a Django & Docker Compose orchestration stack managing Postfix (MTA), Dovecot (MDA), OpenDKIM, and Certbot for automated TLS provisioning and DNS record generation (SPF/DMARC/DKIM).
+* **Engineered an Enterprise Multi-Domain Mail Management System**: Built a Django & Docker Compose orchestration stack managing Postfix (MTA), Dovecot (MDA), OpenDKIM, and Certbot for automated TLS provisioning and DNS record generation (SPF/DMARC/DKIM) live on `https://postfix-manager.19980803.xyz`.
 * **Architected SSL Stream Proxy for Port Restriction Bypass**: Implemented Nginx `ngx_stream_module` Layer 4 proxying to map public ports (8443/2525) to internal POP3/SMTP services, resolving ISP port-blocking challenges.
 * **Hardened Linux & Container Security Infrastructure**: Resolved Docker DNAT bypassing standard IPTables `INPUT` chains by intercepting malicious traffic via `DOCKER-USER` chain integration in Fail2ban, thwarting 10,000+ brute-force attempts.
 * **Implemented Self-Healing Storage for Stateless Containers**: Designed dynamic credential sync and automated backup recovery (`passwd.backup` / `shadow.backup`) for virtual mail users across container restarts.

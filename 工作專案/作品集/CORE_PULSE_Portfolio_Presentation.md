@@ -1,6 +1,7 @@
 # CORE PULSE — SRE / AI Systems 個人品牌與技術展示平台 (求職 Presentation 專案評析)
 
 > **"This is not just a personal website; it's a living engineering showcase of SRE discipline, AI Systems architecture, and Terminal Editorial design aesthetics."**
+> **線上真實部署站點**: [https://19980803.xyz](https://19980803.xyz)
 
 ---
 
@@ -8,6 +9,7 @@
 
 * **求職目標**: Senior SRE Engineer / AI Infrastructure Developer / Staff Platform Engineer / Full-Stack System Architect
 * **專案定位**: 為 SRE & AI 系統開發者打造的個人品牌與技術展示平台（CORE PULSE）。網站本身即是工程品味與架構能力的實體作品。
+* **正式上線 URL**: `https://19980803.xyz` / `core-pulse.pages.dev`
 * **主要亮點**:
   1. **Terminal Editorial 設計系統**: 告別通用模板與 Sass 漸層/玻璃擬態，採用「終端機 × 印刷雜誌」極簡黑灰畫布，色彩作為動態訊號而非裝飾。
   2. **Edge-Native 雙運行時架構**: 前端 React 19 + Vite 5 SPA，邊緣端 Cloudflare Pages Functions + D1 (SQLite) 散列限流。
@@ -15,7 +17,9 @@
   4. **全頁面 AI 知識庫問答系統 (`/ask`)**: 採用 SSE (Server-Sent Events) 流式響應、本地 Markdown Wiki RAG 語意檢索與邊緣端 IP 哈希動態限流。
   5. **嚴苛的自動化測試與契約守護**: 具備完整的 Vitest 單元測試與 Playwright E2E 契約驗證（無障礙契約、SEO Sitemap 同步守護、CSP 主題加載守護）。
 
-## 專案快速簡介簡報 (Project Introduction Slides)
+---
+
+## 專案核心簡報圖 (Architecture & Overview Slides)
 
 ![CORE PULSE 專案簡介總覽 Slide](screenshots/core_pulse_overview_slide.jpg)
 
@@ -23,48 +27,54 @@
 
 ---
 
-## 畫面與亮點展示 (Visual Showcase)
+## 上線實體環境截圖 (Live Production Showcase: https://19980803.xyz)
 
-以下為本專案實體運作截圖（已儲存於 `D:\my-note\screenshots\`）：
+以下截圖均來自生產環境 `https://19980803.xyz`（雙倍解析度 Retina 擷取，儲存於 `D:\my-note\screenshots\`）：
 
-### 1. 首頁 Hero 區塊 (Terminal Editorial 視覺風格)
+### 1. 線上首頁 Hero 區塊 (Terminal Editorial 視覺風格)
 
-![CORE PULSE 首頁 Hero 區塊](screenshots/01_home_hero.png)
+![CORE PULSE 線上首頁 Hero 區塊](screenshots/01_live_home_hero.png)
 
-* **設計觀點**:
+* **線上特點解析**:
   * 採用 **髮絲線框 (Hairline Borders)** 與 **JetBrains Mono** 終端機展示字體。
   * **色彩即訊號 (Color as Signal)**：全站以純粹灰階與深色畫布為主，僅在綠色 Live 狀態燈與動態 Telemetry 指標使用語意色彩，不濫用漸層與光暈。
   * **簡潔嚴謹的視覺對比**: 行長控制在 `≤72ch`，具備清晰的字階比例對比 (`≥1.25`)。
 
 ---
 
-### 2. 滾動專案看板 (Hand-Curated Project Board)
+### 2. 線上滾動專案看板 (Hand-Curated Project Board #worklog)
 
-![CORE PULSE 專案看板與進度圖譜](screenshots/02_home_full.png)
+![CORE PULSE 線上專案看板與進度圖譜](screenshots/02_live_project_board.png)
 
-* **架構亮點**:
+* **線上特點解析**:
   * 展示近 3 個月的滾動工作紀錄（手動精選脫敏 Vault 日誌），舊月份自動納入下方摺疊歸檔。
   * **專案識別色條 (Project Identity Ramp)**: 每一個專案配備固定的 CSS Custom Property 色彩標籤，支援單選過濾與視覺快速辨識，並嚴格通過 WCAG 3:1 以上對比驗證。
 
 ---
 
-### 3. SRE 實時波形觀測台 (`/telemetry`)
+### 3. 線上 SRE 實時波形觀測台 (`https://19980803.xyz/telemetry`)
 
-![SRE 實時波形儀表板 Telemetry Deck](screenshots/03_telemetry_deck.png)
+![SRE 實時波形儀表板 Telemetry Deck](screenshots/03_live_telemetry_deck.png)
 
-* **技術深度**:
-  * 使用 **Three.js (WebGL)** 渲染 SRE 動態波形與服務延遲分佈圖。
+* **線上特點解析**:
+  * 使用 **Three.js (WebGL)** 在生產環境即時渲染 SRE 動態波形與服務延遲分佈圖。
   * **Code Splitting 優化**: 將 Three.js 及其數學庫封裝於獨立的 Lazy Chunk，確保訪問首頁時不需下載龐大的 WebGL 引擎，首屏速度提高 60% 以上。
 
 ---
 
-### 4. AI 職涯知識庫問答系統 (`/ask`)
+### 4. 線上 AI 職涯知識庫問答系統 (`https://19980803.xyz/ask`)
 
-![AI 職涯知識庫問答系統 /ask](screenshots/04_ask_llm_chat.png)
+![AI 職涯知識庫問答系統 /ask](screenshots/04_live_ask_llm.png)
 
-* **AI 系統設計**:
+* **線上特點解析**:
   * 整合 OpenAI 兼容端點與 Cloudflare Edge Functions，提供 SSE 打字機流式輸出。
   * **Wiki RAG 知識庫 Grounding**: 邊緣端自動打包 `src/content/wiki/*.md` 公開技術文件，構建高專注度 System Prompt，自動過濾非 public 敏感標籤。
+
+---
+
+### 5. 線上首頁完整滾動頁面 (Full Page Snapshot)
+
+![CORE PULSE 線上首頁全貌](screenshots/05_live_home_full.png)
 
 ---
 
@@ -168,7 +178,7 @@ flowchart TD
 
 ```markdown
 - **CORE PULSE — SRE & AI Systems Engineer Personal Platform**
-  • Architected an edge-native portfolio & observability platform using React 19, TypeScript, Vite 5, and Cloudflare Pages Functions (Serverless Edge).
+  • Architected an edge-native portfolio & observability platform using React 19, TypeScript, Vite 5, and Cloudflare Pages Functions (Serverless Edge) deployed at https://19980803.xyz.
   • Implemented an SRE Waveform Observation Deck (`/telemetry`) powered by Three.js WebGL and optimized bundle sizes by 60%+ using granular route-based code-splitting.
   • Developed a secure, RAG-grounded LLM assistant (`/ask`) featuring SSE streaming, privacy-preserving IP hash rate limiting backed by Cloudflare D1 SQLite, and automated wiki markdown ingestion.
   • Enforced enterprise-grade code quality with Vitest unit tests and Playwright E2E suites covering Accessibility focus contracts, SEO sitemap sync, and CSP theme validation.
@@ -176,6 +186,6 @@ flowchart TD
 
 ---
 
-*文檔生成時間: 2026-08-13*
+*正式上線網址: https://19980803.xyz*
 *檔案位置: `D:\my-note\CORE_PULSE_Portfolio_Presentation.md`*
-*截圖目錄: `D:\my-note\screenshots\`*
+*真實截圖目錄: `D:\my-note\screenshots\`*

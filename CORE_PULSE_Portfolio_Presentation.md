@@ -15,6 +15,12 @@
   4. **全頁面 AI 知識庫問答系統 (`/ask`)**: 採用 SSE (Server-Sent Events) 流式響應、本地 Markdown Wiki RAG 語意檢索與邊緣端 IP 哈希動態限流。
   5. **嚴苛的自動化測試與契約守護**: 具備完整的 Vitest 單元測試與 Playwright E2E 契約驗證（無障礙契約、SEO Sitemap 同步守護、CSP 主題加載守護）。
 
+## 專案快速簡介簡報 (Project Introduction Slides)
+
+![CORE PULSE 專案簡介總覽 Slide](screenshots/core_pulse_overview_slide.jpg)
+
+![CORE PULSE 高精度 SRE 觀測與架構圖 Slide](screenshots/core_pulse_architecture_slide.jpg)
+
 ---
 
 ## 畫面與亮點展示 (Visual Showcase)

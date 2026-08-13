@@ -4,3 +4,6 @@
 .obsidian/graph.json
 .claudian
 .playwright-mcp/
+
+# Obsidian 垃圾桶：已刪除檔案的暫存區，保留在磁碟供還原，但不進版控
+.trash/

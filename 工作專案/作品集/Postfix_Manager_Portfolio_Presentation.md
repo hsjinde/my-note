@@ -9,8 +9,7 @@ updated: 2026-08-14
 
 > 自架郵件伺服器的管理層：Django 介面負責新增網域時的 TLS 簽發、DKIM 金鑰與設定檔編排，底層以 Docker Compose 跑 Postfix / Dovecot / OpenDKIM。
 >
-> **脫敏狀態**：**文字已脫敏**——管理介面網址、對外埠與內網服務的精確映射、主機商與 OS 版本、封鎖網段皆抽換為概念性描述，面試時可自行補回。
-> **但截圖尚未處理**：下方管理介面截圖仍含真實網域、SPF 記錄的對外 IP、完整 DKIM 公鑰與 admin 帳號名。此頁會同步至公開站，圖片是否遮蔽或抽換待決定。
+> **本頁已脫敏（文字 + 圖片）**：管理介面網址、對外埠與內網服務的精確映射、主機商與 OS 版本、封鎖網段抽換為概念性描述；截圖中的網域、對外 IP、郵件帳號名與架構圖上的埠號以實心色塊遮蔽。面試時可口頭補回細節。
 
 ---
 
@@ -20,11 +19,11 @@ updated: 2026-08-14
 * **專案名稱**: Postfix Manager (多網域郵件伺服器管理系統)
 * **運行狀態**: 自有網域生產環境長期運行中（管理介面走 HTTPS 反向代理，不對外公開路徑）
 * **核心技術棧**: Python (Django), Docker Compose, Postfix (SMTP), Dovecot (POP3/IMAP), OpenDKIM, Certbot (Let's Encrypt), Host Nginx (SSL Stream Proxy), Linux IPTables (DOCKER-USER chain), Fail2ban.
-* **主要工程亮點**:
-  1. **端口封鎖繞過與 SSL Stream 轉發代理**: 針對 VPS 主機商封鎖 995/465/587 等傳統郵件傳輸埠的困境，運用 Host Nginx 的 `ngx_stream_module` 建立四層 SSL Stream 代理，將自訂高位埠轉發至內網 POP3 / SMTP 服務，繞過 ISP 限制。
-  2. **多網域 TLS 憑證與 OpenDKIM 自動化編排**: 整合 Django 管理介面與 Certbot (Webroot 模式)，建立新網域時自動完成 Let's Encrypt TLS 簽發、產生 RSA/Ed25519 OpenDKIM 金鑰，並寫入 Postfix / Dovecot / OpenDKIM 設定檔與匯出 DNS (SPF / DMARC / DKIM) 記錄。
-  3. **Docker DNAT 與 Fail2ban 防禦鏈修正 (DOCKER-USER Chain)**: 剖析 Docker 容器網路映射繞過 Linux IPTables `INPUT` 鏈的機制，將 Fail2ban 封鎖規則掛載至 `DOCKER-USER` 鏈，並拉長滑動時間窗以涵蓋慢速分散式暴力破解。
-  4. **無狀態容器中郵件帳號持久化機制**: 設計 Dovecot/Postfix 虛擬帳號與 Shadow 自動備份與掛載修復機制 (`passwd.backup` / `shadow.backup`)，確保容器重建或滾動更新時帳戶與雜湊密碼不遺失。
+* **主要工程亮點**（完整拆解見下方〈核心技術挑戰與工程解決方案〉）:
+  1. **端口封鎖繞過**：Nginx `ngx_stream_module` 四層 SSL Stream 代理，繞過主機商封鎖的郵件埠。
+  2. **多網域 TLS 與 OpenDKIM 自動化編排**：新增網域一鍵完成憑證簽發、金鑰產生、設定檔寫入與 DNS 記錄匯出。
+  3. **Docker DNAT 與 Fail2ban 防禦鏈修正**：把封鎖規則從被繞過的 `INPUT` 鏈移到 `DOCKER-USER` 鏈。
+  4. **無狀態容器中的帳號持久化**：虛擬帳號與密碼雜湊雙向備份，容器重建自我修復。
 
 ---
 
@@ -34,7 +33,7 @@ updated: 2026-08-14
 ![Postfix Manager 專案總覽簡報](screenshots/mail_server_overview_slide.jpg)
 
 ### Slide 2: 端口繞過與 Nginx SSL Stream 架構 (SSL Stream Proxy & Port Bypass)
-![Postfix Manager 系統架構簡報](screenshots/mail_server_architecture_slide.jpg)
+![Postfix Manager 系統架構簡報](screenshots/mail_server_architecture_slide_redacted.jpg)
 
 ### Slide 3: Linux 網路安全與 Fail2ban DOCKER-USER 防禦 (Security Hardening & Fail2ban)
 ![Postfix Manager 安全強化簡報](screenshots/mail_server_security_slide.jpg)
@@ -47,7 +46,7 @@ updated: 2026-08-14
 
 ### 1. 系統營運儀表板 (Production Dashboard)
 
-![Postfix Manager 系統儀表板看板](screenshots/01_mail_server_index.png)
+![Postfix Manager 系統儀表板看板](screenshots/01_mail_server_index_redacted.png)
 
 * **架構觀點**:
   * 實時顯示當前伺服器監聽之網域總數、郵件帳號數量與關鍵服務（Postfix, Dovecot, OpenDKIM）運作狀態。
@@ -57,7 +56,7 @@ updated: 2026-08-14
 
 ### 2. DNS / 多網域管理控制台 (Production DNS Manager)
 
-![DNS 管理控制台](screenshots/02_mail_server_dns_manager.png)
+![DNS 管理控制台](screenshots/02_mail_server_dns_manager_redacted.png)
 
 * **工程亮點**:
   * **一鍵式網域建立 (Create & Use)**：輸入新網域後，後端 `Util.py` 自動調用內部模組觸發 TLS 憑證簽發、OpenDKIM 秘鑰對生成與設定檔重載。
@@ -67,7 +66,7 @@ updated: 2026-08-14
 
 ### 3. 別名與信箱帳號管理 (Production Alias Manager)
 
-![別名帳號管理](screenshots/03_mail_server_alias_manager.png)
+![別名帳號管理](screenshots/03_mail_server_alias_manager_redacted.png)
 
 * **功能深度**:
   * 支援全 Email (`username@domain.com`) 與短帳號密碼對的建立、修改與刪除。
@@ -77,7 +76,7 @@ updated: 2026-08-14
 
 ### 4. 自動化 DNS 記錄與安全防護細節 (Production DNS Security Detail)
 
-![DNS 設定細節預覽](screenshots/04_mail_server_dns_detail.png)
+![DNS 設定細節預覽](screenshots/04_mail_server_dns_detail_redacted.png)
 
 * **安全規範實踐**:
   * **SPF 自動生成**：根據伺服器對外 IP 自動產出嚴格防偽造標準 `v=spf1 ip4:<IP> -all`。

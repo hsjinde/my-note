@@ -8,6 +8,8 @@ updated: 2026-08-14
 # Osaka Vault — AI 驅動的大阪旅遊知識庫與自動化行程管線
 
 > 一個以 Obsidian Markdown 為底的知識庫：原始剪藏與 AI 知識層分離，用 MCP 讓 Agent 讀寫，圖片走 Cloudflare R2 邊緣 CDN，行程草稿由已確認訂單 grounding 產出。
+>
+> **本頁已脫敏**：此頁會同步至公開站，截圖與內文中的出國日期、航班編號與住宿名稱已遮蔽或改為概括描述——那是「本人何時不在家、住在哪」的完整資訊。
 
 ---
 
@@ -17,12 +19,12 @@ updated: 2026-08-14
 * **專案名稱**: Osaka Vault (大阪旅遊 AI 知識庫與自動化行程管線)
 * **核心技術棧**: Obsidian Markdown Engine, Model Context Protocol (MCP), Cloudflare R2 / Workers, Defuddle Web Clipper, Tavily Dynamic Search/Crawl API, Node.js / Playwright Automation, Mermaid Visualizer.
 * **核心數據規模**: 159+ 結構化 Wiki 實體與概念頁（包含 98+ 筆分類餐廳、7+ 筆交通票券、22+ 筆購物商圈）、100% 邊緣 CDN 資產覆蓋、5 天 4 夜自動化行程框架引擎。
-* **主要工程亮點**:
-  1. **雙層知識隔離架構 (Dual-Layer Knowledge Engine)**：「原始資料層 (Read-Only Clippings)」與「AI 知識層 (Wiki Level)」解耦，防止 LLM 改寫原始剪藏，確保 Grounding 來源不被污染。
-  2. **Cloudflare R2 雲端邊緣資產管線 (Edge Asset Pipeline)**：針對 Obsidian 本地圖片膨脹痛點，設計自動化 R2 媒體處理管線 (Bucket: `core-pulse-assets`)。透過自訂網域 CDN (`https://img.19980803.xyz`) 發佈，並以全 ASCII Key 規範解決 Cloudflare Worker URL 解碼 404 問題。
-  3. **Obsidian MCP (Model Context Protocol) 原生整合**：整合 `@bitbonsai/mcpvault` MCP 服務，讓 AI Agent 具備型別安全的 Obsidian 檔案系統 CRUD、語意檢索與 Frontmatter 元資料驗證能力。
-  4. **增量消化與智慧快取失效機制 (Smart Digest & Cache Invalidation)**：於 `wiki/log.md` 實作 timestamp 比對與 7 天 TTL 快取失效邏輯，避免每次對話重複對數十萬 Token 進行盲目消化，節省 80% 以上運算開銷。
-  5. **來源優先級行程起草引擎**：將「已付款確定行程 (`Osaka Trip/`)」與「他山之石參考資料 (`原始資料/別人行程/`)」硬性隔離，已確認訂單是唯一真值來源；配合 D1~D5 時間軸狀態機（已確認 ✅ / 待定 📌），未確認的項目一律標記待定，不由 Agent 自行補齊。
+* **主要工程亮點**（完整拆解見下方〈核心技術挑戰與工程解決方案〉）:
+  1. **雙層知識隔離架構**：原始剪藏層唯讀、AI 只寫 wiki 層，Grounding 來源不被 LLM 污染。
+  2. **Cloudflare R2 邊緣資產管線**：圖檔移出 Vault 走 CDN，全 ASCII Key 規範解掉 Worker URL 解碼 404。
+  3. **Obsidian MCP 原生整合**：`@bitbonsai/mcpvault` 提供型別安全的檔案 CRUD、語意檢索與 Frontmatter 驗證。
+  4. **增量消化與快取失效**：`wiki/log.md` 的 timestamp 比對 + 7 天 TTL，省去重複燒 token。
+  5. **來源優先級行程起草**：已確認訂單是唯一真值來源，未確認項目一律標「待定 📌」，不由 Agent 自行補齊。
 
 ---
 
@@ -62,7 +64,7 @@ updated: 2026-08-14
 
 ### 1. Obsidian 雙層知識圖譜與 YAML Frontmatter 契約 (Knowledge Graph & Entity Schema)
 
-![Obsidian 雙層知識圖譜展示](screenshots/osaka_vault_obsidian_knowledge_graph.png)
+![Obsidian 雙層知識圖譜展示](screenshots/osaka_vault_obsidian_knowledge_graph_redacted.png)
 
 * **架構與 UI 觀點**:
   * **樹狀與圖譜雙軌**：左側展示標準 Obsidian 檔案樹，右側實時呈現 159+ 節點之關聯知識圖譜 (Knowledge Graph)。
@@ -82,10 +84,10 @@ updated: 2026-08-14
 
 ### 3. 5D4N AI 行程自動化管線與動態儀表板 (Automated Itinerary Dashboard)
 
-![AI 5D4N 行程自動化儀表板展示](screenshots/osaka_vault_itinerary_dashboard.png)
+![AI 5D4N 行程自動化儀表板展示](screenshots/osaka_vault_itinerary_dashboard_redacted.png)
 
 * **系統能力展示**:
-  * **動態行程起草 (`itinerary-draft.md`)**：Agent 自動讀取已付費訂單（樂桃航班 MM024/MM027、心齋橋格蘭多酒店），結合景點與交通知識，生成 D1~D5 時間軸草稿。
+  * **動態行程起草 (`itinerary-draft.md`)**：Agent 自動讀取已付費訂單（去回程航班時刻、住宿 check-in / check-out），結合景點與交通知識，生成 D1~D5 時間軸草稿。
   * **狀態標籤流 (State Machine)**：每一段行程明確標記「已確認 ✅」或「待定 📌」，使用者填補細節時不會覆蓋既有已付款資訊。
 
 ---
@@ -150,7 +152,7 @@ flowchart TD
 * **問題**：傳統 Markdown AI 筆記系統常將網路抓取的「別人的旅遊食記/遊記」直接寫入 LLM 上下文，導致 AI 在回答「我的行程是什麼」時產生嚴重幻覺，把別人推薦的餐廳誤判為用戶已訂項目。
 * **工程解法**：
   1. **硬性目錄隔離**：劃分 `原始資料/` (包含 `別人行程/`，`source_type: reference`) 與 `Osaka Trip/` (`source_type: plan`)。
-  2. **優先級 Grounding 機制**：觸發「起草每日行程」或「查詢行程」時，Agent 被規範必須優先載入 `Osaka Trip/` 的已確認訂單（樂桃航班時間與飯店 check-in），其餘景點僅作為可替換之「待定 📌」選項。
+  2. **優先級 Grounding 機制**：觸發「起草每日行程」或「查詢行程」時，Agent 被規範必須優先載入 `Osaka Trip/` 的已確認訂單（航班時刻與飯店 check-in），其餘景點僅作為可替換之「待定 📌」選項。
 
 ### 亮點二：Cloudflare R2 Edge CDN 媒體資產管線與 URL 正規化
 * **問題**：將網頁剪藏（Web Clipping）存入 Obsidian 時，若圖檔存在本地會造成 Vault 體積暴增；若保留原始外部 URL 則易遇到防盜鏈或連結失效；若直接上傳 Cloudflare R2，中文檔名（如 `大阪城.jpg`）會因為 Worker URL 解碼問題拋出 `404 Not Found`。

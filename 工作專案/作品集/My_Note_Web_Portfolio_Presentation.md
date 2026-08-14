@@ -1,6 +1,13 @@
-# my-note-web — 現代化 Obsidian 雲端知識庫與 Git 雙向同步 Edge 閱讀平台 (求職 Presentation 專案評析)
+---
+title: my-note-web — Obsidian 雲端知識庫與 Git 雙向同步 Edge 閱讀平台（作品集簡報）
+tags: [作品集, 工作專案, my-note-web, Cloudflare, Workers, RAG, 求職]
+date: 2026-08-13
+updated: 2026-08-14
+---
 
-> **"my-note-web is not just a Markdown viewer; it is a high-performance Edge Knowledge Platform built with Cloudflare Workers, Hono, React, Sharded KV, and Workers AI RAG. It bridges local Obsidian vaults with the public web through instant Webhook incremental sync and conflict-safe Git back-write."**
+# my-note-web — Obsidian 雲端知識庫與 Git 雙向同步 Edge 閱讀平台
+
+> 把本地 Obsidian Vault 接上公開網頁：Cloudflare Workers + Hono + Sharded KV 提供閱讀與檢索，Webhook 做增量同步，網頁編輯經 GitHub Contents API 樂觀鎖回寫。
 
 ---
 
@@ -19,7 +26,7 @@
   * **`<50ms` 邊緣 API 響應速度**：基於 Cloudflare 全球 300+ 邊緣節點託管，完全擺脫冷啟動（Zero Cold-Start）。
   * **`秒級` Webhook 增量同步**：Obsidian 推送 Git Commit 後幾秒內反映至線上，同步資源消耗減少 95%。
   * **`168+` 篇 Obsidian 筆記結構化雲端檢索**：支援全內容檢索、標籤過濾與雙向連結（Wikilinks & Backlinks）。
-  * **`0 元` 嵌入式全記憶體 Bigram RAG**：無須負擔向量資料庫 (Vector DB) 成本，透過動態比對與 Context Compression 提供零幻覺 AI 答詢。
+  * **`0 元` 嵌入式全記憶體 Bigram RAG**：無須負擔向量資料庫 (Vector DB) 成本，答案一律附上來源筆記路徑，可回頭驗證。
   * **`100%` 隱私權限硬隔離**：嚴格區分公開閱讀白名單與私有 `wiki/` 知識庫，保護個人隱私邊界。
 
 ---
@@ -57,7 +64,7 @@
 
 * **系統能力展示**:
   * **鍵盤導向體驗**：按下 `⌘K` 或 `Ctrl+K` 快速呼叫全站搜尋模態框，支援 `Esc` 關閉與方向鍵上下選擇。
-  * **雙欄式即時預覽**：左欄列出關鍵字匹配結果，右欄即時呈現筆記段落預覽與黃色高亮標籤 (Highlight Mark)，提供比傳統 Obsidian 原生搜尋更直覺的網頁體驗。
+  * **雙欄式即時預覽**：左欄列出關鍵字匹配結果，右欄即時呈現筆記段落預覽與黃色高亮標籤 (Highlight Mark)，不需離開當前頁面即可判斷是否為要找的筆記。
 
 ---
 
@@ -82,7 +89,7 @@
 
 ---
 
-### 6. 極致流暢行動端響應式介面 (Fluid Mobile Viewport - 375px)
+### 6. 行動端響應式介面 (Fluid Mobile Viewport - 375px)
 
 ![my-note-web 行動端響應式介面展示](screenshots/my_note_web_live_responsive_mobile.png)
 
@@ -239,7 +246,7 @@ export async function putFile(
 
 ---
 
-### 4. 挑戰四：極致輕量邊緣 RAG AI 引擎 (Zero-Embedding Bigram Context Scoring Engine)
+### 4. 挑戰四：輕量邊緣 RAG AI 引擎 (Zero-Embedding Bigram Context Scoring Engine)
 
 * **問題背景**:
   在無伺服器環境中部署傳統 AI RAG (Retrieval-Augmented Generation)，通常需要：
@@ -265,7 +272,7 @@ export async function putFile(
             Stage 2: 載入 Shard 筆記全文計分 ───────────────> 選出 Top 4 筆記
                     │
                     ▼
-            組裝 System Prompt ──> Cloudflare Workers AI ──> 準確且無幻覺回答
+            組裝 System Prompt ──> Cloudflare Workers AI ──> 帶出處的回答
 ```
 
 ---
@@ -287,7 +294,7 @@ export async function putFile(
 ### 6. 挑戰六：自研獨立微型 SPA 架構與「書房紙頁」設計系統 (Custom Micro SPA & Editorial Design System)
 
 * **問題背景**:
-  現代 Web 開發常常過度依賴重型套件（如 React Router、TailwindCSS、Redux 等），導致 Bundle 體積膨脹，且難以打造精準且不落俗套的品牌視覺風格。
+  現代 Web 開發常常過度依賴重型套件（如 React Router、TailwindCSS、Redux 等），導致 Bundle 體積膨脹，也難以做出有辨識度的品牌視覺。
 * **工程解決方案**:
   * **零依賴極速 Hash Router**：在 [src/app/router.ts](src/app/router.ts) 中，以僅 30 行代碼實現型別安全的 Hash 路由解析 (`#/note/<path>`, `#/tag/<tag>`, `#/db`)，完全不依賴任何外部 Router 套件。
   * **Vanilla CSS 變數設計系統 (`theme.css`)**：全站統一使用原生 CSS 自訂變數，完全不用 Tailwind。定義極簡雙色主題（Paper Light / Paper Dark）、紙頁質感邊框 (`var(--ln)`) 與微互動懸浮效果。
@@ -337,18 +344,16 @@ export async function putFile(
 
 ---
 
-## 求職評析總結與加分點 (Recruiter Assessment & Career Pitch)
+## 面試時可以談的四件事 (Talking Points)
 
-為什麼 **my-note-web** 能在前端、全端與 Cloudflare 邊緣架構師的面試中脫穎而出？
-
-1. **極佳的 Cloudflare Edge 邊緣運算思維 (Cloudflare & Serverless Systems Focus)**
-   展現了對 Cloudflare Workers、Hono 框架、KV 分片架構與 Workers AI 的深刻理解。能將個人筆記系統轉化為兼具極速響應（<50ms）與高可靠度的全球邊緣閱讀平台。
-2. **完整的高階 Git 整合與數據一致性控制 (Git Engineering & Optimistic Locking)**
-   許多個人筆記網站僅能做到單向靜態生成（SSG）。本專案實作了 **Webhook 增量同步** 與 **網頁端 Contents API 樂觀鎖 commit 回寫**，展現了對雙向數據同步與衝突處置的硬核控制實力。
-3. **務實且高效的 AI RAG 落地能力 (Practical AI Engineering)**
-   沒有盲目引進昂貴或複雜的 Vector DB 基礎設施，而是根據專案規模（數百篇筆記）自研 **全記憶體 Bigram / Token 計分檢索演算法**，以零額外成本與極低延遲完成精準的 RAG 智慧問答。
-4. **傑出的產品品味與前端設計能力 (Product Design & Frontend Discipline)**
-   自主研發「書房紙頁 (Editorial Paper)」設計系統，嚴格遵守字型學、色彩變數規範與響應式邊界，證明開發者不僅具備紮實的後端與系統設計功底，更具備高水準的 UI/UX 美學與產品打造能力。
+1. **Cloudflare Edge 架構取捨 (Cloudflare & Serverless Systems)**
+   Workers、Hono、KV 分片與 Workers AI 的實際運用。重點不是用了哪些服務，而是為什麼把整站索引壓成一次 KV 讀取（`meta:index`），以及這個決定換到了 `<50ms` 的邊緣響應。
+2. **雙向 Git 同步與資料一致性 (Git Engineering & Optimistic Locking)**
+   多數個人筆記網站只做單向 SSG。這裡實作了 Webhook 增量同步與網頁端 Contents API 樂觀鎖回寫，可以談 SHA 衝突偵測與 `409` 的處理方式。
+3. **RAG 的規模判斷 (Practical AI Engineering)**
+   數百篇筆記的規模不值得養 Vector DB，所以自寫全記憶體 Bigram / Token 計分檢索。可以談兩階段計分的權重設計，以及什麼時候這個做法會失效（語料量再大一個數量級就該換）。
+4. **前端設計系統與零依賴取向 (Product Design & Frontend Discipline)**
+   「書房紙頁」設計系統、30 行的零依賴 Hash Router、Vanilla CSS 變數主題。可以談為什麼在這個專案刻意不用 Tailwind 與 React Router。
 
 ---
-*專案簡報與技術評析檔案生成完成，可於 Obsidian 或任何 Markdown 閱讀器中完美呈現。*
+*索引：[[作品集總覽]]*

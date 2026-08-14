@@ -1,6 +1,13 @@
-# Osaka Vault — AI 驅動的大阪旅遊知識庫與自動化行程管線 (求職 Presentation 專案評析)
+---
+title: Osaka Vault — AI 驅動的旅遊知識庫與自動化行程管線（作品集簡報）
+tags: [作品集, 工作專案, Osaka-Vault, Obsidian, MCP, LLM, Cloudflare, 求職]
+date: 2026-08-13
+updated: 2026-08-14
+---
 
-> **"Osaka Vault is not just a personal travel note; it is an enterprise-grade demonstration of AI Knowledge Engineering, Agentic Discipline, Model Context Protocol (MCP) Integration, and Serverless Edge Asset Pipeline."**
+# Osaka Vault — AI 驅動的大阪旅遊知識庫與自動化行程管線
+
+> 一個以 Obsidian Markdown 為底的知識庫：原始剪藏與 AI 知識層分離，用 MCP 讓 Agent 讀寫，圖片走 Cloudflare R2 邊緣 CDN，行程草稿由已確認訂單 grounding 產出。
 
 ---
 
@@ -11,11 +18,11 @@
 * **核心技術棧**: Obsidian Markdown Engine, Model Context Protocol (MCP), Cloudflare R2 / Workers, Defuddle Web Clipper, Tavily Dynamic Search/Crawl API, Node.js / Playwright Automation, Mermaid Visualizer.
 * **核心數據規模**: 159+ 結構化 Wiki 實體與概念頁（包含 98+ 筆分類餐廳、7+ 筆交通票券、22+ 筆購物商圈）、100% 邊緣 CDN 資產覆蓋、5 天 4 夜自動化行程框架引擎。
 * **主要工程亮點**:
-  1. **雙層知識隔離架構 (Dual-Layer Knowledge Engine)**：獨創「原始資料層 (Read-Only Clippings)」與「AI 知識層 (Wiki Level)」解耦設計。徹底防禦 LLM 侵入或修改原始剪藏，確保 Grounding 資料來源純淨度。
-  2. **Cloudflare R2 雲端邊緣資產管線 (Edge Asset Pipeline)**：針對 Obsidian 本地圖片膨脹痛點，設計全自動 R2 媒體處理管線 (Bucket: `core-pulse-assets`)。透過自訂網域 CDN (`https://img.19980803.xyz`) 進行全球傳播，並實作全 ASCII Key 規範以解決 Cloudflare Worker URL 解碼 404 瓶頸。
+  1. **雙層知識隔離架構 (Dual-Layer Knowledge Engine)**：「原始資料層 (Read-Only Clippings)」與「AI 知識層 (Wiki Level)」解耦，防止 LLM 改寫原始剪藏，確保 Grounding 來源不被污染。
+  2. **Cloudflare R2 雲端邊緣資產管線 (Edge Asset Pipeline)**：針對 Obsidian 本地圖片膨脹痛點，設計自動化 R2 媒體處理管線 (Bucket: `core-pulse-assets`)。透過自訂網域 CDN (`https://img.19980803.xyz`) 發佈，並以全 ASCII Key 規範解決 Cloudflare Worker URL 解碼 404 問題。
   3. **Obsidian MCP (Model Context Protocol) 原生整合**：整合 `@bitbonsai/mcpvault` MCP 服務，讓 AI Agent 具備型別安全的 Obsidian 檔案系統 CRUD、語意檢索與 Frontmatter 元資料驗證能力。
   4. **增量消化與智慧快取失效機制 (Smart Digest & Cache Invalidation)**：於 `wiki/log.md` 實作 timestamp 比對與 7 天 TTL 快取失效邏輯，避免每次對話重複對數十萬 Token 進行盲目消化，節省 80% 以上運算開銷。
-  5. **Zero-Hallucination 零幻覺行程起草引擎**：將「已付款確定行程 (`Osaka Trip/`)」與「他山之石參考資料 (`原始資料/別人行程/`)」進行硬性語意隔離，配合 D1~D5 時間軸狀態機（已確認 ✅ / 待定 📌），自動產出無幻覺之精準行程草稿。
+  5. **來源優先級行程起草引擎**：將「已付款確定行程 (`Osaka Trip/`)」與「他山之石參考資料 (`原始資料/別人行程/`)」硬性隔離，已確認訂單是唯一真值來源；配合 D1~D5 時間軸狀態機（已確認 ✅ / 待定 📌），未確認的項目一律標記待定，不由 Agent 自行補齊。
 
 ---
 
@@ -25,8 +32,8 @@
 ![Osaka Vault 專案總覽簡報](screenshots/osaka_vault_overview_slide.jpg)
 
 * **設計觀點**:
-  * 採用 **Terminal Editorial** 極簡黑灰風格，強烈呈現 SRE/AI 系統工程之嚴謹紀律。
-  * **關鍵指標透視**: 展現 159+ 實體頁面、98+ 餐廳資料與 100% R2 邊緣 CDN 資產傳輸。
+  * 採用 **Terminal Editorial** 黑灰風格，與 CORE PULSE 主站視覺一致。
+  * **關鍵指標**: 159+ 實體頁面、98+ 餐廳資料、圖片資產 100% 走 R2 邊緣 CDN。
 
 ---
 
@@ -51,7 +58,7 @@
 
 ## 畫面與亮點展示 (Real System Showcase)
 
-以下為本專案實體運作與系統介面展示（圖檔已存於 `D:\my-note\screenshots\`）：
+以下為本專案實體運作與系統介面展示（原圖位於 `screenshots/`）：
 
 ### 1. Obsidian 雙層知識圖譜與 YAML Frontmatter 契約 (Knowledge Graph & Entity Schema)
 
@@ -68,7 +75,7 @@
 ![Cloudflare R2 資產管線展示](screenshots/osaka_vault_r2_asset_pipeline.png)
 
 * **工程細節剖析**:
-  * **零儲存庫負擔 (Zero-Vault Overhead)**：傳統 Obsidian Vault 經常因為剪藏大量圖檔導致 Git 儲存庫急遽膨脹。本專案將圖檔全數移轉至 Cloudflare R2 Bucket `core-pulse-assets`。
+  * **零儲存庫負擔 (Zero-Vault Overhead)**：Obsidian Vault 常因剪藏大量圖檔導致 Git 儲存庫膨脹。本專案將圖檔全數移轉至 Cloudflare R2 Bucket `core-pulse-assets`。
   * **URL 規範化修復**：Cloudflare Worker CDN (`https://img.19980803.xyz`) 不會自動解碼 URL，中文 Key（如 `景點/大阪城.jpg`）會觸發 HTTP 404。本系統於上傳時強制進行全 ASCII 正規化轉換 (如 `osaka/entities/transit/jr-haruka-route-map.jpg`)。
 
 ---
@@ -139,7 +146,7 @@ flowchart TD
 
 ## 核心技術挑戰與工程解決方案 (Technical Challenges & Engineering Solutions)
 
-### 亮點一：雙層知識隔離與 Zero-Hallucination 零幻覺 Grounding
+### 亮點一：雙層知識隔離與來源優先級 Grounding
 * **問題**：傳統 Markdown AI 筆記系統常將網路抓取的「別人的旅遊食記/遊記」直接寫入 LLM 上下文，導致 AI 在回答「我的行程是什麼」時產生嚴重幻覺，把別人推薦的餐廳誤判為用戶已訂項目。
 * **工程解法**：
   1. **硬性目錄隔離**：劃分 `原始資料/` (包含 `別人行程/`，`source_type: reference`) 與 `Osaka Trip/` (`source_type: plan`)。
@@ -183,14 +190,14 @@ flowchart TD
 > **回答策略（展現架構思維與維護性考量）**：
 > 「傳統 Vector DB RAG 適合海量非結構化文檔，但存在兩個主要痛點：**可讀性差（黑盒化）** 與 **難以人工精細編輯微調**。
 > 本專案選擇『Obsidian Markdown + MCP 協定 + 雙層結構』：
-> 1. **人間與 AI 共讀**：Markdown 是人類與 AI Agent 最完美的共同語言。使用者能在 Obsidian 視覺化雙鏈圖譜中探索，AI 也能透過 frontmatter 進行精確搜尋。
+> 1. **人間與 AI 共讀**：Markdown 是人類與 AI Agent 都能直接讀寫的共同格式。使用者能在 Obsidian 視覺化雙鏈圖譜中探索，AI 也能透過 frontmatter 進行精確搜尋。
 > 2. **零維護成本**：不需要架設 Vector DB 或 Embedding 伺服器，透過 MCP 協定即能讓 LLM 直接存取原生 Vault，獲得毫秒級檢索體驗。」
 
 ### Q2: 面試官：「你在這個專案中如何防止 LLM 的幻覺 (Hallucination)？」
 > **回答策略（展現 AI 系統設計的防禦性工程）**：
 > 「主要透過兩個策略解決：
 > 1. **Strict Context Grounding**：我將筆記進行『資料來源劃分』，明確將用戶付費訂單與網路參考遊記隔離。在 Prompt 與 `core_rules.md` 中強行約定『已付款行程擁有最高真值 (Truthness) 優先權』。
-> 2. **State Machine Tagging**：行程起草時，強制 Agent 每一個項目都必須掛上『已確認 ✅』或『待定 📌』標籤。在無確切數據時，Agent 被封鎖自動填補虛構細節，徹底杜絕幻覺。」
+> 2. **State Machine Tagging**：行程起草時，強制 Agent 每一個項目都必須掛上『已確認 ✅』或『待定 📌』標籤。在無確切數據時，Agent 被禁止自行填補細節——寧可留白標「待定」，也不生成看似合理的內容。」
 
 ### Q3: 面試官：「在設計 Cloudflare R2 媒體資產管線時，遇到過什麼印象深刻的 Bug？」
 > **回答策略（展現實際動手排查與邊緣計算能力）**：
@@ -205,7 +212,7 @@ flowchart TD
 ### 繁體中文 CV 格式
 * **設計與建構 AI 驅動之雙層知識庫架構 (Osaka Vault)**：基於 Obsidian Markdown、Model Context Protocol (MCP) 與 Cloudflare R2 打造自動化旅遊知識與行程管理系統，收錄 159+ 筆結構化實體頁與 98+ 筆分類餐廳資料。
 * **實作 Cloudflare R2 雲端邊緣資產管線**：設計圖片自動化提取與全球 CDN 發布機制 (`img.19980803.xyz`)，解決本地 Vault 圖檔膨脹問題，並制定全 ASCII Key 正規化規範突破 Cloudflare Worker URL 解碼 404 限制。
-* **工程化防禦 LLM 幻覺與語意 Grounding**：嚴格隔離「已付費訂單」與「網路參考資料」，透過 YAML Frontmatter 規範與 D1-D5 狀態機機制（已確認 ✅ / 待定 📌），達成 100% 精準行程框架自動化產出。
+* **工程化防禦 LLM 幻覺與語意 Grounding**：嚴格隔離「已付費訂單」與「網路參考資料」，透過 YAML Frontmatter 規範與 D1-D5 狀態機機制（已確認 ✅ / 待定 📌），確保 Agent 不會把參考資料誤植為已訂項目。
 * **開發增量消化與 7 天智慧快取失效機制**：於 `wiki/log.md` 實作檔案 Hash 比對與快取控制，節省超過 80% 之 LLM Token 開銷與對話回應延遲。
 
 ### English CV Format
@@ -216,6 +223,4 @@ flowchart TD
 
 ---
 
-*文檔生成時間: 2026-08-13*  
-*檔案位置: `D:\my-note\Osaka_Vault_Portfolio_Presentation.md`*  
-*截圖目錄: `D:\my-note\screenshots\`*  
+*截圖目錄：`screenshots/` ｜ 索引：[[作品集總覽]]*

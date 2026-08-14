@@ -1,21 +1,27 @@
-# CORE PULSE — SRE / AI Systems 個人品牌與技術展示平台 (求職 Presentation 專案評析)
+---
+title: CORE PULSE — SRE / AI 系統個人品牌平台（作品集簡報）
+tags: [作品集, 工作專案, CORE-PULSE, SRE, Cloudflare, React, 求職]
+date: 2026-08-13
+updated: 2026-08-14
+---
 
-> **"This is not just a personal website; it's a living engineering showcase of SRE discipline, AI Systems architecture, and Terminal Editorial design aesthetics."**
-> **線上真實部署站點**: [https://19980803.xyz](https://19980803.xyz)
+# CORE PULSE — SRE / AI 系統個人品牌與技術展示平台
+
+> 線上站點：[https://19980803.xyz](https://19980803.xyz)
 
 ---
 
 ## Executive Summary (求職摘要)
 
 * **求職目標**: Senior SRE Engineer / AI Infrastructure Developer / Staff Platform Engineer / Full-Stack System Architect
-* **專案定位**: 為 SRE & AI 系統開發者打造的個人品牌與技術展示平台（CORE PULSE）。網站本身即是工程品味與架構能力的實體作品。
+* **專案定位**: 個人品牌與技術展示平台。網站本身就是履歷的一部分——架構、測試紀律與設計選擇都攤在生產環境上。
 * **正式上線 URL**: `https://19980803.xyz` / `core-pulse.pages.dev`
 * **主要亮點**:
-  1. **Terminal Editorial 設計系統**: 告別通用模板與 Sass 漸層/玻璃擬態，採用「終端機 × 印刷雜誌」極簡黑灰畫布，色彩作為動態訊號而非裝飾。
-  2. **Edge-Native 雙運行時架構**: 前端 React 19 + Vite 5 SPA，邊緣端 Cloudflare Pages Functions + D1 (SQLite) 散列限流。
-  3. **SRE 實時波形觀測台 (`/telemetry`)**: 整合 Three.js WebGL 動態波形與系統指標，示範 SRE 可觀測性 (Observability) 與低延遲渲染。
-  4. **全頁面 AI 知識庫問答系統 (`/ask`)**: 採用 SSE (Server-Sent Events) 流式響應、本地 Markdown Wiki RAG 語意檢索與邊緣端 IP 哈希動態限流。
-  5. **嚴苛的自動化測試與契約守護**: 具備完整的 Vitest 單元測試與 Playwright E2E 契約驗證（無障礙契約、SEO Sitemap 同步守護、CSP 主題加載守護）。
+  1. **Terminal Editorial 設計系統**: 不使用漸層與玻璃擬態模板，採「終端機 × 印刷雜誌」黑灰畫布，色彩只作為狀態訊號、不作裝飾。
+  2. **Edge-Native 雙運行時架構**: 前端 React 19 + Vite 5 SPA，邊緣端 Cloudflare Pages Functions + D1 (SQLite) 雜湊限流。
+  3. **SRE 實時波形觀測台 (`/telemetry`)**: Three.js WebGL 動態波形與系統指標，示範可觀測性與低延遲渲染。
+  4. **AI 知識庫問答 (`/ask`)**: SSE 流式響應、本地 Markdown Wiki RAG 檢索、邊緣端 IP 雜湊限流。
+  5. **自動化測試與契約守護**: Vitest 單元測試 + Playwright E2E 契約（無障礙焦點環、SEO Sitemap 同步、CSP 主題載入）。
 
 ---
 
@@ -29,7 +35,7 @@
 
 ## 上線實體環境截圖 (Live Production Showcase: https://19980803.xyz)
 
-以下截圖均來自生產環境 `https://19980803.xyz`（雙倍解析度 Retina 擷取，儲存於 `D:\my-note\screenshots\`）：
+以下截圖均來自生產環境 `https://19980803.xyz`（雙倍解析度 Retina 擷取，原圖位於 `screenshots/`）：
 
 ### 1. 線上首頁 Hero 區塊 (Terminal Editorial 視覺風格)
 
@@ -135,7 +141,7 @@ flowchart TD
 
 ### 3. SRE 等級的無障礙與鍵盤導覽契約 (`e2e/a11y-contract.spec.ts`)
 * **嚴格的契約測試**: 透過 Playwright 結合 `@axe-core/playwright` 自動化測試全站可聚焦元素的焦點環 (Focus Ring)。
-* **無障礙對齊**: 全站統一使用 `2px solid :focus-visible` outline，並強制跳過停用元素，徹底防止鍵盤使用者迷失。
+* **無障礙對齊**: 全站統一使用 `2px solid :focus-visible` outline，並強制跳過停用元素，避免鍵盤使用者失去焦點位置。
 
 ### 4. 路由與 SEO 自動同步守護契約 (`e2e/seo.spec.ts`)
 * **解決 SPA SEO 痛點**: 單頁應用經常出現前端新增路由，但 Sitemap 與 Open Graph 遺漏更新的問題。
@@ -143,7 +149,7 @@ flowchart TD
 
 ### 5. 漸進式 Chunk 切割與前庭保護 (Code-Splitting & Vestibular Safety)
 * **Bundle 最佳化**: 將大體積依賴（Three.js 3D 引擎、react-markdown、rehype-highlight）切割至異步 Chunk，首頁保持純靜態載入。
-* **動畫安全**: 全站整合 `MotionConfig reducedMotion="user"`，當使用者開啟系統「減少動態」設定時，自動停用位移動畫，僅保留淡入淡出，展現對使用者體驗的極致細節。
+* **動畫安全**: 全站整合 `MotionConfig reducedMotion="user"`，當使用者開啟系統「減少動態」設定時，自動停用位移動畫，僅保留淡入淡出。
 
 ### 6. GitHub Actions CI/CD 部署自動化
 * **自動化流水線**:
@@ -155,7 +161,7 @@ flowchart TD
 
 ### Q1: 為什麼選擇 React 19 + Vite 5 + Cloudflare Pages Functions，而不是 Next.js？
 > **回答範本**:
-> 「Next.js 非常適合大型 SSR/SSG 應用，但對於一個追求**極致首屏載入速度、冷靜控速與維護成本**的個人工程品牌來說，SPA + Serverless Edge 是更輕量且掌控度更高的選擇。
+> 「Next.js 非常適合大型 SSR/SSG 應用，但對於一個以首屏載入速度與維護成本為優先的個人工程品牌來說，SPA + Serverless Edge 是更輕量且掌控度更高的選擇。
 > 我將動態 API 限制在 Edge Functions (`functions/api/`)，前端則編譯為純靜態資產部署至 Cloudflare CDN Edge。這樣不僅能獲得毫秒級的全球首屏回應，更能大幅降低維護複雜度與伺服器開銷。」
 
 ### Q2: 你在 `/telemetry` 頁面如何確保 3D WebGL 渲染不會影響網頁整體效能？
@@ -186,6 +192,4 @@ flowchart TD
 
 ---
 
-*正式上線網址: https://19980803.xyz*
-*檔案位置: `D:\my-note\CORE_PULSE_Portfolio_Presentation.md`*
-*真實截圖目錄: `D:\my-note\screenshots\`*
+*線上網址：<https://19980803.xyz> ｜ 截圖目錄：`screenshots/` ｜ 索引：[[作品集總覽]]*

@@ -162,13 +162,19 @@ Three.js、react-markdown、rehype-highlight 這些大體積依賴全切進 asyn
 
 ## 履歷描述範本
 
-```markdown
-- **CORE PULSE — SRE & AI Systems Engineer Personal Platform**
-  • Architected an edge-native portfolio & observability platform using React 19, TypeScript, Vite 5, and Cloudflare Pages Functions (Serverless Edge) deployed at https://19980803.xyz.
-  • Implemented an SRE Waveform Observation Deck (`/telemetry`) powered by Three.js WebGL and optimized bundle sizes by 60%+ using granular route-based code-splitting.
-  • Developed a secure, RAG-grounded LLM assistant (`/ask`) featuring SSE streaming, privacy-preserving IP hash rate limiting backed by Cloudflare D1 SQLite, and automated wiki markdown ingestion.
-  • Enforced enterprise-grade code quality with Vitest unit tests and Playwright E2E suites covering Accessibility focus contracts, SEO sitemap sync, and CSP theme validation.
-```
+### 繁體中文
+
+* **設計與建置 Edge-Native 個人品牌與可觀測性平台 (CORE PULSE)**：以 React 19、TypeScript、Vite 5 與 Cloudflare Pages Functions 打造雙運行時架構，前端編譯為靜態資產走 CDN，動態 API 限縮於 Serverless Edge，正式上線於 `https://19980803.xyz`。
+* **開發 SRE 實時波形觀測台 (`/telemetry`)**：以 Three.js WebGL 即時渲染服務指標與延遲分佈，透過 route-based code-splitting 將大體積依賴切至 async chunk，首屏載入速度改善 60% 以上。
+* **建置具隱私保護之 RAG 問答系統 (`/ask`)**：整合 SSE 流式輸出與建置期預編譯的 Markdown Wiki 知識庫，並以 `IP + Salt` SHA-256 雜湊寫入 Cloudflare D1 進行限流——達成防濫用的同時不記錄訪客真實 IP。
+* **將工程規範寫成 CI 契約**：以 Vitest 單元測試搭配 Playwright E2E 守護無障礙焦點環、SEO sitemap 與路由同步、CSP 主題載入；任一路由未同步至 `sitemap.xml` 即中斷建置。
+
+### English
+
+* **Architected an Edge-Native Personal Brand & Observability Platform (CORE PULSE)**: Built a dual-runtime system with React 19, TypeScript, Vite 5 and Cloudflare Pages Functions—static assets served from CDN, dynamic APIs confined to the serverless edge—deployed at https://19980803.xyz.
+* **Implemented an SRE Waveform Observation Deck (`/telemetry`)**: Rendered live service metrics and latency distributions with Three.js WebGL, improving first-paint performance by 60%+ through granular route-based code-splitting of heavy dependencies.
+* **Developed a Privacy-Preserving RAG-Grounded LLM Assistant (`/ask`)**: Combined SSE streaming with a build-time precompiled markdown wiki knowledge base, and rate-limited requests via salted SHA-256 IP hashes stored in Cloudflare D1—preventing abuse without ever recording visitor IPs.
+* **Encoded Engineering Standards as CI Contracts**: Enforced accessibility focus-ring behaviour, SEO sitemap/route parity and CSP theme loading through Vitest unit tests and Playwright E2E suites; any route missing from `sitemap.xml` fails the build outright.
 
 ---
 *線上網址：<https://19980803.xyz> ｜ 索引：[[作品集總覽]]*

@@ -286,4 +286,22 @@ Vault 裡混著兩種東西：想公開的技術文章（`個人學習/`、`好�
    30 行 Hash Router、Vanilla CSS 變數主題。可以談為什麼在這個專案刻意不用 Tailwind 與 React Router。
 
 ---
+
+## 履歷描述範本
+
+### 繁體中文
+
+* **打造 Obsidian 雙向同步之邊緣知識平台 (my-note-web)**：以 Cloudflare Workers、Hono 與 Workers AI 建構 168+ 篇筆記的雲端閱讀與檢索平台，設計 Sharded KV 儲存模型將全站導覽壓縮為單次 KV 讀取，邊緣 API 響應 `<50ms` 且無冷啟動。
+* **實作雙向 Git 同步與寫入衝突防護**：建置 Webhook 增量同步管線（HMAC-SHA256 簽章驗證）達成 push 後 3 秒內上線，另設計 Gzip Tarball 串流全量同步作為災難復原；網頁編輯經 GitHub Contents API SHA 樂觀鎖回寫，以 `409` 攔截並行覆寫。
+* **開發零 Embedding 之邊緣 RAG 檢索引擎**：自研全記憶體 Bigram / Token 兩階段計分演算法（Meta Index 加權篩選 Top 10 → 全文計分選出 Top 4），無須維運向量資料庫即完成語意問答，且答案皆附來源筆記路徑可供驗證。
+* **建立公開／私有內容硬隔離與測試防護網**：以白名單機制與 `NoteMeta.private` 不變量確保私有知識庫不外流至任何公開 API，並以 15 個測試檔、83 個 Vitest 單元與整合測試覆蓋同步、認證、編輯衝突與路由邏輯。
+
+### English
+
+* **Built an Edge-Native Knowledge Platform with Bidirectional Obsidian Sync (my-note-web)**: Architected a Cloudflare Workers + Hono reading and search platform serving 168+ notes, using a sharded KV storage model that collapses full-site navigation into a single KV read, achieving `<50ms` edge API responses with zero cold start.
+* **Engineered Bidirectional Git Sync with Write-Conflict Protection**: Implemented an HMAC-SHA256-verified webhook pipeline delivering sub-3-second propagation from local push to production, plus a streaming gzip tarball full-sync path for disaster recovery; web edits are committed through the GitHub Contents API with SHA-based optimistic locking that surfaces `409` conflicts instead of overwriting.
+* **Developed a Zero-Embedding Edge RAG Engine**: Designed an in-memory two-stage bigram/token scoring algorithm (weighted meta-index ranking to top 10, then full-text scoring to top 4), delivering grounded Q&A with cited source paths and no vector database to operate.
+* **Enforced a Hard Public/Private Content Boundary Backed by Tests**: Guaranteed private vault content never reaches any public API via folder whitelisting and a `NoteMeta.private` invariant, covered by 83 Vitest unit and integration tests across 15 suites spanning sync, auth, edit-conflict and routing logic.
+
+---
 *索引：[[作品集總覽]]*

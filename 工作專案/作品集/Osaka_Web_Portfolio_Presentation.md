@@ -149,4 +149,22 @@ flowchart TD
    commit 觸發建置、Zod 檢核 Frontmatter、Vitest 覆蓋 store 與 Worker API。資料源是人手寫的 Markdown，這層檢核是必要的而非裝飾。
 
 ---
+
+## 履歷描述範本
+
+### 繁體中文
+
+* **設計與開發跨裝置同步之 Jamstack 旅遊儀表板 (Osaka Trip)**：以 React 18、TypeScript 與 Vite 建構前端，將 Obsidian Markdown 作為單一資料來源經 GitHub Actions 建置為靜態站，同步部署至 Cloudflare Pages 自訂網域與 GitHub Pages 雙環境。
+* **實作離線韌性狀態機與讀寫權限分離**：訪客免認證即可讀取 Cloudflare D1 中的同步狀態，寫入則需 Bearer Token 授權；連線中斷時狀態自動落於 `localStorage`，恢復連線後補送，確保海外弱網環境下不中斷使用。
+* **建立建置期型別守門與雙向內容回寫**：以 Zod Schema 於 CI 階段驗證所有 Markdown Frontmatter 並回報錯誤行號，阻擋格式錯誤進入生產環境；前端調整行程結構時由 Cloudflare Worker 透過 GitHub REST API 以 Base64 與 SHA 防衝突機制置換 Markdown 區段並自動觸發重新部署。
+* **自建和風編輯設計系統與無障礙規範**：撰寫 `DESIGN.md` / `PRODUCT.md` 規範，制定襯線／無襯線字體雙軌、主色填色面積 ≤10% 等硬性約束，達成 WCAG AA 對比（正文 ≥4.5:1）與 ≥36–44px 觸控目標，並支援 `prefers-reduced-motion` 降級。
+
+### English
+
+* **Designed and Shipped a Cross-Device Jamstack Travel Dashboard (Osaka Trip)**: Built with React 18, TypeScript and Vite, using Obsidian Markdown as the single source of truth compiled by GitHub Actions into a static site, dual-deployed to a Cloudflare Pages custom domain and GitHub Pages.
+* **Implemented an Offline-Resilient State Engine with Split Read/Write Access**: Visitors read synced state from Cloudflare D1 without authentication while writes require a Bearer token; state falls back to `localStorage` when connectivity drops and replays on reconnect, keeping the app usable on unreliable overseas networks.
+* **Established Build-Time Type Gating and Bidirectional Content Writeback**: Validated every Markdown frontmatter against Zod schemas in CI with precise line-number reporting so malformed data never reaches production; itinerary edits made in the UI are spliced back into Markdown by a Cloudflare Worker via the GitHub REST API using base64 and SHA conflict guards, auto-triggering redeployment.
+* **Authored a Washi Editorial Design System with Accessibility Constraints**: Wrote `DESIGN.md` / `PRODUCT.md` specifications defining a serif/sans dual-track type system and a hard ≤10% accent-fill budget, meeting WCAG AA contrast (≥4.5:1 body text) and ≥36–44px touch targets, with full `prefers-reduced-motion` degradation.
+
+---
 *索引：[[作品集總覽]]*

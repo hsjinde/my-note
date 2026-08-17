@@ -14,6 +14,60 @@ title: Wiki 操作日誌
 
 ---
 
+## [2026-08-17] lint | 健康檢查：結構全綠，落差在「新內容未消化」
+
+以 UTF-8-safe Python 腳本掃 38 個 wiki 內容頁 + 全 vault（366 個 md/canvas、144 個附件）。距上次 lint（2026-07-24）已 3 週餘。
+
+**結構檢查：全綠**
+
+斷鏈 0、heading anchor 0、孤立頁 0、未登錄 index 0。`log.md` 內 5 條斷鏈（`Best practice questions`、資料夾式連結、舊 `llm-wiki` 檔名）屬 append-only 歷史紀錄，依既有慣例刻意保留；ambiguous 僅餘 1 條（`entities/KeyLogger-Server.md` 來源指向 `工作專案/` 原始筆記，語義正確）。額外對 `工作專案/` 全區掃描：0 斷鏈。
+
+**異動範圍**
+
+自 07-24 起原始區異動**全集中於 `工作專案/`**（`個人學習/`、`好工具推薦/`、`Clippings/`、`日常/`、`靈感/` 零異動）。新增 8 篇約 1,400 行：`作品集/` 6 篇（08-14）、`2026-08 工作紀錄`（08-08）、`portfwd-TCP轉發工具重構筆記`（07-24 lint 後）。另有一批附件搬遷與截圖脫敏（`26946a6`、`ca43f33`）。
+
+**已修（自動）——索引補漏**
+
+- `index.md` 原始資料位置表：`工作專案/` 8 篇 → 19 篇；新增 `工作專案/作品集/` 一列
+- `index.md`「待消化筆記」區塊：原停在 07-24「已消化」狀態，補上本輪 8 篇待消化清單
+- `index.md` updated → 2026-08-17
+
+**新發現：內容過時（待裁示，未動）**
+
+- `entities/CORE-PULSE.md` **已被新筆記推翻**：頁面主體描述「右下角 SVG 企鵝浮動按鈕」，但 `2026-08 工作紀錄` 明載該浮動 widget 已於 7/18 移除、現況為 `/ask` 全頁；網址亦由 `core-pulse.19980803.xyz` 改為 `19980803.xyz`；新增的 `/telemetry`（Three.js 觀測台）、Pages Functions SEO middleware、a11y CI 契約等全未反映。
+- `entities/Quartz-閱讀網站.md` **規劃已被實作取代**：頁面記「規劃中，尚未動工」、預計 Quartz 4 + GitHub Pages。實際上線的是 my-note-web（`note.19980803.xyz`，Cloudflare Workers + Hono + Sharded KV），技術路線與部署平台皆不同。
+
+**未消化（待裁示）**
+
+`作品集/` 5 份簡報涵蓋三個 wiki 尚無實體頁的專案（my-note-web、大阪旅券 OSAKA TRIP、Osaka Vault）；`2026-08 工作紀錄` 含 fail2ban jail regex 漏洞（587/465 埠 96% 攻擊靜默漏記）等可提煉知識；`portfwd` 為 204 行 TCP 轉發重構技術筆記。`entities/Ethan.md` 專案清單亦缺這批新專案。
+
+**規則檔同步**：`CLAUDE.md`、`AGENTS.md` 仍為薄指標檔，無重複規則；`core_rules.md` 自 2026-07-05 未改動。
+
+## [2026-08-17] fix+ingest | 使用者裁示「全部修」——消化 `工作專案/` 新內容 + 更新兩頁過時實體頁
+
+承同日 lint，使用者回「全部修」。
+
+**過時內容改寫（2 頁）**
+
+- **[[wiki/entities/CORE-PULSE|CORE-PULSE]] 全面改寫**：舊頁主體是「右下角 SVG 企鵝浮動 widget」，據 `2026-08 工作紀錄` 該 widget 已於 7/18 移除、現為 `/ask` 全頁；網址 `core-pulse.19980803.xyz` → `19980803.xyz`。改寫涵蓋 `/telemetry`（Three.js 觀測台）、Pages Functions 建置期預編譯 wiki、不記 IP 限流、測試即契約（axe 焦點環／sitemap 同步 build gate）、Terminal Editorial 設計系統。`source_count` 1→2、index 摘要同步。
+- **[[Quartz-閱讀網站]] 標記已取代**：舊頁記「規劃中，尚未動工／Quartz 4 + GitHub Pages」。實際落地為 [[my-note-web]]（Cloudflare Workers 自建），路線與平台皆不同。改寫為保留初期決策脈絡 + 明標「已被 my-note-web 取代」，並註明白名單發布原則被沿用；補相關連結。
+
+**新增頁（4）**
+
+- 實體頁 3：[[my-note-web]]（Sharded KV／零 Embedding RAG／Webhook+tarball 雙管線同步／Contents API 樂觀鎖／公開私有硬邊界）、[[Osaka-Web]]（御朱印帳設計系統／離線韌性狀態機／Zod 建置守門／GitHub API 行程回寫）、[[Osaka-Vault]]（雙層知識隔離／R2 ASCII key 正規化／MCP 整合／7 天 TTL 增量消化／狀態標記防幻覺）。
+- 概念頁 1：[[TCP-轉發與-portfwd]]（4 種轉發情境、統一轉發原語、跨平台、28 項 pytest）。
+
+**既有頁補強**
+
+- [[Postfix-Manager]]：新增「兩個『有在跑卻看不到』的真實漏洞」節——(1) 封鎖規則掛 `INPUT` 被 Docker DNAT 繞過、改掛 `DOCKER-USER`；(2) jail regex `postfix/\w+\[` 匹配不到 `postfix/submission/smtpd`，587/465 埠 96% 攻擊靜默漏記，修為 `postfix/(?:\w+/)?\w+\[`（fail2ban-regex 13135→13972）。`source_count` 2→4，補作品集簡報與 `2026-08 工作紀錄` 兩個來源。
+- [[Ethan]]：相關概念補 my-note-web／Osaka-Web／Osaka-Vault／TCP-轉發與-portfwd 四個連結，CORE-PULSE 描述由「AI 吉祥物」更新為「個人品牌與 SRE/AI 展示平台」。
+
+**刻意不另建頁**：`2026-08 工作紀錄`（月度 meta-index，fail2ban nugget 已併入 Postfix-Manager；Bubble-Beam 寶可夢站、TOEIC Flow 知識密度低）、`作品集/` 5 份簡報＋總覽（求職 meta-index，內容已提煉進對應實體頁）。
+
+**隱私處理**：Osaka Vault／Web 頁面未寫入出國日期、航班編號、住宿名稱（「本人何時不在家、住在哪」）；Postfix 未寫實際埠映射、主機商與封鎖網段——皆只提煉知識，貼合原始簡報的脫敏原則。
+
+**驗證**：UTF-8 lint 腳本複掃全 vault → 斷鏈 0、錨點 0、孤立頁 0、未登錄 index 0；新增 4 頁全數有 wiki 內入鏈且已登錄。wiki 內容頁 38 → 42。
+
 ## [2026-07-24] fix | 使用者裁示「處理 1、2」——NeetCode 來源歧義、LLM-Wiki 大小寫撞名根除
 
 承同日 lint，使用者回「處理 1、2」（第 3 項大阪旅遊剪藏依建議略過，使用者其後自行刪除該檔）。

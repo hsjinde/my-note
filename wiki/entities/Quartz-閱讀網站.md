@@ -1,13 +1,15 @@
 ---
 title: Quartz 閱讀網站
-tags: [專案, Quartz, Obsidian, 網站, GitHub-Pages]
-updated: 2026-07-21
+tags: [專案, Quartz, Obsidian, 網站, GitHub-Pages, 已取代]
+updated: 2026-08-17
 source_count: 1
 ---
 
 # Quartz 閱讀網站（my-note 公開站）
 
-[[Ethan]] 的規劃中專案：用 **Quartz 4**（專為發布 Obsidian vault 的靜態網站產生器）把本 vault 的部分筆記產成公開閱讀網站，部署到 GitHub Pages（`hsjinde.github.io/my-note`）。狀態：**規劃中，尚未動工**。
+[[Ethan]] 把本 vault 發布為公開閱讀站的**初期規劃**：用 **Quartz 4**（專為發布 Obsidian vault 的靜態網站產生器）產成靜態網站部署到 GitHub Pages（`hsjinde.github.io/my-note`）。
+
+> **狀態：已被 [[my-note-web]] 取代（2026-08）**。實際落地時沒有採用 Quartz + GitHub Pages，改為自建 Cloudflare Workers + Hono 平台（`note.19980803.xyz`），因為需要 Quartz 無法提供的能力：Webhook 增量同步、網頁端編輯回寫 Git、邊緣 AI 問答。本頁保留當初的決策脈絡作為對照——**白名單發布範圍的設計原則被 [[my-note-web]] 完整沿用**。
 
 ## 決策摘要
 
@@ -28,6 +30,7 @@ Quartz 放 repo 子資料夾 `website/`；Actions 只把白名單資料夾複製
 
 ## 相關
 
+- [[my-note-web]] — 本規劃的實際落地版本（改走 Cloudflare Workers 自建）
 - [[Ethan]] — 專案作者
 - [[Obsidian]] — 內容來源平台
 - [[Postfix-Manager]]、[[wiki/entities/CORE-PULSE|CORE-PULSE]]、[[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — Ethan 的其他專案

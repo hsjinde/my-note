@@ -48,11 +48,15 @@ SRE 學習實驗室：Python 自動化、PyTest 測試、Prometheus/Grafana 監�
 ## 相關概念
 
 - [[SRE-學習路徑]] — SRE 學習路線
-- [[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案（完整路徑消歧義，避免撞名 `工作專案/KeyLogger-Server.md`）
+- [[wiki/entities/CORE-PULSE|CORE-PULSE]] — 個人品牌與 SRE/AI 展示平台（`19980803.xyz`）
+- [[my-note-web]] — 本 vault 的 Cloudflare 雲端閱讀平台（`note.19980803.xyz`）
+- [[Osaka-Web]] — 和風手帳設計的離線旅遊儀表板（`osaka.19980803.xyz`）
+- [[Osaka-Vault]] — AI 驅動的旅遊知識庫（MCP + R2）
 - [[Postfix-Manager]] — 自架郵件伺服器管理系統（Django + Docker）
-- [[wiki/entities/CORE-PULSE|CORE-PULSE]] — 個人網站的 AI 吉祥物對話系統
-- [[Quartz-閱讀網站]] — 用 Quartz 發布本 vault 的公開閱讀站（規劃中）
 - [[wiki/entities/PA440-FW-data-configurator|PA440-FW-data-configurator]] — Palo Alto PA-440 防火牆 CTI 威脅情資自動化工具
+- [[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案（完整路徑消歧義，避免撞名 `工作專案/KeyLogger-Server.md`）
+- [[TCP-轉發與-portfwd]] — 4 種 TCP 轉發情境的 Python 工具庫重構
+- [[Quartz-閱讀網站]] — 公開閱讀站的初期規劃（已被 [[my-note-web]] 取代）
 - [[自製-Claude-Code-Skills]] — 開源的四個 Agent Skills
 
 ## 來源

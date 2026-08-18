@@ -1,6 +1,6 @@
 ---
 title: Wiki 索引
-updated: '2026-08-17'
+updated: '2026-08-18'
 ---
 
 # Wiki 索引
@@ -27,6 +27,7 @@ updated: '2026-08-17'
 | [[LLM-Wiki-搭建指南]] | 從零搭 LLM Wiki 的 6 步驟 + 5 大陷阱（含本 vault 案例） | 1 |
 | [[自製-Claude-Code-Skills]] | 作者開源的 4 個 Agent Skill 與共同設計理念 | 2 |
 | [[Matt-Pocock-Skills-for-Real-Engineers]] | 專為 AI Agent 設計的工程化流程技能庫（TDD、PRD、Grilling 等 SOP） | 1 |
+| [[設計系統實踐]] | 三套自建設計系統（Terminal Editorial／書房紙頁／和風手帳）與四條共通硬約束 | 3 |
 
 ### AI 與 LLM
 
@@ -120,6 +121,7 @@ updated: '2026-08-17'
 2026-08-17 lint + fix：wiki 內部零斷鏈、零錨點斷鏈、零孤立頁、零未登錄；使用者裁示「全部修」，消化 `工作專案/` 新內容並更新兩頁過時實體頁。
 
 **近期已消化**
+- 2026-08-18：新增 [[設計系統實踐]]（三套自建設計系統的共通方法論，來源同 08-17 那批作品集簡報）；[[Postfix-Manager]] 對外埠改概括描述（public repo 脫敏）
 - 2026-08-17：新增 3 實體頁（[[my-note-web]]、[[Osaka-Web]]、[[Osaka-Vault]]）+ 1 概念頁（[[TCP-轉發與-portfwd]]）；改寫 [[wiki/entities/CORE-PULSE|CORE-PULSE]]（企鵝 widget→`/ask` 全頁）、[[Quartz-閱讀網站]]（已被 my-note-web 取代）；[[Postfix-Manager]] 補 fail2ban regex 漏洞與 DOCKER-USER 鏈修正；[[Ethan]] 補新專案連結
 - 2026-07-24：[[wiki/entities/PA440-FW-data-configurator|PA440-FW-data-configurator]]（來源 `工作專案/PA440-FW-data-configurator`）、[[Matt-Pocock-Skills-for-Real-Engineers]]＋[[Matt-Pocock]]
 - 2026-07-21：ingest 14 篇 → 新增 9 頁（5 概念 + 4 實體）

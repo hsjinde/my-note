@@ -9,10 +9,13 @@ source_count: 4
 
 [[Ethan]] 的自架郵件伺服器管理系統：以 **Django + Docker** 把繁瑣的郵件服務配置封裝成 Web UI，管理 Postfix（SMTP）、Dovecot（IMAP/POP3）、OpenDKIM（DKIM 簽章），並整合 Certbot 憑證與 Nginx 反向代理。
 
+> [!note] 本頁刻意不記具體座標
+> 實際埠映射、內網位址、封鎖網段、主機商與 OS 版本一律以概括描述帶過——`hsjinde/my-note` 是 public repo，`wiki/` 對 GitHub 沒有遮蔽效果。（注意：從 HEAD 移除不等於從 git 歷史移除。）
+
 ## 核心設計
 
 - 把 Postfix / Dovecot / OpenDKIM 配置封裝成 Web 操作，信箱帳號直接對應 Linux 系統使用者。
-- 透過 **Nginx 8443 SSL Stream Proxy** 統一對外的加密郵件接入點。
+- 透過 **Nginx 四層 SSL Stream Proxy** 統一對外的加密郵件接入點（對外埠取未被主機商封鎖的高位埠，此處刻意不記具體數字）。
 - 自動整合 Let's Encrypt 憑證簽發（Certbot webroot 驗證）、自動產生 DKIM 金鑰與 SPF/DMARC 記錄。
 - 一鍵部署腳本 `deploy.sh`。（附有預設 admin 帳密，部署後須立即修改。）
 

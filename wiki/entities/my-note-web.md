@@ -43,6 +43,7 @@ KV 按讀寫次數計費，一篇一 key 會讓「畫目錄樹」變成一次 `l
 - [[Obsidian]] — 內容來源平台
 - [[LLM-Wiki]]、[[RAG-vs-LLM-Wiki]] — 站內問答的知識層與檢索取捨
 - [[wiki/entities/CORE-PULSE|CORE-PULSE]]、[[Osaka-Web]]、[[Osaka-Vault]] — [[Ethan]] 的其他 Cloudflare 專案
+- [[設計系統實踐]] — 「書房紙頁」是其中一套
 
 ## 來源
 

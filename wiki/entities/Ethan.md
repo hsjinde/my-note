@@ -53,6 +53,7 @@ SRE 學習實驗室：Python 自動化、PyTest 測試、Prometheus/Grafana 監�
 - [[Osaka-Web]] — 和風手帳設計的離線旅遊儀表板（`osaka.19980803.xyz`）
 - [[Osaka-Vault]] — AI 驅動的旅遊知識庫（MCP + R2）
 - [[Postfix-Manager]] — 自架郵件伺服器管理系統（Django + Docker）
+- [[設計系統實踐]] — 三套自建設計系統的共通方法論
 - [[wiki/entities/PA440-FW-data-configurator|PA440-FW-data-configurator]] — Palo Alto PA-440 防火牆 CTI 威脅情資自動化工具
 - [[wiki/entities/KeyLogger-Server|KeyLogger-Server]] — 個人 C++ Winsock 網路程式專案（完整路徑消歧義，避免撞名 `工作專案/KeyLogger-Server.md`）
 - [[TCP-轉發與-portfwd]] — 4 種 TCP 轉發情境的 Python 工具庫重構

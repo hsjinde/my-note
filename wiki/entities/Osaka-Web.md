@@ -45,6 +45,7 @@ React 18 + TypeScript + Vite + Tailwind CSS ｜ Cloudflare Worker（Hono）+ D1 
 - [[Osaka-Vault]] — 本站的資料來源知識庫
 - [[my-note-web]] — 同樣把 Obsidian 當資料來源、狀態走 Cloudflare 的姊妹專案
 - [[wiki/entities/CORE-PULSE|CORE-PULSE]] — [[Ethan]] 的另一套自建設計系統（Terminal Editorial）
+- [[設計系統實踐]] — 「和風手帳」是其中一套
 
 ## 來源
 

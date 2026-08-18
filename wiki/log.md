@@ -442,3 +442,17 @@ Windows PowerShell 5.1 的 `Get-Content` 預設以 ANSI 讀 UTF-8，中文全部
 ## [2026-07-21] fix | KeyLogger-Server 撞名消歧義（自動處理殘項）
 
 承上，使用者要求自動處理唯一殘留的命名脆弱項。`entities/Ethan.md` 的裸連結 `[[KeyLogger-Server]]` 依 Obsidian 最短路徑會落到 `工作專案/KeyLogger-Server.md`（1 層）而非 entity 頁（2 層）→ 改為完整路徑 `[[wiki/entities/KeyLogger-Server|KeyLogger-Server]]`（條列用一般 `|`，非表格跳脫 `\|`）。效果：Ethan 確定連到 entity 頁，`entities/KeyLogger-Server.md` 由「僅 index 連入」升級為有內容頁入鏈。至此全 wiki 撞名項清空。
+
+## [2026-08-18] merge | 兩台機器的同批 ingest 分歧收斂 + 埠號脫敏
+
+本機工作區留著 08-14 未提交的作品集 ingest 草稿，遠端 `6cca725`（08-17）已有另一輪針對同一批來源、更完整的版本並推上去，兩者九個檔案全數衝突。處置：**以遠端為基底**（08-17 版事實較新，例如把企鵝 widget 從「是否已下線未確認」改為明確的已下線改 `/ask` 全頁），只前移本機獨有的內容，舊 commit 保留在本機分支 `wip/ingest-0814` 備查。
+
+**前移（1 頁）**
+
+- `concepts/設計系統實踐.md` — 三套自建設計系統（Terminal Editorial／書房紙頁／和風手帳）的共通硬約束。遠端該輪未建此頁，內容與 08-17 版三個專案頁的敘述逐條核對過、無矛盾。`index.md` 補登，並自 [[Ethan]]、[[wiki/entities/CORE-PULSE|CORE-PULSE]]、[[my-note-web]]、[[Osaka-Web]] 各補一條入鏈避免孤立頁。
+
+**隱私修正**
+
+- `entities/Postfix-Manager.md` 遠端版仍寫死 Nginx SSL Stream 的對外埠號，這正是作品集簡報刻意脫敏的項目。改為「未被主機商封鎖的高位埠」概括描述，頁首補 note 標明本頁不記具體座標（埠、內網位址、封鎖網段、主機商、OS 版本）——`hsjinde/my-note` 是 public repo，`wiki/` 對 GitHub 無遮蔽效果。**注意：從 HEAD 移除不等於從 git 歷史移除，舊 commit 仍查得到該數字。**
+
+**未動**：`concepts/TCP-轉發與-portfwd.md` 已檢查無敏感座標；`工作專案/` 唯讀原始區未改。

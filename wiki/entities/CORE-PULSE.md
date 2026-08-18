@@ -42,6 +42,7 @@ source_count: 2
 
 - [[Ethan]] — 網站主人
 - [[LLM-Wiki]] — `/ask` 回答的知識來源模式
+- [[設計系統實踐]] — Terminal Editorial 是其中一套
 - [[my-note-web]]、[[Osaka-Web]]、[[Osaka-Vault]]、[[Postfix-Manager]] — [[Ethan]] 的其他專案
 
 ## 來源

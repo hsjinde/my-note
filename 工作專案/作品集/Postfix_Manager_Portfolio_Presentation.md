@@ -2,7 +2,7 @@
 title: Postfix Manager — 多網域郵件伺服器管理系統與 Linux 網路安全強化（作品集簡報）
 tags: [作品集, 工作專案, Postfix-Manager, DevOps, Docker, Linux, 資安, 求職]
 date: 2026-08-13
-updated: 2026-08-14
+updated: 2026-08-25
 ---
 
 # Postfix Manager — 多網域郵件伺服器管理系統與 Linux 網路安全強化架構
@@ -26,6 +26,20 @@ updated: 2026-08-14
 
 ---
 
+## 為什麼做這個
+
+一開始只是想要自己網域的信箱，看起來比較正式。租了 VPS、裝了 Postfix，然後接連撞牆：
+
+**第一次撞牆**是主機商封了郵件埠。信寄得出去、收不進來，客戶端連線直接 timeout。查了才知道這是業界常態——為了防垃圾郵件，多數 VPS 預設封鎖或嚴格審查那幾個埠。
+
+**第二次撞牆**是新增第二個網域。TLS 憑證、DKIM 金鑰對、`main.cf`、`10-ssl.conf`、`KeyTable`、`SigningTable`、DNS 三筆記錄——手動走一遍要二十幾分鐘，而且我第一次就漏了 `SigningTable`，結果信全部沒簽章，寄到 Gmail 直接進垃圾桶。這種事不該靠記憶力，所以寫了 Django 管理層把它自動化。
+
+**第三次撞牆**最嚴重，是安全稽核時發現 Fail2ban 看起來有在擋，實際上完全沒作用。細節在下面第 3 點——那是我到目前為止排查過最有收穫的一個問題，因為它逼我真的去理解 Linux 封包在核心裡怎麼走。
+
+三次撞牆之後，這套東西才變成現在的樣子。它到現在還在跑，我自己的信箱就掛在上面。
+
+---
+
 ## 專案簡報圖
 
 ### Slide 1：專案總覽與系統模組
@@ -41,7 +55,7 @@ updated: 2026-08-14
 
 ## 系統畫面
 
-以下皆為生產環境實際運作的管理介面。
+以下都是生產環境實際運作的管理介面。
 
 ### 1. 營運儀表板
 
@@ -53,19 +67,23 @@ updated: 2026-08-14
 
 ![DNS 管理控制台](screenshots/02_mail_server_dns_manager_redacted.png)
 
-輸入新網域後，後端 `Util.py` 自動串起 TLS 憑證簽發、OpenDKIM 金鑰對生成與設定檔重載。也支援即時切換當前主要網域，Postfix `main.cf` 與 Dovecot 監聽參數會同步更新。
+輸入新網域之後，後端 `Util.py` 自動串起 TLS 憑證簽發、OpenDKIM 金鑰對生成與設定檔重載。也支援即時切換當前主要網域，Postfix `main.cf` 與 Dovecot 監聽參數會同步更新。
+
+這一頁就是為了取代那二十分鐘的手動流程做的。
 
 ### 3. 別名與信箱帳號管理
 
 ![別名帳號管理](screenshots/03_mail_server_alias_manager_redacted.png)
 
-支援全 Email 與短帳號兩種形式的建立、修改、刪除。要停用可疑帳號直接在介面上鎖定，不必進 Linux 終端改 `shadow`。
+支援全 Email 與短帳號兩種形式的建立、修改、刪除。要停用可疑帳號直接在介面上鎖定，不必 SSH 進去改 `shadow`——半夜收到告警的時候，手機上就能處理。
 
 ### 4. 自動化 DNS 記錄
 
 ![DNS 設定細節預覽](screenshots/04_mail_server_dns_detail_redacted.png)
 
-SPF 依伺服器對外 IP 自動產出 `v=spf1 ip4:<IP> -all`；DMARC 預設 reject 策略並設定 postmaster 回報；DKIM 公鑰格式化成 DNS 供應商可直接貼上的 TXT 記錄（`mail._domainkey.<domain>`）。
+SPF 依伺服器對外 IP 自動產出 `v=spf1 ip4:<IP> -all`；DMARC 預設 reject 策略並設定 postmaster 回報；DKIM 公鑰格式化成 DNS 供應商可以直接貼上的 TXT 記錄（`mail._domainkey.<domain>`）。
+
+DKIM 那串公鑰手動貼最容易出錯——換行、引號、長度限制，每家 DNS 供應商的處理還不一樣。乾脆讓程式產好。
 
 ---
 
@@ -135,20 +153,24 @@ flowchart TD
 
 多數 VPS 主機商（AWS EC2、GCP 與各家低價 VPS）預設封鎖或嚴格審查 465/587 SMTP 與 995 POP3 SSL，客戶端根本連不進來。
 
-作法是讓 Host Nginx 載入 `ngx_stream_module` 做四層轉發：挑未被封鎖的高位埠當對外入口，以 SSL 終止或直接 stream 透傳到 loopback 上的 Dovecot 與 Postfix。郵件客戶端（Outlook / Thunderbird / 手機）只需改連接埠設定，協定行為完全不變。Django 新增網域時會自動產生對應的 Nginx stream 設定檔並 `nginx -s reload`。
+作法是讓 Host Nginx 載入 `ngx_stream_module` 做四層轉發：挑一個沒被封鎖的高位埠當對外入口，以 SSL 終止或直接 stream 透傳到 loopback 上的 Dovecot 與 Postfix。郵件客戶端（Outlook / Thunderbird / 手機）只要改連接埠設定，協定行為完全不變。
+
+選四層而不是七層代理，是因為 SMTP 跟 POP3 不是 HTTP，Nginx 的 `http` 區塊處理不了；`stream` 模組只搬 TCP 位元組，協定細節不用管。Django 新增網域時會自動產生對應的 Nginx stream 設定檔並 `nginx -s reload`。
 
 ### 2. 多網域 TLS 與 OpenDKIM 自動化
 
-傳統做法新增一個網域要手改 `main.cf`、`10-ssl.conf`、重產 DKIM 金鑰對、編輯 `KeyTable` 與 `SigningTable`——步驟多且容易漏。
+傳統做法新增一個網域要手改 `main.cf`、`10-ssl.conf`、重產 DKIM 金鑰對、編輯 `KeyTable` 與 `SigningTable`——步驟多，而且漏掉任何一步都不會立刻報錯，是寄出去之後才發現的那種錯。
 
 * **Certbot webroot 整合**：webroot 統一綁到 `/home/web/letsencrypt`，對應外部 Nginx port 80 的 `/.well-known/acme-challenge/`，12 小時一輪自動簽發與續簽。
 * **模板化寫入**（`extModule/Util.py`）：建立網域時自動產生 `mail.private` 與 `mail.txt`，更新 `SigningTable`（`*@domain.com` → `mail._domainkey.domain.com`）與 `KeyTable`，把網域 IP 段加進 TrustedHosts，最後送指令重載容器服務。
 
 ### 3. Fail2ban 被 Docker DNAT 繞過
 
-首次安全稽核時發現伺服器遭上萬次 SMTP/SSH 暴力破解，Fail2ban 明明啟用了，但封鎖規則完全沒作用——`f2b-postfix-docker` 的封包計數是 0。
+首次安全稽核時發現伺服器遭上萬次 SMTP/SSH 暴力破解。Fail2ban 明明啟用了，`fail2ban-client status` 也確實有建黑名單，但攻擊完全沒停。
 
-原因在 Linux 核心的封包路徑：Docker 做 port forwarding 時走 `PREROUTING → DNAT → FORWARD`，**完全不經過 `INPUT` 鏈**，而 Fail2ban 預設只往 `INPUT` 掛規則。
+真正讓我警覺的是 `iptables -L -v -n`：`f2b-postfix-docker` 這條鏈的封包計數是 **0**。規則存在，但沒有任何流量經過它。
+
+原因在 Linux 核心的封包路徑：Docker 做 port forwarding 的時候走 `PREROUTING → DNAT → FORWARD`，**完全不經過 `INPUT` 鏈**，而 Fail2ban 預設只往 `INPUT` 掛規則。也就是說那份黑名單從第一天起就沒有生效過。
 
 修法三件事：
 
@@ -156,14 +178,18 @@ flowchart TD
    ```ini
    action = iptables-multiport[name=postfix-docker, port="<mail ports>", protocol="tcp", chain="DOCKER-USER"]
    ```
-2. 對付分散式慢速字典攻擊（24 小時內數千 IP 輪流試），`findtime` 從預設 600 秒拉到 `86400`，`maxretry` 設 5。
-3. systemd 加上 `After=docker.service` 與 `Wants=docker.service`，避免開機順序造成 `DOCKER-USER` 鏈遺失。
+2. 對付分散式慢速字典攻擊（24 小時內數千 IP 輪流試，每個 IP 只試兩三次，永遠碰不到門檻），`findtime` 從預設 600 秒拉到 `86400`，`maxretry` 設 5。
+3. systemd 加上 `After=docker.service` 與 `Wants=docker.service`，避免開機順序造成 `DOCKER-USER` 鏈遺失——不然重開機之後又回到原點，而且不會有任何錯誤訊息告訴你。
+
+這個問題最值得記下來的不是解法，是那個「規則存在但計數為 0」的訊號。防禦措施裝了、看起來也在跑，但實際上沒接到流量——這種假的安全感比沒裝還危險。
 
 ### 4. 無狀態容器中的帳號持久化
 
 Postfix 與 Dovecot 跑在獨立容器裡，一旦 `docker compose down && up`，存在 `/etc/shadow` 或容器內 DB 的帳號就沒了。
 
-作法是雙向備份加自我修復：Django 在新增/修改/刪除別名時，同步把雜湊後的帳戶密碼寫進 volume 備份檔（`passwd.backup` / `shadow.backup`）；容器的 `entrypoint.sh` 開機時檢查，發現帳號遺失就自動從備份還原。
+作法是雙向備份加自我修復：Django 在新增/修改/刪除別名的時候，同步把雜湊後的帳戶密碼寫進 volume 備份檔（`passwd.backup` / `shadow.backup`）；容器的 `entrypoint.sh` 開機時檢查，發現帳號遺失就自動從備份還原。
+
+備份的是雜湊不是明文——Django 這一層從頭到尾拿不到原始密碼。
 
 ---
 
@@ -185,14 +211,22 @@ Postfix 與 Dovecot 跑在獨立容器裡，一旦 `docker compose down && up`�
 > 「三個考量：
 > 1. **資料主權**：部分業務對郵件資料有在地保存與稽核需求，第三方 SaaS 無法完全滿足私有化控管。
 > 2. **成本結構**：要管數十個測試網域或大量自動化發信帳號時，SaaS 依 user/domain 計費會很貴，自建可以彈性擴充。
-> 3. **掌控力**：做完這個專案我摸熟了 SMTP/POP3/IMAP 協定、DKIM 簽署機制與 Linux 網路層——這是用現成 SaaS 得不到的。」
+> 3. **掌控力**：做完這個專案我才真的摸熟 SMTP/POP3/IMAP 協定、DKIM 簽署機制跟 Linux 網路層——這是用現成 SaaS 得不到的。
+> 但我也不會建議每個團隊都自架。維運責任是真的，憑證、黑名單、備份都得自己顧。是我想學這一層，所以自己扛。」
 
 ### Q2：容器化環境用 Fail2ban 遇過最棘手的 bug？
 
 > 「『Fail2ban 顯示已經 ban 掉 IP，但攻擊者照樣連得進容器』。
-> 排查是這樣：`fail2ban-client status` 確實有建黑名單，但 `iptables -L INPUT -v -n` 的封包命中計數始終是 0——規則存在卻沒有流量經過它。
+> 排查是這樣：`fail2ban-client status` 確實有建黑名單，但 `iptables -L INPUT -v -n` 的封包命中計數始終是 0——規則存在卻沒有流量經過它。這個訊號很關鍵，它把問題從『規則寫錯了嗎』轉向『流量根本沒走這條路』。
 > 我把 Linux 核心的封包流向畫出來，才發現 Docker 的 port 映射走 `PREROUTING` 做 `DNAT`，流量在 `FORWARD` 階段就轉給 Docker 網橋了，完全繞過 `INPUT` 鏈。
-> 解法是把 Fail2ban 的 action 改寫，強制把封鎖規則注入 Docker 官方預留的 `DOCKER-USER` 鏈頂端，攻擊封包才會在進入容器前被 DROP。」
+> 解法是把 Fail2ban 的 action 改寫，強制把封鎖規則注入 Docker 官方預留的 `DOCKER-USER` 鏈頂端，攻擊封包才會在進入容器前被 DROP。
+> 這件事之後我對『看起來有在跑的防禦』會多問一句：它的計數器有在動嗎？」
+
+### Q3：郵件埠被封鎖，為什麼選四層 stream 而不是換主機商？
+
+> 「換主機商只是把問題往後推——多數家都有類似政策，而且審核通過與否不在我控制範圍內。
+> 四層 SSL Stream 的好處是協定完全不變：Nginx `stream` 模組只搬 TCP 位元組，SMTP / POP3 的交握、TLS 憑證驗證都照舊，客戶端只需要改一個埠號設定。
+> 代價是多一層 hop、多一個要維護的設定檔，而且 Nginx 得編進 `ngx_stream_module`。所以新增網域時我讓 Django 順手把 stream 設定檔一起產出來，不然遲早會有一個網域漏設。」
 
 ---
 
@@ -213,4 +247,4 @@ Postfix 與 Dovecot 跑在獨立容器裡，一旦 `docker compose down && up`�
 * **Implemented Self-Healing Storage for Stateless Containers**: Designed dynamic credential sync and automated backup recovery (`passwd.backup` / `shadow.backup`) for virtual mail users across container restarts.
 
 ---
-*索引：[[作品集總覽]]*
+*索引：[[作品集總覽]] ｜ 技術細節：[[工作專案/Postfix-Manager/Postfix-Manager-技術分享筆記|Postfix Manager 技術分享筆記]]*

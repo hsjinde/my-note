@@ -30,6 +30,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[238. Product of Array Except Self]] |            |
 | Valid Sudoku                 | https://leetcode.com/problems/valid-sudoku                 | Medium     | Set constraints (row/col/box)  |                                       |            |
 | Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                | [[128. Longest Consecutive Sequence]] |            |
+|                              |                                                            |            |                                |                                       |            |
 
 ## Two Pointers
 | Problem                            | LeetCode                                                       | Difficulty | Key Points                  |                 筆記                 |  Progress  |

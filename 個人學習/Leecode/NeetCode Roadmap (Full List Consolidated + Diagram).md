@@ -24,7 +24,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Contains Duplicate           | https://leetcode.com/problems/contains-duplicate           | Easy       | HashSet duplicate check        |      [[217. Contains Duplicate]]      | 2026.8.27  |
 | Valid Anagram                | https://leetcode.com/problems/valid-anagram                | Easy       | Frequency count                |        [[242. Valid Anagram]]         | 2026.8.28  |
 | Two Sum                      | https://leetcode.com/problems/two-sum                      | Easy       | Hash map complement            |            [[1. Two Sum]]             |  2026.9.1  |
-| Group Anagrams               | https://leetcode.com/problems/group-anagrams               | Medium     | Sorted key / count signature   |        [[49. Group Anagrams]]         | 2025.12.24 |
+| Group Anagrams               | https://leetcode.com/problems/group-anagrams               | Medium     | Sorted key / count signature   |        [[49. Group Anagrams]]         |  2026.9.2  |
 | Top K Frequent Elements      | https://leetcode.com/problems/top-k-frequent-elements      | Medium     | Bucket / heap                  |   [[347. Top K Frequent Elements]]    | 2026.01.15 |
 | Encode and Decode Strings    | https://leetcode.com/problems/encode-and-decode-strings    | Medium     | Custom delimiter length-prefix |                                       |            |
 | Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[238. Product of Array Except Self]] |            |

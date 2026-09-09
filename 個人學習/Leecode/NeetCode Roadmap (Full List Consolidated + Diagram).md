@@ -27,7 +27,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Group Anagrams               | https://leetcode.com/problems/group-anagrams               | Medium     | Sorted key / count signature   |        [[49. Group Anagrams]]         | 2026.9.2  |
 | Top K Frequent Elements      | https://leetcode.com/problems/top-k-frequent-elements      | Medium     | Bucket / heap                  |   [[347. Top K Frequent Elements]]    | 2026.9.9  |
 | Encode and Decode Strings    | https://leetcode.com/problems/encode-and-decode-strings    | Medium     | Custom delimiter length-prefix |                                       |           |
-| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[238. Product of Array Except Self]] |           |
+| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[238. Product of Array Except Self]] | 2026.9.9  |
 | Valid Sudoku                 | https://leetcode.com/problems/valid-sudoku                 | Medium     | Set constraints (row/col/box)  |                                       |           |
 | Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                | [[128. Longest Consecutive Sequence]] |           |
 |                              |                                                            |            |                                |                                       |           |

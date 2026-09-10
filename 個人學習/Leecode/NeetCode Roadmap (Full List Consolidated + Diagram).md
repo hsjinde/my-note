@@ -29,15 +29,15 @@ description: "[source](https://neetcode.io/roadmap)"
 | Encode and Decode Strings    | https://leetcode.com/problems/encode-and-decode-strings    | Medium     | Custom delimiter length-prefix |                                       |           |
 | Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self | Medium     | Prefix & suffix pass           | [[238. Product of Array Except Self]] | 2026.9.9  |
 | Valid Sudoku                 | https://leetcode.com/problems/valid-sudoku                 | Medium     | Set constraints (row/col/box)  |         [[36. Valid Sudoku]]          | 2026.9.9  |
-| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                | [[128. Longest Consecutive Sequence]] |           |
+| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence | Medium     | Hash set starts                | [[128. Longest Consecutive Sequence]] | 2026.9.10 |
 
 ## Two Pointers
-| Problem                            | LeetCode                                                       | Difficulty | Key Points                  |                 筆記                 |  Progress  |
-| ---------------------------------- | -------------------------------------------------------------- | ---------- | --------------------------- | :----------------------------------: | :--------: |
-| Valid Palindrome                   | https://leetcode.com/problems/valid-palindrome                 | Easy       | Filter + inward scan        |                                      | 2026.01.16 |
-| Two Sum II - Input Array Is Sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted | Medium     | Opposite pointers           |                                      | 2026.01.16 |
-| 3Sum                               | https://leetcode.com/problems/3sum                             | Medium     | Sort + skip duplicates      |             [[15. 3Sum]]             | 2026.01.19 |
-| Container With Most Water          | https://leetcode.com/problems/container-with-most-water        | Medium     | Move smaller pointer        |                                      | 2026.01.20 |
+| Problem                            | LeetCode                                                       | Difficulty | Key Points                  |                筆記                 |  Progress  |
+| ---------------------------------- | -------------------------------------------------------------- | ---------- | --------------------------- | :-------------------------------: | :--------: |
+| Valid Palindrome                   | https://leetcode.com/problems/valid-palindrome                 | Easy       | Filter + inward scan        |                                   | 2026.01.16 |
+| Two Sum II - Input Array Is Sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted | Medium     | Opposite pointers           |                                   | 2026.01.16 |
+| 3Sum                               | https://leetcode.com/problems/3sum                             | Medium     | Sort + skip duplicates      |           [[15. 3Sum]]            | 2026.01.19 |
+| Container With Most Water          | https://leetcode.com/problems/container-with-most-water        | Medium     | Move smaller pointer        |                                   | 2026.01.20 |
 | Trapping Rain Water                | https://leetcode.com/problems/trapping-rain-water              | Hard       | Two pointer / prefix maxima | [[42. Trapping Rain Water (接雨水)]] | 2026.01.22 |
 
 ## Sliding Window

@@ -34,7 +34,7 @@ description: "[source](https://neetcode.io/roadmap)"
 ## Two Pointers
 | Problem                            | LeetCode                                                       | Difficulty | Key Points                  |                筆記                 |  Progress  |
 | ---------------------------------- | -------------------------------------------------------------- | ---------- | --------------------------- | :-------------------------------: | :--------: |
-| Valid Palindrome                   | https://leetcode.com/problems/valid-palindrome                 | Easy       | Filter + inward scan        |                                   | 2026.01.16 |
+| Valid Palindrome                   | https://leetcode.com/problems/valid-palindrome                 | Easy       | Filter + inward scan        |                                   | 2026.9.14  |
 | Two Sum II - Input Array Is Sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted | Medium     | Opposite pointers           |                                   | 2026.01.16 |
 | 3Sum                               | https://leetcode.com/problems/3sum                             | Medium     | Sort + skip duplicates      |           [[15. 3Sum]]            | 2026.01.19 |
 | Container With Most Water          | https://leetcode.com/problems/container-with-most-water        | Medium     | Move smaller pointer        |                                   | 2026.01.20 |

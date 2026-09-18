@@ -41,13 +41,13 @@ description: "[source](https://neetcode.io/roadmap)"
 | Trapping Rain Water                | https://leetcode.com/problems/trapping-rain-water              | Hard       | Two pointer / prefix maxima |      [[42. Trapping Rain Water (接雨水)]]      | 2026.09.18 |
 
 ## Sliding Window
-| Problem                                        | LeetCode                                                                     | Difficulty | Key Points             |                             筆記                              |  Progress  |
-| ---------------------------------------------- | ---------------------------------------------------------------------------- | ---------- | ---------------------- | :-----------------------------------------------------------: | :--------: |
-| Best Time to Buy and Sell Stock                | https://leetcode.com/problems/best-time-to-buy-and-sell-stock                | Easy       | Track min so far       | [[121. Best Time to Buy and Sell Stock (買賣股票的最佳時機)]] | 2026.02.23 |
-| Longest Substring Without Repeating Characters | https://leetcode.com/problems/longest-substring-without-repeating-characters | Medium     | Window + index map     |     [[3. Longest Substring Without Repeating Characters]]     | 2025.10.14 |
-| Longest Repeating Character Replacement        | https://leetcode.com/problems/longest-repeating-character-replacement        | Medium     | Window + max count     |       [[424. Longest Repeating Character Replacement]]        | 2025.10.14 |
-| Minimum Window Substring                       | https://leetcode.com/problems/minimum-window-substring                       | Hard       | Expand/contract counts |                                                               |            |
-| Sliding Window Maximum                         | https://leetcode.com/problems/sliding-window-maximum                         | Hard       | Monotonic deque        |                                                               |            |
+| Problem                                        | LeetCode                                                                     | Difficulty | Key Points             |                          筆記                           |  Progress  |
+| ---------------------------------------------- | ---------------------------------------------------------------------------- | ---------- | ---------------------- | :---------------------------------------------------: | :--------: |
+| Best Time to Buy and Sell Stock                | https://leetcode.com/problems/best-time-to-buy-and-sell-stock                | Easy       | Track min so far       | [[121. Best Time to Buy and Sell Stock (買賣股票的最佳時機)]]  | 2026.9.18  |
+| Longest Substring Without Repeating Characters | https://leetcode.com/problems/longest-substring-without-repeating-characters | Medium     | Window + index map     | [[3. Longest Substring Without Repeating Characters]] | 2025.10.14 |
+| Longest Repeating Character Replacement        | https://leetcode.com/problems/longest-repeating-character-replacement        | Medium     | Window + max count     |   [[424. Longest Repeating Character Replacement]]    | 2025.10.14 |
+| Minimum Window Substring                       | https://leetcode.com/problems/minimum-window-substring                       | Hard       | Expand/contract counts |                                                       |            |
+| Sliding Window Maximum                         | https://leetcode.com/problems/sliding-window-maximum                         | Hard       | Monotonic deque        |                                                       |            |
 
 ## Stack
 | Problem                          | LeetCode                                                       | Difficulty | Key Points                     |           筆記            |  Progress  |

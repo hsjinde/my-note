@@ -50,9 +50,9 @@ description: "[source](https://neetcode.io/roadmap)"
 | Sliding Window Maximum                         | https://leetcode.com/problems/sliding-window-maximum                         | Hard       | Monotonic deque        |                                                       |           |     |
 
 ## Stack
-| Problem                          | LeetCode                                                       | Difficulty | Key Points                     |           筆記            |  Progress  |
+| Problem                          | LeetCode                                                       | Difficulty | Key Points                     |            筆記             |  Progress  |
 | -------------------------------- | :------------------------------------------------------------- | ---------- | ------------------------------ | :-----------------------: | :--------: |
-| Valid Parentheses                | https://leetcode.com/problems/valid-parentheses                | Easy       | Stack matching                 | [[20. Valid Parentheses]] | 2025.10.15 |
+| Valid Parentheses                | https://leetcode.com/problems/valid-parentheses                | Easy       | Stack matching                 | [[20. Valid Parentheses]] | 2026.10.13 |
 | Min Stack                        | https://leetcode.com/problems/min-stack                        | Medium     | Track min per node             |                           | 2025.10.15 |
 | Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation | Medium     | Stack ops                      |                           | 2025.10.15 |
 | Generate Parentheses             | https://leetcode.com/problems/generate-parentheses             | Medium     | Backtrack counts               |                           | 2025.10.16 |

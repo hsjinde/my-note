@@ -48,6 +48,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Longest Repeating Character Replacement        | https://leetcode.com/problems/longest-repeating-character-replacement        | Medium     | Window + max count     |   [[424. Longest Repeating Character Replacement]]    | 2026.9.29 |     |
 | Minimum Window Substring                       | https://leetcode.com/problems/minimum-window-substring                       | Hard       | Expand/contract counts |           [[76. Minimum Window Substring]]            |           |     |
 | Sliding Window Maximum                         | https://leetcode.com/problems/sliding-window-maximum                         | Hard       | Monotonic deque        |                                                       |           |     |
+|                                                |                                                                              |            |                        |                                                       |           |     |
 
 ## Stack
 | Problem                          | LeetCode                                                       | Difficulty | Key Points                     |            筆記             |  Progress  |

@@ -54,7 +54,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Problem                          | LeetCode                                                       | Difficulty | Key Points                     |            筆記             |  Progress  |
 | -------------------------------- | :------------------------------------------------------------- | ---------- | ------------------------------ | :-----------------------: | :--------: |
 | Valid Parentheses                | https://leetcode.com/problems/valid-parentheses                | Easy       | Stack matching                 | [[20. Valid Parentheses]] | 2026.10.13 |
-| Min Stack                        | https://leetcode.com/problems/min-stack                        | Medium     | Track min per node             |                           | 2025.10.15 |
+| Min Stack                        | https://leetcode.com/problems/min-stack                        | Medium     | Track min per node             |                           | 2026.10.14 |
 | Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation | Medium     | Stack ops                      |                           | 2025.10.15 |
 | Generate Parentheses             | https://leetcode.com/problems/generate-parentheses             | Medium     | Backtrack counts               |                           | 2025.10.16 |
 | Daily Temperatures               | https://leetcode.com/problems/daily-temperatures               | Medium     | Monotonic stack                |                           | 2025.10.16 |

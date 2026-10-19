@@ -59,7 +59,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation | Medium     | Stack ops                      |                              | 2026.10.15 |
 | Generate Parentheses             | https://leetcode.com/problems/generate-parentheses             | Medium     | Backtrack counts               | [[22. Generate Parentheses]] | 2026.10.16 |
 | Daily Temperatures               | https://leetcode.com/problems/daily-temperatures               | Medium     | Monotonic stack                | [[739. Daily Temperatures]]  | 2026.10.16 |
-| Car Fleet                        | https://leetcode.com/problems/car-fleet                        | Medium     | Sort by position / stack times |                              | 2025.10.17 |
+| Car Fleet                        | https://leetcode.com/problems/car-fleet                        | Medium     | Sort by position / stack times | [[853. Car Fleet]]           | 2026.10.17 |
 | Largest Rectangle in Histogram   | https://leetcode.com/problems/largest-rectangle-in-histogram   | Hard       | Monotonic stack sentinel       |                              |            |
 
 ## Binary Search

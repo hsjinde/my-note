@@ -65,8 +65,8 @@ description: "[source](https://neetcode.io/roadmap)"
 ## Binary Search
 | Problem                              | LeetCode                                                           | Difficulty | Key Points            |                           筆記                            |  Progress  |
 | ------------------------------------ | ------------------------------------------------------------------ | ---------- | --------------------- | :-----------------------------------------------------: | :--------: |
-| Binary Search                        | https://leetcode.com/problems/binary-search                        | Easy       | Classic template      |           [[98. Validate Binary Search Tree]]           | 2026.10.22 |
-| Search a 2D Matrix                   | https://leetcode.com/problems/search-a-2d-matrix                   | Medium     | Flatten / 2-phase     |                                                         | 2025.10.21 |
+| Binary Search                        | https://leetcode.com/problems/binary-search                        | Easy       | Classic template      |                                                         | 2026.10.22 |
+| Search a 2D Matrix                   | https://leetcode.com/problems/search-a-2d-matrix                   | Medium     | Flatten / 2-phase     |               [[74. Search a 2D Matrix]]                | 2026.10.22 |
 | Koko Eating Bananas                  | https://leetcode.com/problems/koko-eating-bananas                  | Medium     | Search speed          |                                                         | 2025.10.21 |
 | Find Minimum in Rotated Sorted Array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array | Medium     | Compare mid vs right  | [[153. Find Minimum in Rotated Sorted Array - 二分法邊界差異]] | 2025.10.21 |
 | Search in Rotated Sorted Array       | https://leetcode.com/problems/search-in-rotated-sorted-array       | Medium     | Determine sorted half |         [[33. Search in Rotated Sorted Array]]          | 2025.10.22 |

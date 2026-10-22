@@ -52,15 +52,15 @@ description: "[source](https://neetcode.io/roadmap)"
 |                                                |                                                                              |            |                        |                                                       |           |     |
 
 ## Stack
-| Problem                          | LeetCode                                                       | Difficulty | Key Points                     |              筆記              |  Progress  |
-| -------------------------------- | :------------------------------------------------------------- | ---------- | ------------------------------ | :--------------------------: | :--------: |
-| Valid Parentheses                | https://leetcode.com/problems/valid-parentheses                | Easy       | Stack matching                 |  [[20. Valid Parentheses]]   | 2026.10.13 |
-| Min Stack                        | https://leetcode.com/problems/min-stack                        | Medium     | Track min per node             |                              | 2026.10.14 |
-| Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation | Medium     | Stack ops                      |                              | 2026.10.15 |
-| Generate Parentheses             | https://leetcode.com/problems/generate-parentheses             | Medium     | Backtrack counts               | [[22. Generate Parentheses]] | 2026.10.16 |
-| Daily Temperatures               | https://leetcode.com/problems/daily-temperatures               | Medium     | Monotonic stack                | [[739. Daily Temperatures]]  | 2026.10.16 |
-| Car Fleet                        | https://leetcode.com/problems/car-fleet                        | Medium     | Sort by position / stack times | [[853. Car Fleet]]           | 2026.10.20 |
-| Largest Rectangle in Histogram   | https://leetcode.com/problems/largest-rectangle-in-histogram   | Hard       | Monotonic stack sentinel       | [[84. Largest Rectangle in Histogram]] |            |
+| Problem                          | LeetCode                                                       | Difficulty | Key Points                     |                   筆記                   |  Progress  |
+| -------------------------------- | :------------------------------------------------------------- | ---------- | ------------------------------ | :------------------------------------: | :--------: |
+| Valid Parentheses                | https://leetcode.com/problems/valid-parentheses                | Easy       | Stack matching                 |       [[20. Valid Parentheses]]        | 2026.10.13 |
+| Min Stack                        | https://leetcode.com/problems/min-stack                        | Medium     | Track min per node             |                                        | 2026.10.14 |
+| Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation | Medium     | Stack ops                      |                                        | 2026.10.15 |
+| Generate Parentheses             | https://leetcode.com/problems/generate-parentheses             | Medium     | Backtrack counts               |      [[22. Generate Parentheses]]      | 2026.10.16 |
+| Daily Temperatures               | https://leetcode.com/problems/daily-temperatures               | Medium     | Monotonic stack                |      [[739. Daily Temperatures]]       | 2026.10.16 |
+| Car Fleet                        | https://leetcode.com/problems/car-fleet                        | Medium     | Sort by position / stack times |           [[853. Car Fleet]]           | 2026.10.20 |
+| Largest Rectangle in Histogram   | https://leetcode.com/problems/largest-rectangle-in-histogram   | Hard       | Monotonic stack sentinel       | [[84. Largest Rectangle in Histogram]] | 2026.10.21 |
 
 ## Binary Search
 | Problem                              | LeetCode                                                           | Difficulty | Key Points            |                              筆記                              |  Progress  |

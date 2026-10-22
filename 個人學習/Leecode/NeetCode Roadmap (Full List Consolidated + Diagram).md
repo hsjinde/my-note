@@ -63,15 +63,15 @@ description: "[source](https://neetcode.io/roadmap)"
 | Largest Rectangle in Histogram   | https://leetcode.com/problems/largest-rectangle-in-histogram   | Hard       | Monotonic stack sentinel       | [[84. Largest Rectangle in Histogram]] | 2026.10.21 |
 
 ## Binary Search
-| Problem                              | LeetCode                                                           | Difficulty | Key Points            |                              筆記                              |  Progress  |
-| ------------------------------------ | ------------------------------------------------------------------ | ---------- | --------------------- | :------------------------------------------------------------: | :--------: |
-| Binary Search                        | https://leetcode.com/problems/binary-search                        | Easy       | Classic template      |              [[98. Validate Binary Search Tree]]               | 2025.10.17 |
-| Search a 2D Matrix                   | https://leetcode.com/problems/search-a-2d-matrix                   | Medium     | Flatten / 2-phase     |                                                                | 2025.10.21 |
-| Koko Eating Bananas                  | https://leetcode.com/problems/koko-eating-bananas                  | Medium     | Search speed          |                                                                | 2025.10.21 |
+| Problem                              | LeetCode                                                           | Difficulty | Key Points            |                           筆記                            |  Progress  |
+| ------------------------------------ | ------------------------------------------------------------------ | ---------- | --------------------- | :-----------------------------------------------------: | :--------: |
+| Binary Search                        | https://leetcode.com/problems/binary-search                        | Easy       | Classic template      |           [[98. Validate Binary Search Tree]]           | 2026.10.22 |
+| Search a 2D Matrix                   | https://leetcode.com/problems/search-a-2d-matrix                   | Medium     | Flatten / 2-phase     |                                                         | 2025.10.21 |
+| Koko Eating Bananas                  | https://leetcode.com/problems/koko-eating-bananas                  | Medium     | Search speed          |                                                         | 2025.10.21 |
 | Find Minimum in Rotated Sorted Array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array | Medium     | Compare mid vs right  | [[153. Find Minimum in Rotated Sorted Array - 二分法邊界差異]] | 2025.10.21 |
-| Search in Rotated Sorted Array       | https://leetcode.com/problems/search-in-rotated-sorted-array       | Medium     | Determine sorted half |             [[33. Search in Rotated Sorted Array]]             | 2025.10.22 |
-| Time Based Key-Value Store           | https://leetcode.com/problems/time-based-key-value-store           | Medium     | Store list + bs       |                                                                | 2025.10.23 |
-| Median of Two Sorted Arrays          | https://leetcode.com/problems/median-of-two-sorted-arrays          | Hard       | Partition halves      |                                                                |            |
+| Search in Rotated Sorted Array       | https://leetcode.com/problems/search-in-rotated-sorted-array       | Medium     | Determine sorted half |         [[33. Search in Rotated Sorted Array]]          | 2025.10.22 |
+| Time Based Key-Value Store           | https://leetcode.com/problems/time-based-key-value-store           | Medium     | Store list + bs       |                                                         | 2025.10.23 |
+| Median of Two Sorted Arrays          | https://leetcode.com/problems/median-of-two-sorted-arrays          | Hard       | Partition halves      |                                                         |            |
 
 ## Linked List
 | Problem                          | LeetCode                                                       | Difficulty | Key Points                      |                   筆記                   |  Progress  |

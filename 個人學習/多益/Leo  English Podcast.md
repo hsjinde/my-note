@@ -3,4 +3,10 @@
 - reception
 - disasters 
 - Occupied
-- 
+- registration
+- facilities 
+- dial
+- remote
+- attractions
+- concierge
+- valet

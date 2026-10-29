@@ -10,3 +10,8 @@
 - attractions
 - concierge
 - valet
+- evacuate
+- clerk
+- amenities
+- invoice
+- 

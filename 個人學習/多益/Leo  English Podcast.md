@@ -14,4 +14,5 @@
 - clerk
 - amenities
 - invoice
-- 
+- laundry
+- amenity

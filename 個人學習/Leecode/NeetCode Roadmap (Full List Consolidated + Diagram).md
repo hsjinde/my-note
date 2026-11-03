@@ -61,6 +61,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Daily Temperatures               | https://leetcode.com/problems/daily-temperatures               | Medium     | Monotonic stack                |      [[739. Daily Temperatures]]       | 2026.10.16 |
 | Car Fleet                        | https://leetcode.com/problems/car-fleet                        | Medium     | Sort by position / stack times |           [[853. Car Fleet]]           | 2026.10.20 |
 | Largest Rectangle in Histogram   | https://leetcode.com/problems/largest-rectangle-in-histogram   | Hard       | Monotonic stack sentinel       | [[84. Largest Rectangle in Histogram]] | 2026.10.21 |
+|                                  |                                                                |            |                                |                                        |            |
 
 ## Binary Search
 | Problem                              | LeetCode                                                           | Difficulty | Key Points            |                           筆記                            |  Progress  |

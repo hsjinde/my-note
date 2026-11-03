@@ -80,7 +80,7 @@ description: "[source](https://neetcode.io/roadmap)"
 | Merge Two Sorted Lists           | https://leetcode.com/problems/merge-two-sorted-lists           | Easy       | Dummy head merge                |      [[21. Merge Two Sorted Lists]]      | 2025.10.28 |
 | Reorder List                     | https://leetcode.com/problems/reorder-list                     | Medium     | Split + reverse + weave         |                                          | 2025.10.30 |
 | Remove Nth Node From End of List | https://leetcode.com/problems/remove-nth-node-from-end-of-list | Medium     | Two pointers gap                | [[19. Remove Nth Node From End Of List]] | 2025.10.31 |
-| Copy List with Random Pointer    | https://leetcode.com/problems/copy-list-with-random-pointer    | Medium     | Interweave clone nodes          |                                          |            |
+| Copy List with Random Pointer    | https://leetcode.com/problems/copy-list-with-random-pointer    | Medium     | Interweave clone nodes          |  [[138. Copy List with Random Pointer]]  |            |
 | Add Two Numbers                  | https://leetcode.com/problems/add-two-numbers                  | Medium     | Carry addition                  |          [[2. Add Two Numbers]]          | 2026.02.09 |
 | Linked List Cycle                | https://leetcode.com/problems/linked-list-cycle                | Easy       | Floyd detect                    |        [[141. Linked List Cycle]]        | 2026.03.04 |
 | Find the Duplicate Number        | https://leetcode.com/problems/find-the-duplicate-number        | Medium     | Cycle detection / binary search |    [[287. Find the Duplicate Number]]    | 2026.03.10 |

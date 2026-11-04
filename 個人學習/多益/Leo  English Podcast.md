@@ -19,3 +19,4 @@
 | laundry | n. | 洗衣服務、待洗衣物 |
 | amenity | n. | 便利設施（amenities 的單數，實際多用複數） |
 
+## 100 Essential Phrase & How to Talk on the Phone in English

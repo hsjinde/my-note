@@ -26,3 +26,7 @@
 - crowded
 - opportunity
 - freaking out
+- Etiquette
+- elderly
+- disability
+- acquaintances
